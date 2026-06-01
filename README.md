@@ -1,35 +1,45 @@
-# atrium-site
+# Atrium
 
-The public download & docs page for **Atrium** — a calm window where every
-project's agents, terminals, and commands are visible, grouped, and interactive.
-*Organizer, not orchestrator.*
+A calm window where every project's **agents**, **terminals**, and **commands**
+are visible, grouped, and interactive — in one place. Atrium *organizes what's
+running*. It doesn't do the running for you. *Organizer, not orchestrator.*
 
-- **Site:** https://redlinelabs-dev.github.io/atrium-site
-- **Downloads:** [Releases](https://github.com/redlinelabs-dev/atrium-site/releases/latest)
-- **App source:** private (`redlinelabs-dev/atrium`) — see ADR-0003 there for why
-  the code is private but the site + releases are public.
+**→ [Download for Windows](https://github.com/redlinelabs-dev/atrium-site/releases/latest)**
+&nbsp;·&nbsp; [redlinelabs-dev.github.io/atrium-site](https://redlinelabs-dev.github.io/atrium-site)
 
-This repo is **just the static site + the release binaries**. It's plain
-`index.html` + `style.css`, served by GitHub Pages (deploy-from-branch, `main` /
-root). No build step.
+## What it does
 
-## Add the screenshot
+- **Projects → grouped, collapsible panes** — Agents, Terminals, and Commands,
+  organized so fifteen open panes stay meaningful instead of becoming noise.
+- **Fully interactive** — every pane is a real terminal. Type into it, drive your
+  agent, Ctrl-C, resize. Full ANSI/TUI rendering, not a watch-only feed.
+- **Liveness at a glance** — a colored dot per pane tells you what's running,
+  starting, or crashed, so a dead process can't quietly go unnoticed.
+- **Windows & WSL native** — drives PowerShell, Git Bash, and WSL2 side by side,
+  and knows which git branch / worktree each pane is sitting in.
 
-The hero shows a placeholder until a real screenshot exists. Drop a PNG named
-`screenshot.png` in the repo root and push — the page picks it up automatically.
+## Install
 
-## Cutting a release (maintainer runbook)
+1. Grab the latest installer from
+   **[Releases](https://github.com/redlinelabs-dev/atrium-site/releases/latest)**
+   (`Atrium_<version>_x64-setup.exe`). Windows 10/11, 64-bit.
+2. Run it. Atrium isn't code-signed yet, so Windows SmartScreen will warn on
+   first launch — click **More info → Run anyway**.
+3. It installs per-user (no admin needed) and uninstalls cleanly from Add/Remove
+   Programs.
 
-1. In the **private** `atrium` repo: bump `version` in
-   `app/src-tauri/tauri.conf.json` (canonical) and keep `Cargo.toml` /
-   `package.json` loosely in sync. Commit.
-2. Tag the private repo for provenance: `git tag v0.1.0 && git push --tags`.
-3. Build on Windows: `bun run tauri build` → the NSIS installer lands in
-   `app/src-tauri/target/release/bundle/nsis/Atrium_<version>_x64-setup.exe`.
-4. Smoke-test: install **and** uninstall (confirm the Add/Remove Programs entry).
-5. Here on **atrium-site**: create a GitHub Release `v0.1.0`, attach the `.exe`,
-   write short notes. The site's Download button points at
-   `releases/latest`, so no page edit is needed per release.
+Each release lists a SHA-256 checksum if you'd like to verify your download.
 
-The installer is unsigned (no code-signing cert), so Windows SmartScreen warns on
-first run — the page documents *More info → Run anyway*.
+## About
+
+Atrium is a free, personal-project app, inspired by Aaron Francis's
+[Solo](https://faster.dev). **The application source is closed**; this repository
+is the public home for the website and the release downloads only — so there's
+nothing to build here.
+
+Found a bug or have a request? Open an
+[issue](https://github.com/redlinelabs-dev/atrium-site/issues).
+
+---
+
+*A Redline Labs project by Jimmy Van Veen.*
