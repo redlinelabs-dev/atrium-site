@@ -1,0 +1,301 @@
+/* Atrium download/docs page — dark, electric, matches the app's palette.
+   Accent indigo #6d7cff, live-green #00e676, deep neutral backgrounds. */
+
+:root {
+  --bg: #0c0e14;
+  --bg-2: #11141d;
+  --panel: #161a26;
+  --border: #232838;
+  --text: #e7e9f0;
+  --muted: #9aa3b8;
+  --primary: #6d7cff;
+  --primary-glow: rgba(109, 124, 255, 0.45);
+  --live: #00e676;
+  --radius: 14px;
+  --maxw: 1040px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* ── Hero ─────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  padding: 0 24px 64px;
+  background:
+    radial-gradient(1100px 520px at 50% -120px, rgba(109, 124, 255, 0.16), transparent 70%),
+    linear-gradient(180deg, var(--bg-2), var(--bg));
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 18px;
+}
+
+.brand-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--live);
+  box-shadow: 0 0 10px var(--live);
+}
+
+.nav-link {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.hero-inner {
+  max-width: 820px;
+  margin: 48px auto 40px;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(34px, 6vw, 60px);
+  font-weight: 800;
+}
+
+.lede {
+  margin: 22px auto 0;
+  max-width: 640px;
+  color: var(--muted);
+  font-size: clamp(16px, 2.2vw, 19px);
+}
+.lede strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.cta {
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 650;
+  font-size: 16px;
+  padding: 14px 30px;
+  border-radius: 11px;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.btn:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  color: #0a0c12;
+  background: linear-gradient(180deg, #8390ff, var(--primary));
+  box-shadow: 0 8px 26px var(--primary-glow);
+}
+.btn-primary:hover {
+  box-shadow: 0 12px 34px var(--primary-glow);
+}
+
+.cta-meta {
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+.cta-note {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ── Screenshot ───────────────────────────────────────── */
+.shot-wrap {
+  max-width: var(--maxw);
+  margin: 8px auto 0;
+}
+
+.shot {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  background: var(--panel);
+}
+
+/* placeholder state when screenshot.png is missing */
+.shot-missing {
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 14px;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 14px,
+      rgba(255, 255, 255, 0.02) 14px,
+      rgba(255, 255, 255, 0.02) 28px
+    ),
+    var(--panel);
+}
+.shot-missing::after {
+  content: "screenshot.png — coming soon";
+}
+
+/* ── Why ──────────────────────────────────────────────── */
+main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 72px 24px;
+}
+
+.why h2,
+.first-run h2 {
+  font-size: clamp(24px, 3.5vw, 32px);
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.card h3 {
+  font-size: 17px;
+  margin: 14px 0 8px;
+}
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+
+.card-ico {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(109, 124, 255, 0.14);
+  color: var(--primary);
+  font-size: 18px;
+}
+.card-ico-live {
+  background: rgba(0, 230, 118, 0.14);
+  color: var(--live);
+}
+
+/* ── First run ────────────────────────────────────────── */
+.first-run {
+  margin-top: 36px;
+}
+
+.run-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.run-block {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+}
+.run-block h3 {
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+.run-block p,
+.run-block li {
+  color: var(--muted);
+  font-size: 14.5px;
+}
+.run-block ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.run-block li {
+  margin-bottom: 6px;
+}
+.run-block strong {
+  color: var(--text);
+}
+
+/* ── Footer ───────────────────────────────────────────── */
+.foot {
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 44px 24px 56px;
+  background: var(--bg-2);
+}
+.foot-brand {
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+.foot-line {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+.foot-meta {
+  margin: 14px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+.foot-meta a {
+  color: var(--muted);
+}
