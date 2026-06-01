@@ -32,9 +32,8 @@ Each release lists a SHA-256 checksum if you'd like to verify your download.
 
 ## About
 
-Atrium is a free, personal-project app, inspired by Aaron Francis's
-[Solo](https://faster.dev). **The application source is closed**; this repository
-is the public home for the website and the release downloads only — so there's
+Atrium is a free app. **The application source is closed**; this repository is
+the public home for the website and the release downloads only — so there's
 nothing to build here.
 
 Found a bug or have a request? Open an
