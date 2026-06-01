@@ -1,0 +1,11 @@
+{
+  "version": "0.2.0",
+  "notes": "Atrium v0.2.0 — split + Add, agent catalog, self-update groundwork. See the release page for details.",
+  "pub_date": "2026-06-01T16:02:00Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYngwMEc1blBnYzYzNjkxTjkrR3I1WStBK21PdkFueTN2OGcwQmV4QSs0S0dEMjZPTks4TUVWV1hXT3RVdFpwd0NsQXpZNzRLVnJJSFdmZndOWWcvRmcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwMzQ0MTQ5CWZpbGU6QXRyaXVtXzAuMi4wX3g2NC1zZXR1cC5leGUKaXNhd1lRa0E3eEdzMTZVVE5EZ0UrMWVsS2Y0NlFzV05NaDJsbXZlWmg1ZnVhMnlFS1ZDdCtadlRoTURQNUFyL0ltdlRMdXFKU2I3cWZ5cU9OcGhjQUE9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.2.0/Atrium_0.2.0_x64-setup.exe"
+    }
+  }
+}
