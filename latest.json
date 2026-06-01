@@ -1,11 +1,11 @@
 {
-  "version": "0.2.1",
-  "notes": "Atrium v0.2.1 — fixes the duplicate Agents group bug; projects are now structurally well-formed. First self-updatable release.",
-  "pub_date": "2026-06-01T16:51:00Z",
+  "version": "0.3.0",
+  "notes": "Atrium v0.3.0 — automatic + manual update checks, and the duplicate Agents group bug is fully fixed (legacy setups self-heal on launch).",
+  "pub_date": "2026-06-01T17:24:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjRLQ2s5Lzd4cDQxQVJOSVNXem0yYmJtTDIvUEJ3Q3BlRVMxM3FzZlFSNVorYWRHYWw5VXAvUkE3TnBkOWZZMnJUbVFkRHk4QXo3Q1J0ZEZtak56VHdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwMzQ3MTA1CWZpbGU6QXRyaXVtXzAuMi4xX3g2NC1zZXR1cC5leGUKM2ZScjhRTEY4NGZnWVJ0bE44cmJJMm1FaTVVbzNXV2lIcU9lNm9ieFZ2dVJncVU4RTVPZ09qOWV2NVZJNERGaXZuWDM5T0pmTXNLSmdicjFEWW50QkE9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.2.1/Atrium_0.2.1_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjdINU1sKzBKd3FYV3RFOXFnWVBtbkhpRjZYRDRPNjYrTjhyNDFLZkFpWEJPa2FQR2pxc21sOGVGUWx3OUVJRUo3SEM4Z3VsSnJaY0UycjFaaENML0FrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwMzQ5MDYwCWZpbGU6QXRyaXVtXzAuMy4wX3g2NC1zZXR1cC5leGUKN1ZkSTVzblVpL2dacDY2cTV6SjBhM2Y4NTVWWGNaSFZYU2szSFZOcHBzcTJzNVhiRTlDUTZjRVd4OThNRHBpV0pRWHh1Zko5bTNYOTlwRW5wRkN6QUE9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.3.0/Atrium_0.3.0_x64-setup.exe"
     }
   }
 }
