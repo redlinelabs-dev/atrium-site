@@ -47,7 +47,7 @@
           <a class="btn btn-primary" href="https://github.com/redlinelabs-dev/atrium-site/releases/latest">
             Download for Windows
           </a>
-          <span class="cta-meta">v0.1 · Windows 10/11 (64-bit) · free</span>
+          <span class="cta-meta"><span id="version"></span>Windows 10/11 (64-bit) · free</span>
         </div>
         <p class="cta-note">
           Unsigned build — see <a href="#first-run">first-run note</a> below.
@@ -136,5 +136,19 @@
         <a href="https://github.com/redlinelabs-dev/atrium-site/releases">Changelog &amp; downloads</a>
       </p>
     </footer>
+
+    <!-- Show the latest release version, fetched from GitHub so it's never hand-edited /
+         stale (the download button already points at /releases/latest). Fails silent: if
+         the API is unreachable, the label just stays empty rather than showing a wrong one. -->
+    <script>
+      fetch("https://api.github.com/repos/redlinelabs-dev/atrium-site/releases/latest")
+        .then((r) => (r.ok ? r.json() : null))
+        .then((rel) => {
+          if (rel && rel.tag_name) {
+            document.getElementById("version").textContent = rel.tag_name + " · ";
+          }
+        })
+        .catch(() => {});
+    </script>
   </body>
 </html>
