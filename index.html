@@ -14,18 +14,25 @@
       content="One calm window where every project's agents, terminals, and commands are visible, grouped, and interactive. Organizer, not orchestrator."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="atrium-icon-128.png" />
+    <!-- Favicon: SVG for modern browsers (crisp at any size), .ico fallback,
+         PNG for Apple touch / OG. Same monogram as the app icon. -->
+    <link rel="icon" type="image/svg+xml" href="atrium-icon.svg" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="atrium-icon-128.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="hero">
       <nav class="nav">
-        <span class="brand"><span class="brand-dot"></span> Atrium</span>
+        <span class="brand"><img class="brand-icon" src="atrium-icon.svg" alt="" width="24" height="24" /> Atrium</span>
         <a class="nav-link" href="https://github.com/redlinelabs-dev/atrium-site/releases/latest"
           >Releases</a
         >
       </nav>
 
       <div class="hero-inner">
+        <img class="hero-icon" src="atrium-icon.svg" alt="Atrium" width="88" height="88" />
         <h1>
           A calm window for everything<br />
           your projects are running.
