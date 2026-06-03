@@ -1,11 +1,11 @@
 {
-  "version": "0.4.0",
-  "notes": "Atrium v0.4.0 — macOS support, session restore (reopen where you left off), live folder + git in the sidebar, cleaner pane names, better copy/paste, and diffs that stay in Atrium.",
-  "pub_date": "2026-06-03T04:32:08Z",
+  "version": "0.5.0",
+  "notes": "Atrium v0.5.0 — agent permissions hub (approve tools once per project, synced to each worktree), a calm status light (loading / working / idle / done at a glance), and sturdier agent sessions: reliable resume, clean fresh-start when a session's gone, and fixed startup rendering.",
+  "pub_date": "2026-06-03T21:28:45Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjF5UVQrRmlIbTU5ajl0VnVxRHFkU0xwTnJlZkdFVTVFZi8zMS8ybkJnM1JkbzNuUzRQVzlpcEFLQXlWR2R5ZWRNeFNLS3hMdjNaNU52L29tU0V4QVFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNDUzMjMyCWZpbGU6QXRyaXVtXzAuNC4wX3g2NC1zZXR1cC5leGUKV1NpUXZ3RUdrK2NraHhyVVNzOFlOVWtlTC80UldoQUFqRGdQN2lzS3FjTVBHNjJtSEdRS3BSTlR5U3pxWlBMV3VqTUwrVGFvV2g4VmxTMEVtME15QkE9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.4.0/Atrium_0.4.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjk2SHU1dXk0ejh6RGxOYWUvMEhYZm1KL3krOUtxYnE1TzVEb0trZGRtbmhNSHJTd0NsN1Q1eGd4MlZMRDJCdWxPeXlFNVlQUVZ4L040RGxVV2JmMVFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNTIxOTQzCWZpbGU6QXRyaXVtXzAuNS4wX3g2NC1zZXR1cC5leGUKV3JJeE5vclZqNW10RlVqVC9vQ3RrdWFlWjJZVVkySllGQSsweUlCM0JYU1FKWmt2TEZ0d0JnVXh5bkx1dGZtM053bm5PRlZkNnJzUmlpL2FObVZTQnc9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.5.0/Atrium_0.5.0_x64-setup.exe"
     }
   }
 }
