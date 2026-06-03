@@ -1,11 +1,11 @@
 {
-  "version": "0.3.0",
-  "notes": "Atrium v0.3.0 — automatic + manual update checks, and the duplicate Agents group bug is fully fixed (legacy setups self-heal on launch).",
-  "pub_date": "2026-06-01T17:24:00Z",
+  "version": "0.4.0",
+  "notes": "Atrium v0.4.0 — macOS support, session restore (reopen where you left off), live folder + git in the sidebar, cleaner pane names, better copy/paste, and diffs that stay in Atrium.",
+  "pub_date": "2026-06-03T04:32:08Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjdINU1sKzBKd3FYV3RFOXFnWVBtbkhpRjZYRDRPNjYrTjhyNDFLZkFpWEJPa2FQR2pxc21sOGVGUWx3OUVJRUo3SEM4Z3VsSnJaY0UycjFaaENML0FrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwMzQ5MDYwCWZpbGU6QXRyaXVtXzAuMy4wX3g2NC1zZXR1cC5leGUKN1ZkSTVzblVpL2dacDY2cTV6SjBhM2Y4NTVWWGNaSFZYU2szSFZOcHBzcTJzNVhiRTlDUTZjRVd4OThNRHBpV0pRWHh1Zko5bTNYOTlwRW5wRkN6QUE9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.3.0/Atrium_0.3.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjF5UVQrRmlIbTU5ajl0VnVxRHFkU0xwTnJlZkdFVTVFZi8zMS8ybkJnM1JkbzNuUzRQVzlpcEFLQXlWR2R5ZWRNeFNLS3hMdjNaNU52L29tU0V4QVFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNDUzMjMyCWZpbGU6QXRyaXVtXzAuNC4wX3g2NC1zZXR1cC5leGUKV1NpUXZ3RUdrK2NraHhyVVNzOFlOVWtlTC80UldoQUFqRGdQN2lzS3FjTVBHNjJtSEdRS3BSTlR5U3pxWlBMV3VqTUwrVGFvV2g4VmxTMEVtME15QkE9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.4.0/Atrium_0.4.0_x64-setup.exe"
     }
   }
 }
