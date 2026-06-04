@@ -1,11 +1,11 @@
 {
-  "version": "0.5.0",
-  "notes": "Atrium v0.5.0 — agent permissions hub (approve tools once per project, synced to each worktree), a calm status light (loading / working / idle / done at a glance), and sturdier agent sessions: reliable resume, clean fresh-start when a session's gone, and fixed startup rendering.",
-  "pub_date": "2026-06-03T21:28:45Z",
+  "version": "0.6.0",
+  "notes": "Atrium v0.6.0 — Open in VS Code: a Code button opens each pane's working directory and the project menu opens the repo root (launching via Remote-WSL for WSL projects), with a loading state and a graceful notice if the code command isn't on your PATH. Plus safer agent panes (cwd-change hidden, restart confirmed) and a contrast-tuned editor button.",
+  "pub_date": "2026-06-04T02:22:13Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjk2SHU1dXk0ejh6RGxOYWUvMEhYZm1KL3krOUtxYnE1TzVEb0trZGRtbmhNSHJTd0NsN1Q1eGd4MlZMRDJCdWxPeXlFNVlQUVZ4L040RGxVV2JmMVFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNTIxOTQzCWZpbGU6QXRyaXVtXzAuNS4wX3g2NC1zZXR1cC5leGUKV3JJeE5vclZqNW10RlVqVC9vQ3RrdWFlWjJZVVkySllGQSsweUlCM0JYU1FKWmt2TEZ0d0JnVXh5bkx1dGZtM053bm5PRlZkNnJzUmlpL2FObVZTQnc9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.5.0/Atrium_0.5.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYnlUbXNEVFMwVC9FR2F0ZUEvZXEvaHpEdEJwOG1nbmYzZDl2NDR6NnpOcmNBWkVNVXFCeHRuaENieUtkcUNjQncvTHRDRzVJMktJOTVmWXEwZWEzQVFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNTM5NTQxCWZpbGU6QXRyaXVtXzAuNi4wX3g2NC1zZXR1cC5leGUKZVRrYnZmdWZHQ2YzOFNVYjV5TCtvMXZuSUZiTkNoYk1HQnBENmU1M1dxeUNQdStSeVN1YVlvcTlScTRMUWR0bjVNQ28veU11RDVqL3h5c216Y0I2QWc9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.6.0/Atrium_0.6.0_x64-setup.exe"
     }
   }
 }
