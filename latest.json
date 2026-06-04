@@ -1,11 +1,11 @@
 {
-  "version": "0.6.0",
-  "notes": "Atrium v0.6.0 — Open in VS Code: a Code button opens each pane's working directory and the project menu opens the repo root (launching via Remote-WSL for WSL projects), with a loading state and a graceful notice if the code command isn't on your PATH. Plus safer agent panes (cwd-change hidden, restart confirmed) and a contrast-tuned editor button.",
-  "pub_date": "2026-06-04T02:22:13Z",
+  "version": "0.7.0",
+  "notes": "Atrium v0.7.0 — The Cockpit Foundation: a new dashboard with every project's live status at a glance, read-only git diff + commit-graph views, automatic detection of package.json/Makefile/justfile scripts, a configurable editor (VS Code / Cursor / Zed / Windsurf / custom), per-project scratchpad notes and a TODOs dock, and atrium.toml project import/export. Plus polish: non-selectable chrome, right-click-to-paste in the terminal, and worktrees no longer re-prompt for tools you've already approved.",
+  "pub_date": "2026-06-04T14:45:28Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYnlUbXNEVFMwVC9FR2F0ZUEvZXEvaHpEdEJwOG1nbmYzZDl2NDR6NnpOcmNBWkVNVXFCeHRuaENieUtkcUNjQncvTHRDRzVJMktJOTVmWXEwZWEzQVFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNTM5NTQxCWZpbGU6QXRyaXVtXzAuNi4wX3g2NC1zZXR1cC5leGUKZVRrYnZmdWZHQ2YzOFNVYjV5TCtvMXZuSUZiTkNoYk1HQnBENmU1M1dxeUNQdStSeVN1YVlvcTlScTRMUWR0bjVNQ28veU11RDVqL3h5c216Y0I2QWc9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.6.0/Atrium_0.6.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjZZQVV1b1RTVnR5ai9oTmI2ZFBpdVRIbW9xYjlzcHdzdklkRkN0c25LaDUvWWhMNjVzakI1b2lRODNhajVtbDYxN2tkMmZUWURDMkltRmFPYkpFS3dJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNTgyNjE0CWZpbGU6QXRyaXVtXzAuNy4wX3g2NC1zZXR1cC5leGUKRW1vWkFHcGdheWhNeThqd2tMK3dadTFoYm1TMGpBN3BlU2RqOFRld1RDYUFTTGF1WVQzcjhCTWJBbUxVZWpMRzBTRWhjOFdvSkhydjQwc0NqbUFRQnc9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.7.0/Atrium_0.7.0_x64-setup.exe"
     }
   }
 }
