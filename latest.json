@@ -1,11 +1,11 @@
 {
-  "version": "0.7.0",
-  "notes": "Atrium v0.7.0 — The Cockpit Foundation: a new dashboard with every project's live status at a glance, read-only git diff + commit-graph views, automatic detection of package.json/Makefile/justfile scripts, a configurable editor (VS Code / Cursor / Zed / Windsurf / custom), per-project scratchpad notes and a TODOs dock, and atrium.toml project import/export. Plus polish: non-selectable chrome, right-click-to-paste in the terminal, and worktrees no longer re-prompt for tools you've already approved.",
-  "pub_date": "2026-06-04T14:45:28Z",
+  "version": "0.8.0",
+  "notes": "Atrium v0.8.0 — The Integration Layer: a local stdio MCP server lets your agents see the whole cockpit and write into it — read project + pane status, read another pane's recent logs (read_pane_output), and add/update TODOs and scratchpad notes — all over the shared filesystem, so it works on default WSL2 with no setup. Plus live per-pane status, context-window usage % on Claude panes, app zoom (Ctrl +/-/0), and first-class agent Providers. Visibility-in, never control-out.",
+  "pub_date": "2026-06-05T15:39:55Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjZZQVV1b1RTVnR5ai9oTmI2ZFBpdVRIbW9xYjlzcHdzdklkRkN0c25LaDUvWWhMNjVzakI1b2lRODNhajVtbDYxN2tkMmZUWURDMkltRmFPYkpFS3dJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNTgyNjE0CWZpbGU6QXRyaXVtXzAuNy4wX3g2NC1zZXR1cC5leGUKRW1vWkFHcGdheWhNeThqd2tMK3dadTFoYm1TMGpBN3BlU2RqOFRld1RDYUFTTGF1WVQzcjhCTWJBbUxVZWpMRzBTRWhjOFdvSkhydjQwc0NqbUFRQnc9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.7.0/Atrium_0.7.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYndKN1h5YjVwRG1MaFI0Q1lJY1JkbXorZFlSWGwwK2czMHZOTTVOYjQ3OS9selNuRGYyY1A4VjR4MUZpYXhnSy9wM0dyWEZlWmlmTWNrcGhMT21qVWc0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNjczMzUyCWZpbGU6QXRyaXVtXzAuOC4wX3g2NC1zZXR1cC5leGUKdXZDWlRkRmZhYUwwZkdUdDVtRmlBOFFXWFJkQmRtWExDUDNEN1FiN3JVN0ZzOEYwWnFRVGRvM0VlUW45eFVDcWhuems4WWZIZis5VFhyMHY1RHBRQnc9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.8.0/Atrium_0.8.0_x64-setup.exe"
     }
   }
 }
