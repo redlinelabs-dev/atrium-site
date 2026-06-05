@@ -3,3 +3,8 @@
 Thumbs.db
 *.swp
 .vscode/
+
+# Astro
+node_modules/
+dist/
+.astro/

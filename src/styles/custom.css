@@ -1,0 +1,18 @@
+/* Atrium docs theme — match the app's palette (indigo accent #6d7cff, liveness green #00e676). */
+:root {
+	--sl-color-accent-low: #1b1f3a;
+	--sl-color-accent: #6d7cff;
+	--sl-color-accent-high: #c8cdff;
+}
+:root[data-theme='dark'] {
+	--sl-color-bg: #0c0e14;
+	--sl-color-bg-nav: #11141d;
+	--sl-color-bg-sidebar: #0e1119;
+	--sl-color-gray-6: #161a26;
+	--sl-color-gray-7: #11141d;
+}
+/* A small "live" accent for inline status words in the docs, echoing the cockpit's green dot. */
+.atrium-live {
+	color: #00e676;
+	font-weight: 600;
+}

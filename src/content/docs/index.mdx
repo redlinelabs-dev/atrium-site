@@ -1,0 +1,44 @@
+---
+title: Atrium
+description: A calm, single-window cockpit for your coding agents and dev stack — with an MCP layer that lets agents see and annotate it.
+template: splash
+hero:
+  tagline: One calm window for every project, agent, and terminal — and an MCP layer that lets your agents see the whole cockpit and write into it.
+  image:
+    file: ../../assets/screenshot.png
+    alt: The Atrium cockpit — projects, panes, and live status in one window.
+  actions:
+    - text: Download for Windows
+      link: https://github.com/redlinelabs-dev/atrium-site/releases/latest
+      icon: external
+      variant: primary
+    - text: What is Atrium?
+      link: /atrium-site/guides/what-is-atrium/
+      icon: right-arrow
+      variant: minimal
+    - text: Using Atrium with agents
+      link: /atrium-site/guides/agents-mcp/
+      icon: right-arrow
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+	<Card title="Organize, don't orchestrate" icon="puzzle">
+		Projects → groups → panes (agents, terminals, commands) in one quiet window. Atrium organizes what's
+		running; it never drives the work for you.
+	</Card>
+	<Card title="Live at a glance" icon="approve-check">
+		Liveness dots, activity pulses, attention flags, per-pane working directory, context-window % on
+		Claude panes, and a cross-project dashboard.
+	</Card>
+	<Card title="Agents that aren't blind" icon="rocket">
+		A local MCP server lets your agents read the whole cockpit — project + pane status, even a sibling
+		pane's logs — and write into Atrium's TODOs and scratchpad.
+	</Card>
+	<Card title="Windows + WSL, natively" icon="laptop">
+		Built for the WSL2 boundary. The agent integration crosses WSL↔Windows over the shared filesystem,
+		so it works on a default WSL2 setup with no networking, firewall, or config.
+	</Card>
+</CardGrid>

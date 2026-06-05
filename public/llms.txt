@@ -1,0 +1,25 @@
+# Atrium
+
+> Atrium is a calm, single-window desktop cockpit (Tauri + React + xterm.js, built for Windows + WSL2)
+> for your coding agents, terminals, and dev servers — organized into projects with live status. It is
+> an organizer, not an orchestrator: it never drives or dispatches agents (visibility-in, never
+> control-out). As of 0.8.0 it ships a local MCP server so agents can see the cockpit and write into it.
+
+## For agents (MCP)
+
+Atrium exposes a local stdio MCP server (the agent spawns `atrium --mcp-stdio`, reaching state over the
+shared filesystem). Tools are read + write-into-Atrium ONLY — there is no spawn/run/control verb.
+
+- Read: list_projects, list_panes, pane_status(pane_id), read_pane_output(pane_id) [read a sibling
+  pane's recent logs], list_todos, read_scratchpad(slug)
+- Write-into-Atrium: add_todo(text), set_todo_status(id, status), append_scratchpad(slug, text)
+
+Full guide (for both humans and LLMs): https://redlinelabs-dev.github.io/atrium-site/guides/agents-mcp/
+
+## Docs
+
+- What is Atrium?: https://redlinelabs-dev.github.io/atrium-site/guides/what-is-atrium/
+- Install & first run: https://redlinelabs-dev.github.io/atrium-site/guides/install/
+- Core concepts (projects, panes, providers, the boundary): https://redlinelabs-dev.github.io/atrium-site/guides/concepts/
+- Using Atrium with agents (MCP): https://redlinelabs-dev.github.io/atrium-site/guides/agents-mcp/
+- Changelog: https://redlinelabs-dev.github.io/atrium-site/changelog/

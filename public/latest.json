@@ -1,0 +1,11 @@
+{
+  "version": "0.8.0",
+  "notes": "Atrium v0.8.0 — The Integration Layer: a local stdio MCP server lets your agents see the whole cockpit and write into it — read project + pane status, read another pane's recent logs (read_pane_output), and add/update TODOs and scratchpad notes — all over the shared filesystem, so it works on default WSL2 with no setup. Plus live per-pane status, context-window usage % on Claude panes, app zoom (Ctrl +/-/0), and first-class agent Providers. Visibility-in, never control-out.",
+  "pub_date": "2026-06-05T00:00:00Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "REPLACE_WITH_CONTENTS_OF_Atrium_0.8.0_x64-setup.exe.sig_AFTER_THE_WINDOWS_BUILD",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.8.0/Atrium_0.8.0_x64-setup.exe"
+    }
+  }
+}
