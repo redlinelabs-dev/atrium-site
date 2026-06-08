@@ -1,11 +1,11 @@
 {
-  "version": "0.9.0",
-  "notes": "Atrium v0.9.0 — Editions & Worktrees: a git-worktree lens for the Sidebar (each worktree as a two-line row, empty worktrees as launch targets, drift detection, move-to-worktree; bare-clone and traditional layouts, graceful on non-git repos), plus the developer foundation for the Free/Pro editions (a build-time isPro() seam, the MCP server as a Pro-only module, free/pro build modes guarded in CI). Includes the new privacy policy — provable no-telemetry, no backend the app depends on. Windows/WSL2 build; native macOS/Linux still in progress.",
-  "pub_date": "2026-06-08T17:53:06Z",
+  "version": "0.9.1",
+  "notes": "Atrium v0.9.1 — Inventory & Slim Sidebar: the Worktrees view now shows only what's running (Root always pinned + occupied worktrees only), with a clean two-row header — directory on row 1, branch on row 2. The new Inventory Dock tab is the full catalog of every worktree, occupied or idle, with live search, sort (name / panes / prunable-first), filter (all / idle / prunable), prunable/locked badges, and a per-row launch button. Launching into a worktree is now consolidated in one place.",
+  "pub_date": "2026-06-08T20:49:33Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjNnNDNGK2xEcEdkSUd0aG4xT2R1czQzL2d6UlB0cldEcVhTYkdGdGljZmZrU0JQUVJKbmxsV203NVAvQktFdENNekNjWmg1QXBIQ2JzaDQxTE1TVUE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwOTQwOTMwCWZpbGU6QXRyaXVtXzAuOS4wX3g2NC1zZXR1cC5leGUKMGRLNGhkUS9FTi8vRTB4TE5TZS9BcE1hdnI3SFAvQlFZTE9xMWtFR0k5T2pXdVRYWVVQUk9XS1I4MWwzMjQrTWVCM2Iwa1lzekFxZXF5bTJ1bjhVRGc9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.9.0/Atrium_0.9.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjBvTFNkVXNaRzhVaDY1M2Y3amtQa2RPU1h0NWt5aThhWk11REt2VzNrT0hiT3VIRzlXTEhsMUUvTmg2TGE5L2NjblA4Z3FleFFqMUlLakIvNkRZREEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwOTUxNjY3CWZpbGU6QXRyaXVtXzAuOS4xX3g2NC1zZXR1cC5leGUKQUU2MTZKNGdYalp4YkJCWXVkV2Nrc3VleTVlWkxmNEZUWjRXekppRVhadjllVEw0cUIyaG9TWUg2SUtwUktpL3ZKOTNtYnpnNC9rZEcrZkdOZW16Q2c9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.9.1/Atrium_0.9.1_x64-setup.exe"
     }
   }
 }
