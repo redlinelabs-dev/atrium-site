@@ -33,6 +33,7 @@ export default defineConfig({
 					items: [{ label: 'Using Atrium with agents (MCP)', slug: 'guides/agents-mcp' }],
 				},
 				{ label: 'Release notes', items: [{ label: 'Changelog', slug: 'changelog' }] },
+				{ label: 'Trust', items: [{ label: 'Privacy policy', slug: 'privacy' }] },
 			],
 		}),
 	],
