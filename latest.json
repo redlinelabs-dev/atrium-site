@@ -1,11 +1,11 @@
 {
-  "version": "0.9.2",
-  "notes": "Atrium v0.9.2 — Settings, Unframed: the Settings panel moved out of its cramped modal into a full-window view with a four-category left-nav (Appearance, Tools, New projects, About). Same settings and behavior — just far roomier and easier to scan. Plus a build-config fix so vite.config.ts is no longer shadowed by a stale compiled copy.",
-  "pub_date": "2026-06-09T00:18:46Z",
+  "version": "0.9.3",
+  "notes": "Atrium v0.9.3 — Type to Jump: a keyboard Switcher. Press Ctrl+Shift+K to fuzzy-jump to any pane, project, worktree, or view across all your projects — type a few letters and press Enter. Plain Ctrl+K still works as your shell's kill-line.",
+  "pub_date": "2026-06-09T03:21:53Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjZKSzNyaTRCNFlDb05kZU9yRk5xbk1ZTDNibnhhL2NIM0I4bnc3R2lTRFM4VG1CL3FBMnZ6a3JWYUJqYzE5OU10a1crdkZhTXVLTXhueklOc1JKVFFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwOTY0MDYxCWZpbGU6QXRyaXVtXzAuOS4yX3g2NC1zZXR1cC5leGUKVHZyOFB3UnlXbWR3N2RYeGwxNXdvdDBETnZKa1QrYktPRkdZbWEzeTdNaTlxNC9mNGlvZVFzMC9YR3U4cHJCcit3T2laOFJSTS9sejRZTFVQUDVvRFE9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.9.2/Atrium_0.9.2_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjk4eStsdk5icXJPRGNoT3dOcWV1Y2doTGJvcnJzNVYwbmxzQVhhUkVpTmRwOW5WRUIyQkIxNVRqKzdNRlg4QnBRUmtNRXZqM21EYW15THprNmRKWUFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwOTc1MDczCWZpbGU6QXRyaXVtXzAuOS4zX3g2NC1zZXR1cC5leGUKRW5IR0dvRGZ0dExlbmxxMGlacUpINlVDZzZUbW1QZW42dVNEUUNVTW5JaDJqaDAyU2lrZEd1NjNTUC9mWUQ0Wkd2Z1pUNXAxT2VaZEFuY1RSVkNZQ0E9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.9.3/Atrium_0.9.3_x64-setup.exe"
     }
   }
 }
