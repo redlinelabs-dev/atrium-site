@@ -1,11 +1,11 @@
 {
-  "version": "0.9.3",
-  "notes": "Atrium v0.9.3 — Type to Jump: a keyboard Switcher. Press Ctrl+Shift+K to fuzzy-jump to any pane, project, worktree, or view across all your projects — type a few letters and press Enter. Plain Ctrl+K still works as your shell's kill-line.",
-  "pub_date": "2026-06-09T03:21:53Z",
+  "version": "0.9.4",
+  "notes": "Atrium v0.9.4 — Worktree Lifecycle: create, remove, and prune git worktrees from the UI; spawn any pane kind into any worktree; per-project view memory; top-level ErrorBoundary so crashes show a recoverable panel instead of a blank screen.",
+  "pub_date": "2026-06-10T00:00:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjk4eStsdk5icXJPRGNoT3dOcWV1Y2doTGJvcnJzNVYwbmxzQVhhUkVpTmRwOW5WRUIyQkIxNVRqKzdNRlg4QnBRUmtNRXZqM21EYW15THprNmRKWUFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwOTc1MDczCWZpbGU6QXRyaXVtXzAuOS4zX3g2NC1zZXR1cC5leGUKRW5IR0dvRGZ0dExlbmxxMGlacUpINlVDZzZUbW1QZW42dVNEUUNVTW5JaDJqaDAyU2lrZEd1NjNTUC9mWUQ0Wkd2Z1pUNXAxT2VaZEFuY1RSVkNZQ0E9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.9.3/Atrium_0.9.3_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYncwV2R4SXFRM1lUVDZQUnhrYlBEQXcxaGt0VW9RdjNRMGRweU5ackhITysyVHpPSk9TcFdCWlNyQlhjckhQSmMxOXFaVEMwaCtUcGhUUjdBQzdXVUFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMTIzODE1CWZpbGU6QXRyaXVtXzAuOS40X3g2NC1zZXR1cC5leGUKWDFBVjFxci9tT0RQNTZ5clhLVFRFMndjQm85SG1mYkE4WSs5OWU1Z1h3MHFsNlJLdys2U3E5MmxiTno2YlkwUjRVZXkyR0tuVUlTN2NUblJla2x2QXc9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.9.4/Atrium_0.9.4_x64-setup.exe"
     }
   }
 }
