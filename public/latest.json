@@ -1,11 +1,11 @@
 {
-  "version": "0.9.4",
-  "notes": "Atrium v0.9.4 — Worktree Lifecycle: create, remove, and prune git worktrees from the UI; spawn any pane kind into any worktree; per-project view memory; top-level ErrorBoundary so crashes show a recoverable panel instead of a blank screen.",
-  "pub_date": "2026-06-10T00:00:00Z",
+  "version": "0.10.0",
+  "notes": "Atrium v0.10.0 \u2014 The Cockpit, Furnished: the full next-era program (worktree restore resilience, status legibility, UX calm pass, the Worktree View, and the Pro v1 bundle) plus a deep polish-and-fix pass \u2014 6 preset themes, command/keybinding registry + ? cheatsheet, pin-a-pane, Open-lazygit hatch, scrollback search, worktree Inventory triage, a constant-identity status orb, CVD-safe agent colors, and fixes for the close button, the worktree-create hang, and an atrium.toml import security gate.",
+  "pub_date": "2026-06-14T16:00:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYncwV2R4SXFRM1lUVDZQUnhrYlBEQXcxaGt0VW9RdjNRMGRweU5ackhITysyVHpPSk9TcFdCWlNyQlhjckhQSmMxOXFaVEMwaCtUcGhUUjdBQzdXVUFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMTIzODE1CWZpbGU6QXRyaXVtXzAuOS40X3g2NC1zZXR1cC5leGUKWDFBVjFxci9tT0RQNTZ5clhLVFRFMndjQm85SG1mYkE4WSs5OWU1Z1h3MHFsNlJLdys2U3E5MmxiTno2YlkwUjRVZXkyR0tuVUlTN2NUblJla2x2QXc9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.9.4/Atrium_0.9.4_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYnhkOGYyRzE4ZkhzSXFoWHJJYVRhU2VDMFRNQjI5YUJadkkxRkVVVXFScHp1eGJUS0ZwSUsxZkhrcTNVNkJ6RFRMSHUySHI3YlRMcTI0NjluTGtKQVFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxNDY3MDg3CWZpbGU6QXRyaXVtXzAuMTAuMF94NjQtc2V0dXAuZXhlClg0bTdWNW11eTFHMHk1dE1MQXpYODhTVnlJT3JPZU1NdHBuYU1Vb29MSElOSTN0WHJNbGd2SlNKUjFiWEFqTkR5RVNZelpwdkZFazV3N1QwY2ZXOUNBPT0K",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.10.0/Atrium_0.10.0_x64-setup.exe"
     }
   }
 }
