@@ -5,7 +5,7 @@ description: Atrium is a calm, single-window cockpit for your coding agents, ter
 
 Atrium is a **calm, single-window cockpit** for everything you run while building software: coding
 agents (Claude Code, Codex, …), terminals, and dev servers — organized into projects, all visible at a
-glance. It's a native desktop app (Tauri 2 + React + xterm.js), built especially for **Windows + WSL2**.
+glance. It's a native desktop app (Tauri 2 + React + xterm.js), built for **Windows + WSL2 and macOS**.
 
 ## The one-sentence version
 
@@ -34,8 +34,9 @@ boundary — *visibility-in, never control-out* — is a hard architectural line
 [Core concepts](/atrium-site/guides/concepts/)).
 
 The crowded 2026 lane is multi-agent *orchestration*. Atrium's lane is the quieter, more durable one:
-the **calm cockpit + cross-agent awareness + shared memory**, across the WSL boundary that other tools
-don't cross.
+the **calm cockpit + cross-agent awareness + shared memory** — including, on Windows, across the WSL
+boundary that other tools don't cross. On macOS there's no such boundary to cross; the same cockpit
+just drives your native shell directly.
 
 ## Next
 

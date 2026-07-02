@@ -12,6 +12,10 @@ hero:
       link: https://github.com/redlinelabs-dev/atrium-site/releases/latest
       icon: external
       variant: primary
+    - text: Download for macOS
+      link: https://github.com/redlinelabs-dev/atrium-site/releases/latest
+      icon: external
+      variant: primary
     - text: What is Atrium?
       link: /atrium-site/guides/what-is-atrium/
       icon: right-arrow
@@ -37,8 +41,9 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 		A local MCP server lets your agents read the whole cockpit — project + pane status, even a sibling
 		pane's logs — and write into Atrium's TODOs and scratchpad.
 	</Card>
-	<Card title="Windows + WSL, natively" icon="laptop">
-		Built for the WSL2 boundary. The agent integration crosses WSL↔Windows over the shared filesystem,
-		so it works on a default WSL2 setup with no networking, firewall, or config.
+	<Card title="Windows + WSL and macOS, natively" icon="laptop">
+		Built for the WSL2 boundary — the agent integration crosses WSL↔Windows over the shared filesystem,
+		no networking, firewall, or config. On macOS there's no boundary to cross: Atrium drives your
+		native zsh, bash, or fish directly.
 	</Card>
 </CardGrid>

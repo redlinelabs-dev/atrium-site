@@ -5,8 +5,8 @@ description: Projects, groups, panes, providers, the .atrium folder, and Atrium'
 
 ## Projects → groups → panes
 
-- **Project** — a folder + a connection (which shell, e.g. WSL2, and the working directory). The unit
-  you switch between.
+- **Project** — a folder + a connection (which shell, e.g. WSL2 on Windows or a native shell like zsh
+  on macOS, and the working directory). The unit you switch between.
 - **Group** — a labeled section within a project (Agents / Terminals / Commands).
 - **Pane** — a single live terminal: an **agent** (e.g. `claude`), a plain **terminal**, or a
   **command** (a script Atrium detected or you defined). Panes stay mounted/alive when hidden — switching

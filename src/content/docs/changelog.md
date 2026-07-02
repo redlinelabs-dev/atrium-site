@@ -6,10 +6,66 @@ description: Notable changes to Atrium, newest first. Full history on GitHub Rel
 Newest first. Each minor release is a deliberate "floor" — functional and daily-driven before the next.
 Full history + downloads on [GitHub Releases](https://github.com/redlinelabs-dev/atrium-site/releases).
 
+## 0.11.1 — "Paste the Picture"
+
+Native **macOS support** ships: a universal (Apple Silicon + Intel) build with darwin auto-update
+entries alongside the existing Windows updater. See [Install & first run](/atrium-site/guides/install/)
+for the Gatekeeper first-run step (ad-hoc signed, not notarized).
+
+- **Paste screenshots into panes** — `Ctrl+V` with an image on the clipboard writes it to a temp PNG
+  and pastes the (shell-translated) path into the pane, so agents can read the image natively.
+
+## 0.11.0 — "The Thaw"
+
+Six fixes and quality-of-life improvements across the pane/terminal layer:
+
+- **All-shells PTY freeze fix** — resolves a freeze that could affect any shell, not just one kind.
+- **Clickable terminal hyperlinks**, plus a WebGL repaint fix.
+- **Respawn preserves the live working directory** instead of resetting to the project root.
+- **Git Bash opens in the project directory.**
+- **Per-project active-pane memory** — Atrium remembers which pane was focused, per project.
+- **WSL2 pressure relief + disclosure** — eases and surfaces the shared-VM memory-pressure behavior
+  described below.
+
+## 0.10.0 — "The Cockpit, Furnished" — 2026-06-14
+
+The largest release since the cockpit foundation: a full next-era program plus a deep polish-and-fix
+pass, consolidating everything accumulated since 0.9.4.
+
+- **Worktree View** — a pane-geometry lens: partition selector, agent/shell slots, tabbed panes,
+  per-project view memory, empty-slot spawn, and entry points from the Sidebar and Switcher.
+- **Pro v1 bundle** — focus-aware desktop notifications + OSC 9/777 passthrough, named workspaces
+  (save/materialize), Switcher action verbs, and per-worktree runtime vars (`$ATRIUM_PORT` /
+  `$ATRIUM_WORKTREE`) so two worktrees can run the same dev server on distinct ports. All Pro code is
+  dead-code-eliminated from the Free build.
+- **Theming** — six preset themes (dark, light, high-contrast, nord, solarized-dark, sepia) with a
+  glow-intensity control; status-orb semantics stay constant across every theme.
+- **Command palette** — a `?` shortcut cheatsheet overlay over a single data-first command/keybinding
+  registry.
+- **Pane power** — pin a pane to the top of its group, scrollback search (`Ctrl+Shift+/`), "Open
+  lazygit here," a per-pane Restart button.
+- **Status legibility** — the `StatusDot` orb system across Sidebar, Dashboard, and Rail, with a
+  status legend and hover descriptions.
+- **Distribution/quality** — copy a diff or commit-graph as shareable markdown, plus a no-telemetry pass.
+
+## 0.9.4 — "Worktree Lifecycle"
+
+Full worktree lifecycle management from the UI.
+
+- **Spawn any pane kind into a worktree** — a `＋▾` caret per worktree opens the full spawn menu
+  scoped to that directory.
+- **New/remove worktree dialogs** — create a worktree with a new or existing branch; remove with a
+  two-gate destructive confirm (homed panes, git's `--force` gate on dirty worktrees).
+- **Prune orphaned worktrees** — one-click `git worktree prune` from Inventory, with a prunable-count
+  badge.
+- **Per-project Sidebar view memory** — the Groups/Worktrees toggle persists and survives restart.
+- **ErrorBoundary** — a top-level React error boundary so render crashes show a recoverable panel
+  instead of a blank screen.
+
 ## 0.9.0 — "Editions & Worktrees"
 
 A git-worktree lens for the Sidebar, plus the developer foundation for the Free/Pro editions.
-Windows/WSL2 build — native macOS/Linux is still in progress.
+Windows/WSL2 build at the time — native macOS support shipped later, in 0.11.1.
 
 - **Worktrees view** — a git-worktree organizing lens in the Sidebar: each worktree as a two-line
   row with a group-colored orb, empty worktrees as launch targets, drift detection, and

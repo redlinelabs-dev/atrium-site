@@ -1,24 +1,50 @@
 ---
 title: Install & first run
-description: Download Atrium for Windows, get past SmartScreen on first launch, and connect your first WSL project.
+description: Download Atrium for Windows or macOS, get past SmartScreen (Windows) or Gatekeeper (macOS) on first launch, and connect your first project.
 ---
 
 ## Requirements
 
-- **Windows 10/11.** Atrium is a native Windows app; agents and projects typically live in **WSL2**
-  (Ubuntu or similar), which Atrium drives across the WSL↔Windows boundary.
-- Your coding agents installed where you run them (e.g. `claude` in your WSL distro).
+- **Windows 10/11**, 64-bit. Agents and projects typically live in **WSL2** (Ubuntu or similar),
+  which Atrium drives across the WSL↔Windows boundary.
+- **macOS** (Apple Silicon or Intel — one universal build). Agents and projects run **natively** —
+  no WSL2-equivalent boundary to cross.
+- Your coding agents installed where you run them (e.g. `claude` in your WSL distro or macOS shell).
 
 ## Download & install
 
-1. Grab the latest installer from the [releases page](https://github.com/redlinelabs-dev/atrium-site/releases/latest)
-   — `Atrium_<version>_x64-setup.exe`.
+1. Grab the latest release from the [releases page](https://github.com/redlinelabs-dev/atrium-site/releases/latest):
+   - **Windows** — `Atrium_<version>_x64-setup.exe`
+   - **macOS** — `Atrium_<version>_universal.dmg` (one build for Apple Silicon and Intel)
 2. Run it. Atrium installs per-user and self-updates from then on (signed updates).
 
 ### "Windows protected your PC" (SmartScreen)
 
 The installer isn't EV-code-signed yet, so SmartScreen may warn on first run. Click **More info →
 Run anyway**. (Updates after the first install are cryptographically signed and verified by the app.)
+
+### The macOS Gatekeeper block
+
+Atrium's macOS build is **ad-hoc signed, not notarized** (no Apple Developer Program enrollment) — so
+first launch takes one extra step:
+
+1. Drag `Atrium.app` into **/Applications**. This is required, not just convenient — Atrium's
+   self-updater only works from `/Applications`; if you launch it from anywhere else, it shows a
+   one-time prompt and disables updates until you move it.
+2. Open it. On macOS Sequoia (15)+, Gatekeeper blocks it with an *"Apple could not verify…"*
+   warning — right-click-open no longer bypasses this (Apple removed that escape hatch in 15.0).
+   Clear it with any of:
+   - **System Settings → Privacy & Security → scroll down → "Open Anyway"**, or
+   - the terminal one-liner:
+     ```sh
+     xattr -r -d com.apple.quarantine /Applications/Atrium.app
+     ```
+   - **Homebrew** (personal tap, prints the same one-liner as a caveat after install):
+     ```sh
+     brew tap redlinelabs-dev/tap
+     brew install --cask atrium
+     ```
+3. This is a **one-time** step per install — once cleared, self-update keeps working normally.
 
 ## First run
 

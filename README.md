@@ -5,6 +5,7 @@ are visible, grouped, and interactive — in one place. Atrium *organizes what's
 running*. It doesn't do the running for you. *Organizer, not orchestrator.*
 
 **→ [Download for Windows](https://github.com/redlinelabs-dev/atrium-site/releases/latest)**
+&nbsp;·&nbsp; **[Download for macOS](https://github.com/redlinelabs-dev/atrium-site/releases/latest)**
 &nbsp;·&nbsp; [redlinelabs-dev.github.io/atrium-site](https://redlinelabs-dev.github.io/atrium-site)
 
 ## What it does
@@ -17,8 +18,12 @@ running*. It doesn't do the running for you. *Organizer, not orchestrator.*
   starting, or crashed, so a dead process can't quietly go unnoticed.
 - **Windows & WSL native** — drives PowerShell, Git Bash, and WSL2 side by side,
   and knows which git branch / worktree each pane is sitting in.
+- **macOS native** — drives zsh, bash, and fish directly, no WSL2-equivalent
+  boundary to cross.
 
 ## Install
+
+**Windows**
 
 1. Grab the latest installer from
    **[Releases](https://github.com/redlinelabs-dev/atrium-site/releases/latest)**
@@ -27,6 +32,16 @@ running*. It doesn't do the running for you. *Organizer, not orchestrator.*
    first launch — click **More info → Run anyway**.
 3. It installs per-user (no admin needed) and uninstalls cleanly from Add/Remove
    Programs.
+
+**macOS**
+
+1. Grab the latest `.dmg` from
+   **[Releases](https://github.com/redlinelabs-dev/atrium-site/releases/latest)**
+   (`Atrium_<version>_universal.dmg` — one build for Apple Silicon and Intel) and
+   drag `Atrium.app` into `/Applications`.
+2. Atrium is ad-hoc signed, not notarized, so macOS Gatekeeper blocks the first
+   launch — see the [install guide](https://redlinelabs-dev.github.io/atrium-site/guides/install/)
+   for the one-time fix.
 
 Each release lists a SHA-256 checksum if you'd like to verify your download.
 

@@ -22,9 +22,11 @@ Visibility-in, never control-out.
 
 When you open a Claude pane, Atrium writes a project-scoped `.mcp.json` that points at the Atrium binary
 in **stdio** mode (`atrium --mcp-stdio --root <…/.atrium>`). The agent spawns it and talks over
-stdin/stdout; it reaches Atrium's state through the **shared filesystem**, so it works on a default WSL2
-(NAT) setup with no port, firewall, or token. (Why stdio and not HTTP? A Windows-bound HTTP server is
-unreachable from a default WSL2 distro — the shared filesystem is the one crossing that always works.)
+stdin/stdout; it reaches Atrium's state through the **shared filesystem**, so it works with no port,
+firewall, or token — on Windows, on a default WSL2 (NAT) setup, and on macOS. (Why stdio and not HTTP?
+On Windows, a Windows-bound HTTP server is unreachable from a default WSL2 distro — the shared
+filesystem is the one crossing that always works. macOS has no such boundary, but stdio works the same
+way there too, so there's one mechanism for both platforms.)
 
 Run `/mcp` in Claude to confirm the `atrium` server is connected.
 
