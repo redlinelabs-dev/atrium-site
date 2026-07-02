@@ -6,6 +6,14 @@
     "windows-x86_64": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYndxVUdWUEYyNWY3TlBhdnd5Wm8yLzRuY0d6eWNTeVpnZXdmbjRHbjUxRGF3K3RKUFVTdldJT0F3elU5SWNYYUV2ZzY3ME83dTdmaDErM256bnBiYVFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyOTkxOTEwCWZpbGU6QXRyaXVtXzAuMTEuMV94NjQtc2V0dXAuZXhlCnNaQS9PdVRSQW5uUVRJVWRoOFlTTUFDL0JqTE5jTkJLT2ljZG1LU3BaYUtwWkQ4eFFGdXpjR2JZNlRMMnNSVDZ1U0FIVUNXL0RObzZwbTRWQnBveEJRPT0K",
       "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.11.1/Atrium_0.11.1_x64-setup.exe"
+    },
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYitFRlRoS1JicmsrSkxFdHBmc2ptdlI5VG1SS1QwVGpDMVhLeXo5OFVjWDFJSlZ2Ty81VDUxRzYxQUNVUUZ5T09ISFpwUy9MQWZEL3N2SldHd3lIS3dBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzMDEwNDkzCWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKaUYrMmMySXFVcDUzNjRpNEpoT1huOGk1WUk1QVR0WkphQ0piVGY1cUxoOERVQmRqSFE1bGV0NnViSkdrREVGQ01lb1JoQVhoNGF2aEdBay9SL0taQlE9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.11.1/Atrium.app.tar.gz"
+    },
+    "darwin-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYitFRlRoS1JicmsrSkxFdHBmc2ptdlI5VG1SS1QwVGpDMVhLeXo5OFVjWDFJSlZ2Ty81VDUxRzYxQUNVUUZ5T09ISFpwUy9MQWZEL3N2SldHd3lIS3dBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzMDEwNDkzCWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKaUYrMmMySXFVcDUzNjRpNEpoT1huOGk1WUk1QVR0WkphQ0piVGY1cUxoOERVQmRqSFE1bGV0NnViSkdrREVGQ01lb1JoQVhoNGF2aEdBay9SL0taQlE9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.11.1/Atrium.app.tar.gz"
     }
   }
 }
