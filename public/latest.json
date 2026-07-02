@@ -1,11 +1,11 @@
 {
-  "version": "0.11.0",
-  "notes": "Atrium v0.11.0 — The Thaw: stops the sporadic all-shells freeze, reopens a restarted shell where you were working (not /), adds clickable terminal hyperlinks (OSC 8 + bare URLs) plus a WebGL repaint fix, opens Git Bash in the project directory, remembers the active pane per project across switches, and lightens Atrium's WSL2 footprint (active-scoped polling + staggered spawns) with an honest heavy-WSL usage note.",
-  "pub_date": "2026-07-02T03:22:19Z",
+  "version": "0.11.1",
+  "notes": "Atrium v0.11.1 — Paste the Picture: paste screenshots straight into agent panes (Ctrl+V with an image saves a temp PNG and pastes the shell-correct path; agents read it natively). Text paste unchanged.",
+  "pub_date": "2026-07-02T11:32:49Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYi9YWFJabjRQS29hTFVMUWhkd0xVY1BsYjEwNVB2aFY4M1U4TjlJNGs2cDg1c1h4UnNuMDZtZTlrY3UrRGcrRStLcWRCS3k2VHNCUExNTmRkWURnSVFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyOTYyMjE4CWZpbGU6QXRyaXVtXzAuMTEuMF94NjQtc2V0dXAuZXhlCjMxVXluMllKM3JKaHNTTitKSld5RExTdzF0eW5jc3N1K3BHaXA3NWpFVmk4ZXpVWU1GbUw2NVdUWWZsankvZktVNTl4S29oUys3ajVLb1NoWUUyV0NRPT0K",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.11.0/Atrium_0.11.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYndxVUdWUEYyNWY3TlBhdnd5Wm8yLzRuY0d6eWNTeVpnZXdmbjRHbjUxRGF3K3RKUFVTdldJT0F3elU5SWNYYUV2ZzY3ME83dTdmaDErM256bnBiYVFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyOTkxOTEwCWZpbGU6QXRyaXVtXzAuMTEuMV94NjQtc2V0dXAuZXhlCnNaQS9PdVRSQW5uUVRJVWRoOFlTTUFDL0JqTE5jTkJLT2ljZG1LU3BaYUtwWkQ4eFFGdXpjR2JZNlRMMnNSVDZ1U0FIVUNXL0RObzZwbTRWQnBveEJRPT0K",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.11.1/Atrium_0.11.1_x64-setup.exe"
     }
   }
 }
