@@ -50,9 +50,9 @@ first launch takes one extra step:
 
 1. **Add a project** — point it at a folder (a WSL path like `/home/you/code/my-app`, or a native
    path). Atrium detects the shell and sets the project's working directory.
-2. **Add panes** — within a project's groups, open an **agent** pane (e.g. `claude`), a **terminal**, or
-   a **command** (Atrium auto-detects `package.json` / `Makefile` / `Cargo.toml` / … scripts you can add
-   in one click).
+2. **Add panes** — within a project's groups (Agents / Terminals / Commands by default), open an
+   **agent** pane (e.g. `claude`), a **terminal**, or a **command** (Atrium auto-detects `package.json`
+   / `Makefile` / `justfile` scripts you can add in one click).
 3. **Run.** Liveness dots, activity, and the live working directory light up as things start.
 
 Panes stay alive when you switch away, and your session restores when you reopen Atrium (agent panes
@@ -60,10 +60,19 @@ come back as click-to-wake skeletons — Atrium never auto-spawns processes on l
 
 ## Updating
 
-Atrium checks for updates on launch and applies them in place. You can keep working; the new version
-takes effect next restart.
+Atrium checks for updates on launch and every few hours after, and shows a quiet, dismissible pill when
+one is available. It **never restarts itself** — that would kill your live terminals; you choose when
+to apply. There's also a manual **Check for updates** in Settings → About. Updates are
+cryptographically signed and verified by the app.
+
+## A note on WSL2 memory (Windows)
+
+All WSL panes share one WSL2 VM (`vmmem`), and a heavy agent fleet can approach its memory cap — Atrium
+shows per-pane memory so you can see it coming. Relief valves: close idle panes, raise the cap in
+`%UserProfile%\.wslconfig`, or `wsl --shutdown` between sessions.
 
 ## Next
 
-- [Core concepts](/atrium-site/guides/concepts/) — projects, panes, providers, the boundary.
-- [Using Atrium with agents (MCP)](/atrium-site/guides/agents-mcp/) — give your agents eyes into the cockpit.
+- [Core concepts](/atrium-site/guides/concepts/) — projects, panes, lenses, the boundary.
+- [Panes & terminals](/atrium-site/guides/panes/) — what a pane can do.
+- [The Atrium MCP server](/atrium-site/guides/agents-mcp/) — give your agents eyes into the cockpit.

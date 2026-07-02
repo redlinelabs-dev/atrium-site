@@ -1,49 +1,82 @@
 ---
 title: Atrium
-description: A calm, single-window cockpit for your coding agents and dev stack — with an MCP layer that lets agents see and annotate it.
+description: A calm, single-window cockpit for your coding agents and dev stack — projects, worktrees, and live status in one quiet window.
 template: splash
 hero:
-  tagline: One calm window for every project, agent, and terminal — and an MCP layer that lets your agents see the whole cockpit and write into it.
+  tagline: One calm window for every project, agent, and terminal. Atrium organizes what's running — it never runs the work for you.
   image:
     file: ../../assets/screenshot.png
     alt: The Atrium cockpit — projects, panes, and live status in one window.
   actions:
-    - text: Download for Windows
+    - text: Download Atrium
       link: https://github.com/redlinelabs-dev/atrium-site/releases/latest
-      icon: external
+      icon: down-caret
       variant: primary
-    - text: Download for macOS
-      link: https://github.com/redlinelabs-dev/atrium-site/releases/latest
+    - text: Other platforms & versions
+      link: https://github.com/redlinelabs-dev/atrium-site/releases
       icon: external
-      variant: primary
+      variant: minimal
     - text: What is Atrium?
       link: /atrium-site/guides/what-is-atrium/
-      icon: right-arrow
-      variant: minimal
-    - text: Using Atrium with agents
-      link: /atrium-site/guides/agents-mcp/
       icon: right-arrow
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
+<script>{`
+// Platform-aware download: point the primary hero button at the direct installer for
+// this OS, using the same latest.json the app's updater reads (served at the site root).
+// If anything here fails, the button keeps its releases-page fallback link.
+(async () => {
+  try {
+    const btn = document.querySelector('.hero a[href$="/releases/latest"]');
+    if (!btn) return;
+    const isWin = /Windows/i.test(navigator.userAgent);
+    const isMac = /Macintosh|Mac OS X/i.test(navigator.userAgent);
+    if (!isWin && !isMac) return; // Linux et al: keep the releases-page link
+    const res = await fetch('/atrium-site/latest.json');
+    if (!res.ok) return;
+    const { version } = await res.json();
+    if (!/^[0-9A-Za-z.-]+$/.test(version)) return;
+    const asset = isWin
+      ? 'Atrium_' + version + '_x64-setup.exe'
+      : 'Atrium_' + version + '_universal.dmg';
+    btn.href = 'https://github.com/redlinelabs-dev/atrium-site/releases/download/v' + version + '/' + asset;
+    const label = isWin ? 'Download for Windows' : 'Download for macOS';
+    for (const node of btn.childNodes) {
+      if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+        node.textContent = label + ' · v' + version;
+        break;
+      }
+    }
+  } catch { /* leave the fallback link as-is */ }
+})();
+`}</script>
+
 <CardGrid stagger>
 	<Card title="Organize, don't orchestrate" icon="puzzle">
 		Projects → groups → panes (agents, terminals, commands) in one quiet window. Atrium organizes what's
-		running; it never drives the work for you.
+		running; it never drives the work for you. That boundary is structural, not a setting.
 	</Card>
 	<Card title="Live at a glance" icon="approve-check">
-		Liveness dots, activity pulses, attention flags, per-pane working directory, context-window % on
-		Claude panes, and a cross-project dashboard.
+		Status orbs that pulse while an agent works and breathe when it needs you, live working directory
+		and git branch per pane, context-window % on Claude panes, and a cross-project dashboard.
+	</Card>
+	<Card title="Worktrees as a first-class lens" icon="seti:git">
+		See every git worktree, spawn any pane into any worktree, create/remove/prune from the UI, and
+		flip into a per-worktree cockpit view. Jump anywhere with the Switcher (Ctrl+Shift+K).
 	</Card>
 	<Card title="Agents that aren't blind" icon="rocket">
-		A local MCP server lets your agents read the whole cockpit — project + pane status, even a sibling
-		pane's logs — and write into Atrium's TODOs and scratchpad.
+		Sessions resume exactly where they left off, and an opt-in local MCP server lets agents read the
+		cockpit — even a sibling pane's logs — and write into Atrium's TODOs and scratchpad.
 	</Card>
 	<Card title="Windows + WSL and macOS, natively" icon="laptop">
-		Built for the WSL2 boundary — the agent integration crosses WSL↔Windows over the shared filesystem,
-		no networking, firewall, or config. On macOS there's no boundary to cross: Atrium drives your
-		native zsh, bash, or fish directly.
+		Built for the WSL2 boundary — everything crosses WSL↔Windows over the shared filesystem, no
+		networking or config. On macOS, Atrium drives your native zsh, bash, or fish directly.
+	</Card>
+	<Card title="Private by construction" icon="seti:lock">
+		No telemetry, no account, no server in the loop — and a privacy policy that tells you how to
+		verify that yourself.
 	</Card>
 </CardGrid>

@@ -1,34 +1,75 @@
 ---
-title: Using Atrium with agents (MCP)
-description: Atrium's local MCP server gives your coding agents eyes into the cockpit — read project + pane status and logs, and write TODOs + scratchpad — over the shared filesystem, with no networking.
+title: The Atrium MCP server
+description: An opt-in local MCP server gives your coding agents eyes into the cockpit — read project + pane status and logs, write TODOs + scratchpad — over the shared filesystem, with no networking.
 ---
 
-Atrium ships a local **MCP server** so a coding agent running in one of your panes can *see the whole
-cockpit and write into it*. This page is for **both humans and agents** — if you're an LLM working inside
-an Atrium pane, this is your guide to the `atrium` tools.
+The Atrium binary ships a local **MCP server** so a coding agent running in one of your panes can *see
+the whole cockpit and write into it*. It is **opt-in**: current builds don't register it with any agent
+automatically — you connect it yourself (one command, below).
+
+This page is for **both humans and agents** — if you're an LLM working inside an Atrium pane, this is
+your guide to the `atrium` tools.
 
 ## What you can do with it
 
 - **See the cockpit.** "What projects/panes exist? What's running? What's this pane doing?"
 - **Read a sibling pane's logs.** "Read the dev-server pane and tell me why it's 500ing."
-- **Leave a trail the human sees.** Add/Update TODOs and append scratchpad notes — they show up live in
+- **Leave a trail the human sees.** Add/update TODOs and append scratchpad notes — they show up live in
   Atrium's dock.
 
 What you **cannot** do: drive Atrium. There is no tool to spawn, run, restart, or close anything — by
 design ([the boundary](/atrium-site/guides/concepts/#the-boundary--visibility-in-never-control-out)).
-Visibility-in, never control-out.
+Visibility-in, never control-out. A unit test fails Atrium's build if a control verb ever appears in
+the tool surface.
 
-## How it connects (no setup)
+## Connecting it (one-time, per project)
 
-When you open a Claude pane, Atrium writes a project-scoped `.mcp.json` that points at the Atrium binary
-in **stdio** mode (`atrium --mcp-stdio --root <…/.atrium>`). The agent spawns it and talks over
-stdin/stdout; it reaches Atrium's state through the **shared filesystem**, so it works with no port,
-firewall, or token — on Windows, on a default WSL2 (NAT) setup, and on macOS. (Why stdio and not HTTP?
-On Windows, a Windows-bound HTTP server is unreachable from a default WSL2 distro — the shared
-filesystem is the one crossing that always works. macOS has no such boundary, but stdio works the same
-way there too, so there's one mechanism for both platforms.)
+The transport is **stdio**: the agent spawns the Atrium binary itself with `--mcp-stdio` and talks over
+stdin/stdout. State crosses via the **shared filesystem** (`~/.atrium/` + the project's `.atrium/`), so
+there's no port, firewall rule, or token — and on Windows it works even from inside a default (NAT)
+WSL2 distro, where a host-bound HTTP server wouldn't be reachable.
 
-Run `/mcp` in Claude to confirm the `atrium` server is connected.
+Two paths matter:
+
+- **`command`** — the Atrium executable, *as the agent sees it*. From WSL that's the `/mnt/c/...`
+  view of the Windows exe; on macOS it's inside the app bundle.
+- **`--root`** — Atrium's data dir (`~/.atrium`), *as the spawned Atrium process sees it* — so it stays
+  host-native (`C:\Users\...` on Windows) even when the agent lives in WSL.
+
+For Claude Code, register it from the project directory:
+
+```sh
+# Windows + WSL2 (agent in WSL, Atrium on Windows — adjust <you>):
+claude mcp add atrium -- \
+  "/mnt/c/Users/<you>/AppData/Local/Atrium/Atrium.exe" \
+  --mcp-stdio --root 'C:\Users\<you>\.atrium'
+
+# macOS:
+claude mcp add atrium -- \
+  /Applications/Atrium.app/Contents/MacOS/Atrium \
+  --mcp-stdio --root ~/.atrium
+```
+
+Or commit the equivalent project-scoped `.mcp.json` at the repo root:
+
+```json
+{
+  "mcpServers": {
+    "atrium": {
+      "command": "/mnt/c/Users/<you>/AppData/Local/Atrium/Atrium.exe",
+      "args": ["--mcp-stdio", "--root", "C:\\Users\\<you>\\.atrium"]
+    }
+  }
+}
+```
+
+Run `/mcp` in Claude to confirm the `atrium` server is connected. Register **per project** (not
+globally): the per-project tools (TODOs, scratchpad) resolve against the directory the server is
+spawned in.
+
+> **History.** 0.8.0 briefly auto-wrote this `.mcp.json` when you opened a Claude pane; that
+> auto-writer was removed in 0.9.4. MCP discovery will return as an explicit per-project opt-in when
+> the Pro edition ships — it will never be on by default.
 
 ## The tools
 
@@ -65,7 +106,7 @@ project the agent is running in.
 ## Notes for agents
 
 - Status is sourced from a **live snapshot** Atrium refreshes every few seconds — it's near-real-time,
-  not instantaneous.
+  not instantaneous. Atrium must be running for live data to be fresh.
 - `read_pane_output` returns recent scrollback (plain text), not a live stream; call it again for fresh
   output.
 - These tools see the user's own cockpit. Treat pane output as potentially sensitive context.

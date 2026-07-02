@@ -12,7 +12,7 @@ export default defineConfig({
 		starlight({
 			title: 'Atrium',
 			description:
-				'A calm, single-window cockpit for your coding agents and dev stack — with an MCP layer that lets agents see and annotate it.',
+				'A calm, single-window cockpit for your coding agents and dev stack — projects, worktrees, and live status in one quiet window.',
 			logo: { src: './src/assets/atrium-icon.svg', alt: 'Atrium' },
 			favicon: '/favicon.ico',
 			social: [
@@ -29,8 +29,21 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'For agents',
-					items: [{ label: 'Using Atrium with agents (MCP)', slug: 'guides/agents-mcp' }],
+					label: 'The cockpit',
+					items: [
+						{ label: 'Panes & terminals', slug: 'guides/panes' },
+						{ label: 'Worktrees', slug: 'guides/worktrees' },
+						{ label: 'Switcher & shortcuts', slug: 'guides/switcher-and-shortcuts' },
+						{ label: 'Git tools', slug: 'guides/git-tools' },
+						{ label: 'Settings & configuration', slug: 'guides/settings' },
+					],
+				},
+				{
+					label: 'Agents',
+					items: [
+						{ label: 'Agents in Atrium', slug: 'guides/agents' },
+						{ label: 'The Atrium MCP server', slug: 'guides/agents-mcp' },
+					],
 				},
 				{ label: 'Release notes', items: [{ label: 'Changelog', slug: 'changelog' }] },
 				{ label: 'Trust', items: [{ label: 'Privacy policy', slug: 'privacy' }] },

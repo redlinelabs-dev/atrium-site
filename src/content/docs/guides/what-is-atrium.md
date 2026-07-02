@@ -12,19 +12,26 @@ glance. It's a native desktop app (Tauri 2 + React + xterm.js), built for **Wind
 > Atrium **organizes what's running; it doesn't run the work for you.**
 
 You launch the agents and commands; Atrium keeps them in one quiet place, shows you their live state,
-and — new in 0.8.0 — lets those agents *see the cockpit and annotate it* through a local MCP server.
+and stays out of the way.
 
 ## What it's for
 
 - **Stop alt-tabbing across terminal windows.** Projects → groups → panes, each a live terminal that
-  stays alive when you switch away. Sessions restore when you reopen.
-- **Know what's happening without staring.** A liveness dot per pane (starting / running / crashed /
-  exited), an activity pulse while output streams, an attention flag when an agent rings the bell, the
-  live working directory + git branch, and context-window usage % on Claude panes.
-- **See every project at once.** A dashboard with each project's live status, dirty-git dot, and pane
-  counts.
-- **Give your agents situational awareness.** Through the [MCP layer](/atrium-site/guides/agents-mcp/),
-  an agent can ask what else is running, read another pane's logs, and leave TODOs/notes you'll see.
+  stays alive when you switch away. Sessions restore when you reopen — Claude panes resume the exact
+  conversation.
+- **Know what's happening without staring.** A status orb per pane (solid while running, pulsing while
+  working, breathing when an agent needs your input), the live working directory + git branch, and
+  context-window usage % on Claude panes.
+- **See every project at once.** A dashboard with each project's live status, plus an attention rail
+  that surfaces crashed or waiting panes even from background projects.
+- **Work across git worktrees.** A [worktrees lens](/atrium-site/guides/worktrees/) over the sidebar,
+  full create/remove/prune lifecycle from the UI, and a per-worktree cockpit view — built for running
+  parallel agents on parallel branches.
+- **Jump anywhere.** The [Switcher](/atrium-site/guides/switcher-and-shortcuts/) (`Ctrl+Shift+K` /
+  `⌘⇧K`) fuzzy-jumps to any pane, project, worktree, or view across everything you have open.
+- **Give your agents situational awareness — if you want.** An opt-in local
+  [MCP server](/atrium-site/guides/agents-mcp/) lets an agent ask what else is running, read another
+  pane's logs, and leave TODOs/notes you'll see in the dock.
 
 ## What it is *not*
 
@@ -35,11 +42,18 @@ boundary — *visibility-in, never control-out* — is a hard architectural line
 
 The crowded 2026 lane is multi-agent *orchestration*. Atrium's lane is the quieter, more durable one:
 the **calm cockpit + cross-agent awareness + shared memory** — including, on Windows, across the WSL
-boundary that other tools don't cross. On macOS there's no such boundary to cross; the same cockpit
-just drives your native shell directly.
+boundary that other tools don't cross. On macOS there's no such boundary; the same cockpit just drives
+your native shell directly.
+
+## Free and Pro
+
+Atrium's full local organizer — everything described in these docs unless marked otherwise — is
+**free**. A **Pro** edition ("augmentation": desktop notifications, named workspaces, Switcher actions,
+per-worktree runtime vars) is in development; today's releases ship a single standard build, and the
+genuine free/pro installer split lands with 1.0. Nothing is purchasable yet.
 
 ## Next
 
 - [Install & first run](/atrium-site/guides/install/)
 - [Core concepts](/atrium-site/guides/concepts/)
-- [Using Atrium with agents (MCP)](/atrium-site/guides/agents-mcp/)
+- [Panes & terminals](/atrium-site/guides/panes/)

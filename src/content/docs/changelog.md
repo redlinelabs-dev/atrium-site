@@ -61,6 +61,10 @@ Full worktree lifecycle management from the UI.
 - **Per-project Sidebar view memory** — the Groups/Worktrees toggle persists and survives restart.
 - **ErrorBoundary** — a top-level React error boundary so render crashes show a recoverable panel
   instead of a blank screen.
+- **Removed: the `.mcp.json` auto-writer.** Atrium no longer writes MCP discovery config when a Claude
+  pane opens. The [MCP server](/atrium-site/guides/agents-mcp/) itself still ships in the binary —
+  connecting it is now a manual, per-project opt-in. Auto-discovery will return as an explicit opt-in
+  with the Pro edition; it will never be on by default.
 
 ## 0.9.0 — "Editions & Worktrees"
 
@@ -70,10 +74,11 @@ Windows/WSL2 build at the time — native macOS support shipped later, in 0.11.1
 - **Worktrees view** — a git-worktree organizing lens in the Sidebar: each worktree as a two-line
   row with a group-colored orb, empty worktrees as launch targets, drift detection, and
   move-to-worktree. Bare-clone and traditional layouts; graceful on non-git repos.
-- **Free/Pro edition seam (foundation)** — a build-time `isPro()` seam: the MCP server becomes a
-  Pro-only dynamic import, with free/pro build modes and a CI guard proving a free build excludes
-  all Pro/MCP code. Atrium stays **free** (organization); **Pro** (augmentation) is in
-  development. The standard build ships in 0.9.0; the genuine free/pro split lands in 1.0.
+- **Free/Pro edition seam (foundation)** — a build-time `isPro()` seam with free/pro build modes and
+  a CI guard proving a free build excludes all Pro code (at the time, that included the MCP
+  auto-discovery wiring — removed entirely in 0.9.4). Atrium stays **free** (organization); **Pro**
+  (augmentation) is in development. The standard build ships in 0.9.0; the genuine free/pro split
+  lands in 1.0.
 - **Privacy policy** — provable no-telemetry, no backend the app depends on. See
   [Privacy](/atrium-site/privacy/).
 
@@ -85,7 +90,8 @@ The agent-integration layer — **visibility-in, never control-out**.
   shared filesystem (works on default WSL2, no port/firewall/token). Read tools: `list_projects`,
   `list_panes`, `pane_status`, `read_pane_output` (read a sibling pane's logs), `list_todos`,
   `read_scratchpad`. Write-into-Atrium tools: `add_todo`, `set_todo_status`, `append_scratchpad`. No
-  control verb — enforced by a test. See [Using Atrium with agents](/atrium-site/guides/agents-mcp/).
+  control verb — enforced by a test. See [The Atrium MCP server](/atrium-site/guides/agents-mcp/).
+  (The auto-discovery wiring this shipped with was later removed in 0.9.4 — connecting is manual.)
 - **Live status snapshot** — the cockpit publishes real per-pane status so the MCP surface reflects
   what's actually running.
 - **Context-window usage %** on Claude panes (read from Claude's own statusline).
