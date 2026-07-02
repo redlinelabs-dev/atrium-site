@@ -1,11 +1,11 @@
 {
-  "version": "0.10.0",
-  "notes": "Atrium v0.10.0 \u2014 The Cockpit, Furnished: the full next-era program (worktree restore resilience, status legibility, UX calm pass, the Worktree View, and the Pro v1 bundle) plus a deep polish-and-fix pass \u2014 6 preset themes, command/keybinding registry + ? cheatsheet, pin-a-pane, Open-lazygit hatch, scrollback search, worktree Inventory triage, a constant-identity status orb, CVD-safe agent colors, and fixes for the close button, the worktree-create hang, and an atrium.toml import security gate.",
-  "pub_date": "2026-06-14T16:00:00Z",
+  "version": "0.11.0",
+  "notes": "Atrium v0.11.0 — The Thaw: stops the sporadic all-shells freeze, reopens a restarted shell where you were working (not /), adds clickable terminal hyperlinks (OSC 8 + bare URLs) plus a WebGL repaint fix, opens Git Bash in the project directory, remembers the active pane per project across switches, and lightens Atrium's WSL2 footprint (active-scoped polling + staggered spawns) with an honest heavy-WSL usage note.",
+  "pub_date": "2026-07-02T03:22:19Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYnhkOGYyRzE4ZkhzSXFoWHJJYVRhU2VDMFRNQjI5YUJadkkxRkVVVXFScHp1eGJUS0ZwSUsxZkhrcTNVNkJ6RFRMSHUySHI3YlRMcTI0NjluTGtKQVFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxNDY3MDg3CWZpbGU6QXRyaXVtXzAuMTAuMF94NjQtc2V0dXAuZXhlClg0bTdWNW11eTFHMHk1dE1MQXpYODhTVnlJT3JPZU1NdHBuYU1Vb29MSElOSTN0WHJNbGd2SlNKUjFiWEFqTkR5RVNZelpwdkZFazV3N1QwY2ZXOUNBPT0K",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.10.0/Atrium_0.10.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYi9YWFJabjRQS29hTFVMUWhkd0xVY1BsYjEwNVB2aFY4M1U4TjlJNGs2cDg1c1h4UnNuMDZtZTlrY3UrRGcrRStLcWRCS3k2VHNCUExNTmRkWURnSVFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyOTYyMjE4CWZpbGU6QXRyaXVtXzAuMTEuMF94NjQtc2V0dXAuZXhlCjMxVXluMllKM3JKaHNTTitKSld5RExTdzF0eW5jc3N1K3BHaXA3NWpFVmk4ZXpVWU1GbUw2NVdUWWZsankvZktVNTl4S29oUys3ajVLb1NoWUUyV0NRPT0K",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.11.0/Atrium_0.11.0_x64-setup.exe"
     }
   }
 }
