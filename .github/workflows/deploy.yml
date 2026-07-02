@@ -48,7 +48,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          # 30 min (default 10) — Pages incidents leave deployments queued but
-          # still progressing; the default timeout cancels them prematurely.
-          timeout: 1800000
+        # NB: deploy-pages' timeout is capped at 600000 ms (10 min) — it cannot be
+        # raised. If deploys fail stuck in deployment_queued, check githubstatus.com
+        # (Pages incident) and re-run once the incident clears.
