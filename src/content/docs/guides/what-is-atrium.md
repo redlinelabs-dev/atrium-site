@@ -48,9 +48,10 @@ your native shell directly.
 ## Free and Pro
 
 Atrium's full local organizer — everything described in these docs unless marked otherwise — is
-**free**. A **Pro** edition ("augmentation": desktop notifications, named workspaces, Switcher actions,
-per-worktree runtime vars) is in development; today's releases ship a single standard build, and the
-genuine free/pro installer split lands with 1.0. Nothing is purchasable yet.
+**free**, no caps, no nags. A **Pro** edition ("augmentation": desktop notifications, named workspaces,
+Switcher actions, per-worktree runtime vars) is in active development as a one-time-purchase edition;
+today's releases ship a single standard build, and the genuine free/pro installer split lands ahead of
+1.0. Nothing is purchasable yet.
 
 ## Next
 

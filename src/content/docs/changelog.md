@@ -77,8 +77,9 @@ Windows/WSL2 build at the time — native macOS support shipped later, in 0.11.1
 - **Free/Pro edition seam (foundation)** — a build-time `isPro()` seam with free/pro build modes and
   a CI guard proving a free build excludes all Pro code (at the time, that included the MCP
   auto-discovery wiring — removed entirely in 0.9.4). Atrium stays **free** (organization); **Pro**
-  (augmentation) is in development. The standard build ships in 0.9.0; the genuine free/pro split
-  lands in 1.0.
+  (augmentation) is in active development as a paid, one-time-purchase edition. The standard build
+  ships in 0.9.0; the genuine free/pro split lands ahead of 1.0, as part of Atrium's commercial
+  launch.
 - **Privacy policy** — provable no-telemetry, no backend the app depends on. See
   [Privacy](/atrium-site/privacy/).
 
