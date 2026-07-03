@@ -7,7 +7,7 @@ description: Atrium watches nothing you do — no telemetry, no account, no serv
 in the loop. This page says exactly what that means — and, just as importantly, how you can
 check that I'm telling the truth.
 
-_Last updated: 2026-06-08._
+_Last updated: 2026-07-03._
 
 ## The short version
 
@@ -58,12 +58,12 @@ them carry any information about your work.
   any internet connection — but it learns nothing about how you use Atrium. You can also update
   manually instead.
 
-- **Licensing (paid editions only).** Atrium's free edition is free and has no licensing in it
-  at all. If you buy a paid edition in the future, the way it confirms your purchase — an app
-  store's built-in entitlement, or a one-time offline key — verifies **only your license**,
-  never your activity. And it is never something the app *needs in order to run*: if a license
-  check can't reach the network, Atrium keeps working locally. Anti-piracy stays "within
-  reason" — I'd rather a determined freeloader succeed than treat a paying user like a suspect.
+- **Licensing (paid editions only).** Atrium's free edition has no licensing in it at all. For a
+  paid Pro edition, the way it confirms your purchase — a one-time offline key, checked against a
+  merchant-of-record — verifies **only your license**, never your activity. And it is never
+  something the app *needs in order to run*: if a license check can't reach the network, Atrium
+  keeps working locally. Anti-piracy stays "within reason" — I'd rather a determined freeloader
+  succeed than treat a paying user like a suspect.
 
 That's the entire list. No part of it sends your activity anywhere, and the app's core function
 never waits on a server I control.
