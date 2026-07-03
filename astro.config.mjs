@@ -45,6 +45,7 @@ export default defineConfig({
 						{ label: 'The Atrium MCP server', slug: 'guides/agents-mcp' },
 					],
 				},
+				{ label: 'Pricing', items: [{ label: 'Free vs. Pro', slug: 'pricing' }] },
 				{ label: 'Release notes', items: [{ label: 'Changelog', slug: 'changelog' }] },
 				{ label: 'Trust', items: [{ label: 'Privacy policy', slug: 'privacy' }] },
 			],
