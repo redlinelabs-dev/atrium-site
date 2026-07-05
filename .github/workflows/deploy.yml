@@ -47,6 +47,13 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+      # actions/deploy-pages intermittently fails with "Deployment failed, try again later"
+      # (GitHub-side transient; build + artifact are fine). One automatic retry absorbs it —
+      # if THIS also fails, the job goes red and it's worth a human look.
+      - name: Retry deploy (absorb the known Pages transient)
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
         # NB: deploy-pages' timeout is capped at 600000 ms (10 min) — it cannot be
         # raised. If deploys fail stuck in deployment_queued, check githubstatus.com
