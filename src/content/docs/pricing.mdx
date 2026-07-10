@@ -40,13 +40,15 @@ handful of features a developer who works for a living pays for without thinking
 		major version**: every 1.x update is included forever, no renewal required. A future 2.0
 		would be a new purchase, but v1 never gets squeezed. No subscription, ever.
 
-		- **SSH / remote session-attach** — the wedge feature for anyone working on a remote box
+		- **SSH / remote session-attach** — open projects on a remote box over your own `ssh`,
+		  reattach to your own `tmux` sessions; zero credentials stored, ever
+		- **GitHub + Jira, read-only** — a per-project Integration Hub: your PRs with live CI
+		  checks and review states, your issues, your Jira tickets — visibility in, never control out
+		- **My Work** — one calm view of everything assigned to you across GitHub and Jira
 		- **Background monitoring + notifications** — know when a pane needs you, even stepped away
+		- **Session-history search** — search across past terminal sessions, not just the open one
 		- **Named workspaces** — materialize a whole pane setup in one click
-		- **Session-history search** — search into past terminal output
 		- **Worktree runtime vars** — e.g. `PORT=${3000+index}` across parallel worktrees
-		- **Radical theming** — custom themes beyond the presets
-		- **Broadcast input** — send one keystroke to many panes, with safety rails
 
 		{/* Placeholder checkout CTA — real merchant-of-record checkout link lands in Tier M3b (Polar or Lemon Squeezy). Do not wire up payment processing from this link yet. */}
 		[Buy Atrium Pro — $39 (checkout coming soon)](https://github.com/redlinelabs-dev/atrium-site/releases/latest)
@@ -71,6 +73,16 @@ unlocks a crippled app.
 
 No. Atrium has no subscription billing, and never will. You pay once for Pro and get every
 1.x update forever — no renewal, no update window, no subscription infrastructure of any kind.
+
+### Why does the Pro app embed an Atlassian OAuth client secret?
+
+Because Atlassian's OAuth flow requires one, and Atrium has no server to hide it on — there is
+no Atrium backend, by promise. The embedded "secret" is not load-bearing: the actual security
+boundary is PKCE plus a localhost-only callback, so extracting the string from the binary gets
+you nothing — it can't read anyone's Jira data without the user completing Atlassian's own
+consent screen. This is a deliberate, documented trade-off in favor of "no backend, ever," not
+an oversight. (Every API call goes directly from your machine to Atlassian's; nothing routes
+through us — see the [privacy policy](/atrium-site/privacy/).)
 
 ### How does checkout work?
 
