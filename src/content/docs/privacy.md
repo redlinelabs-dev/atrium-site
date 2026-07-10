@@ -7,7 +7,7 @@ description: Atrium watches nothing you do — no telemetry, no account, no serv
 in the loop. This page says exactly what that means — and, just as importantly, how you can
 check that I'm telling the truth.
 
-_Last updated: 2026-07-03._
+_Last updated: 2026-07-10 (opt-in crash reports amendment, ADR-0035)._
 
 ## The short version
 
@@ -32,8 +32,15 @@ Nothing. To be specific, Atrium does **not** collect, store, or transmit:
   these sessions; it does not observe their contents.
 - **Identifiers** — no account, no sign-in, no device fingerprint, no advertising ID, no
   analytics or "anonymous usage statistics."
-- **Crash or error reports** — Atrium does not phone home when something breaks. If you want to
-  report a bug, you do it yourself, on purpose, on the public Support channel (below).
+- **Crash or error reports — opt-in, off by default.** Atrium does not phone home when
+  something breaks, unless you've turned on "Send crash reports" in Settings → About (it is
+  off by default and you can turn it off again at any time). When it's on, a crash sends
+  exactly: the app version, your OS and OS version, which edition you run, and the crash's
+  error message and stack trace — with any file path outside Atrium's own code, and anything
+  that looks like your username, stripped out first, on your machine, before anything is sent.
+  It never sends your files, projects, panes, commands, or anything you typed. You can still
+  always report a bug yourself, by hand, on the public Support channel (below) — the setting
+  only covers *automatic* reports.
 
 There is no analytics SDK, no tracking pixel, and no usage dashboard — because there is no data
 flowing to one.
@@ -64,6 +71,16 @@ them carry any information about your work.
   something the app *needs in order to run*: if a license check can't reach the network, Atrium
   keeps working locally. Anti-piracy stays "within reason" — I'd rather a determined freeloader
   succeed than treat a paying user like a suspect.
+
+- **Crash reports (opt-in only, off by default).** If you've turned this on, a crash in
+  Atrium's own code sends one small report to an endpoint I run — no third-party analytics
+  vendor is involved. The report contains only your app version, OS, edition, and the crash's
+  error message and stack trace, with file paths and usernames stripped down to Atrium's own
+  source locations before it ever leaves your machine. It never contains your files, projects,
+  panes, commands, or anything you typed. Like the update check, this is a best-effort call —
+  if it fails, or you're offline, Atrium works exactly the same either way. You can verify this
+  yourself the same way as everything else on this page: turn the setting off, or watch the
+  wire — with the setting off, this endpoint is never contacted at all.
 
 That's the entire list. No part of it sends your activity anywhere, and the app's core function
 never waits on a server I control.
