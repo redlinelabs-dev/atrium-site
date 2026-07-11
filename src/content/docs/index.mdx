@@ -1,6 +1,6 @@
 ---
 title: Atrium
-description: A calm, single-window cockpit for your coding agents and dev stack — projects, worktrees, and live status in one quiet window.
+description: A calm, single-window cockpit for your coding agents and dev stack. The organizer is free forever; Pro adds SSH, GitHub + Jira, and My Work for $39 once — no subscription.
 template: splash
 hero:
   tagline: One calm window for every project, agent, and terminal. Atrium organizes what's running — it never runs the work for you.
@@ -20,7 +20,7 @@ hero:
       link: /atrium-site/guides/what-is-atrium/
       icon: right-arrow
       variant: minimal
-    - text: Pricing
+    - text: Atrium Pro — $39
       link: /atrium-site/pricing/
       icon: right-arrow
       variant: minimal
@@ -58,6 +58,10 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 })();
 `}</script>
 
+## Free, forever — the whole organizer
+
+Everything below is in the free tier. No caps, no nags, nothing held back to force an upgrade.
+
 <CardGrid stagger>
 	<Card title="Organize, don't orchestrate" icon="puzzle">
 		Projects → groups → panes (agents, terminals, commands) in one quiet window. Atrium organizes what's
@@ -87,11 +91,15 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 ## Atrium Pro — the augmentation layer
 
-The organizer above is free, forever, with no caps. **Atrium Pro** ($39 one-time, every 1.x update
-included forever) adds what a working developer pays for without thinking: a per-project
-[Integration Hub](/atrium-site/guides/pro-integrations/) — your GitHub PRs with live CI checks,
-your Jira tickets, read-only always — a cross-project **My Work** view, calm state-change
-notifications, [SSH remote projects](/atrium-site/guides/pro-ssh/) over your own `ssh` + `tmux`,
-session-history search, named workspaces, and per-worktree runtime vars.
+**Atrium Pro** ($39 one-time, every 1.x update included forever) adds what a working developer
+pays for without thinking:
+
+- **[SSH remote projects](/atrium-site/guides/pro-ssh/)** — over your own `ssh` + `tmux`; zero credentials stored
+- **[GitHub + Jira Integration Hub](/atrium-site/guides/pro-integrations/)** — your PRs, CI checks, and tickets, read-only always
+- **My Work** — everything assigned to you across GitHub + Jira, one view
+- **Notifications** — calm, focus-aware desktop alerts on state changes
+- **Session-history search** — across past sessions, not just the open one
+- **Named workspaces** — a whole pane setup in one click
+- **Worktree runtime vars** — e.g. `PORT=${3000+index}` across parallel worktrees
 
 [**Buy Atrium Pro — $39**](https://buy.polar.sh/polar_cl_c3Z1l6fB0kj5T4YF8KBZI8XiQFjWtzdbINqMR1moRg5) · [Compare Free vs. Pro](/atrium-site/pricing/)

@@ -22,6 +22,11 @@ export default defineConfig({
 			customCss: ['./src/styles/custom.css'],
 			sidebar: [
 				{
+					label: 'Buy Pro — $39',
+					link: 'https://buy.polar.sh/polar_cl_c3Z1l6fB0kj5T4YF8KBZI8XiQFjWtzdbINqMR1moRg5',
+					attrs: { target: '_blank', class: 'buy-cta' },
+				},
+				{
 					label: 'Start here',
 					items: [
 						{ label: 'What is Atrium?', slug: 'guides/what-is-atrium' },
@@ -47,7 +52,7 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Pro',
+					label: 'Pro features',
 					items: [
 						{ label: 'GitHub + Jira integrations', slug: 'guides/pro-integrations' },
 						{ label: 'SSH remote projects', slug: 'guides/pro-ssh' },
@@ -55,14 +60,7 @@ export default defineConfig({
 				},
 				{
 					label: 'Pricing',
-					items: [
-						{ label: 'Free vs. Pro', slug: 'pricing' },
-						{
-							label: 'Buy Pro — $39',
-							link: 'https://buy.polar.sh/polar_cl_c3Z1l6fB0kj5T4YF8KBZI8XiQFjWtzdbINqMR1moRg5',
-							attrs: { target: '_blank' },
-						},
-					],
+					items: [{ label: 'Free vs. Pro', slug: 'pricing' }],
 				},
 				{ label: 'Release notes', items: [{ label: 'Changelog', slug: 'changelog' }] },
 				{ label: 'Trust', items: [{ label: 'Privacy policy', slug: 'privacy' }] },

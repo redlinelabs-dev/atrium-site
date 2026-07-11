@@ -16,7 +16,7 @@ and stays out of the way.
 
 ## What it's for
 
-- **Stop alt-tabbing across terminal windows.** Projects → groups → panes, each a live terminal that
+- **Stop alt-tabbing across terminal windows.** [Projects → groups → panes](/atrium-site/guides/concepts/#projects--groups--panes), each a live terminal that
   stays alive when you switch away. Sessions restore when you reopen — Claude panes resume the exact
   conversation.
 - **Know what's happening without staring.** A status orb per pane (solid while running, pulsing while

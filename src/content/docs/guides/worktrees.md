@@ -3,8 +3,10 @@ title: Worktrees
 description: The worktrees sidebar lens, the inventory, full create/remove/prune lifecycle from the UI, spawning panes into worktrees, and the per-worktree Worktree View.
 ---
 
-Git worktrees are how you run **parallel agents on parallel branches** — one checkout per line of work,
-no stash juggling. Atrium treats them as a first-class organizing lens, not an afterthought.
+A git worktree is a second working copy of the same repository, checked out to a different branch — so
+you can have several branches open at once without stashing. That's how you run **parallel agents on
+parallel branches**: one checkout per line of work, no stash juggling. Atrium treats them as a
+first-class organizing [lens](/atrium-site/guides/concepts/#lenses), not an afterthought.
 
 ## The Worktrees sidebar lens
 
@@ -60,3 +62,9 @@ nothing is duplicated or moved.
 
 The [Pro edition](/atrium-site/pricing/) adds `$ATRIUM_PORT` / `$ATRIUM_WORKTREE` template
 variables so two worktrees can run the same dev-server command on distinct ports.
+
+## Next
+
+- [Git tools](/atrium-site/guides/git-tools/) — the read-only diff and commit graph behind the
+  dirty/drift signals.
+- [The Switcher](/atrium-site/guides/switcher-and-shortcuts/) — jump to any worktree from the keyboard.

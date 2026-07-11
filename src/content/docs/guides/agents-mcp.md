@@ -110,3 +110,9 @@ project the agent is running in.
 - `read_pane_output` returns recent scrollback (plain text), not a live stream; call it again for fresh
   output.
 - These tools see the user's own cockpit. Treat pane output as potentially sensitive context.
+
+## Next
+
+- [Agents in Atrium](/atrium-site/guides/agents/) — providers, session resume, permissions.
+- [Core concepts → The boundary](/atrium-site/guides/concepts/#the-boundary--visibility-in-never-control-out) —
+  why there's no control verb to call.

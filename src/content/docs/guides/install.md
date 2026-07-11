@@ -20,10 +20,12 @@ description: Download Atrium for Windows or macOS, get past SmartScreen (Windows
 
 ### Upgrading to Pro
 
-[Buy a license](/atrium-site/pricing/) (Polar checkout; the key arrives by email), download the
+[**Buy an Atrium Pro license — $39**](https://buy.polar.sh/polar_cl_c3Z1l6fB0kj5T4YF8KBZI8XiQFjWtzdbINqMR1moRg5)
+(Polar checkout; the key arrives by email), download the
 **Pro** installer from the same releases page — `Atrium-Pro_<version>_x64-setup.exe` on Windows,
 `Atrium-Pro_<version>_universal.dmg` on macOS — and install it right over Free. All your projects,
-panes, and settings stay put. Then paste the key in **Settings → License**.
+panes, and settings stay put. Then paste the key in **Settings → License**. Undecided? See
+[Free vs. Pro](/atrium-site/pricing/).
 
 ### "Windows protected your PC" (SmartScreen)
 
