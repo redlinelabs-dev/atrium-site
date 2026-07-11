@@ -91,3 +91,9 @@ execute anything by itself.
 `todos.json` and `notes/*.md` — the dock's TODOs and scratchpad. These travel with the checkout and are
 what agents read/write through MCP. App-level preferences (theme, fonts, zoom, editor, catalog) are
 stored locally by the app and aren't part of any of these files.
+
+## Next
+
+- [Agents in Atrium](/atrium-site/guides/agents/) — the agent catalog and managed permissions.
+- The Integrations & License tabs are [Pro](/atrium-site/pricing/) — GitHub + Jira health and
+  your key.

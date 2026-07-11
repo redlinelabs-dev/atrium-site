@@ -3,6 +3,10 @@ title: Core concepts
 description: Projects, groups, panes, lenses, providers, the .atrium folder, and Atrium's hard visibility-in-never-control-out boundary.
 ---
 
+This is Atrium's whole vocabulary on one page — the handful of nouns (project, group, pane, lens,
+provider) the rest of these guides lean on, plus the one hard rule that shapes everything:
+*visibility-in, never control-out*.
+
 ## Projects → groups → panes
 
 - **Project** — a folder + a **connection** (which shell, e.g. WSL2 on Windows or a native shell like
@@ -70,3 +74,9 @@ Panes are persisted as click-to-wake skeletons (**dormant**), never as live proc
 auto-spawn anything on launch. Scrollback is saved and replayed size-first (the terminal resizes before
 history is written, so nothing rewraps). Claude agent panes carry a stable session id so wake, restart,
 and restore resume the exact conversation.
+
+## Next
+
+- [Panes & terminals](/atrium-site/guides/panes/) — what each pane can do.
+- [Worktrees](/atrium-site/guides/worktrees/) — the parallel-branches lens.
+- [Agents in Atrium](/atrium-site/guides/agents/) — providers and session resume.

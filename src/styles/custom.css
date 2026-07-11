@@ -16,3 +16,17 @@
 	color: #00e676;
 	font-weight: 600;
 }
+/* The sidebar's pinned "Buy Pro — $39" link, rendered as a calm button rather than a doc link. */
+a.buy-cta {
+	display: block;
+	text-align: center;
+	background: var(--sl-color-accent);
+	color: #fff;
+	border-radius: 0.5rem;
+	padding: 0.4rem 0.6rem;
+	font-weight: 600;
+}
+a.buy-cta:hover {
+	background: var(--sl-color-accent-high);
+	color: #0c0e14;
+}

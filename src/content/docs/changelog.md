@@ -8,8 +8,9 @@ Full history + downloads on [GitHub Releases](https://github.com/redlinelabs-dev
 
 ## 0.12.0 — "The Connected Cockpit"
 
-The Pro flagship release — **Atrium Pro is now purchasable**: [$39 one-time](/atrium-site/pricing/),
-every 1.x update included forever.
+The Pro flagship release — **Atrium Pro is now purchasable**:
+**[buy it for $39, one-time](https://buy.polar.sh/polar_cl_c3Z1l6fB0kj5T4YF8KBZI8XiQFjWtzdbINqMR1moRg5)**
+(every 1.x update included forever), or [compare Free vs. Pro](/atrium-site/pricing/).
 
 **Pro:**
 

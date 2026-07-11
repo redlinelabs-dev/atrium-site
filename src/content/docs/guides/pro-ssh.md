@@ -36,4 +36,10 @@ secret.
   prompt for passwords).
 - `tmux` installed on the remote host.
 
-*Requires an [Atrium Pro license](/atrium-site/pricing/).*
+## Next
+
+- [GitHub + Jira integrations](/atrium-site/guides/pro-integrations/) — the other half of Pro:
+  your PRs, CI checks, and Jira tickets in the cockpit.
+- [Compare Free vs. Pro](/atrium-site/pricing/), or
+  [buy Atrium Pro — $39, one-time](https://buy.polar.sh/polar_cl_c3Z1l6fB0kj5T4YF8KBZI8XiQFjWtzdbINqMR1moRg5) —
+  every 1.x update included forever.

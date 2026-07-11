@@ -3,6 +3,10 @@ title: The Switcher & keyboard shortcuts
 description: Fuzzy-jump to any pane, project, worktree, or view with Ctrl+Shift+K — plus the full keyboard reference.
 ---
 
+Two things move you around Atrium fast: the **Switcher** (one keystroke to fuzzy-jump anywhere) and
+a small, collision-free set of keyboard shortcuts. This page is both — the Switcher first, then the
+full key reference.
+
 ## The Switcher
 
 `Ctrl+Shift+K` (`⌘⇧K` on macOS) opens the **Switcher** — a keyboard fuzzy-finder over everything you
@@ -45,3 +49,9 @@ this table describes.
 
 In-pane copy/paste on macOS: `⌘⇧C` / `⌘V`. Right-click pastes on all platforms. `Ctrl+V` with an
 image on the clipboard [pastes a screenshot](/atrium-site/guides/panes/#working-with-panes).
+
+## Next
+
+- [Settings & configuration](/atrium-site/guides/settings/) — themes, editors, the agent catalog.
+- Action verbs in the Switcher (New pane, New worktree, Toggle theme) are a
+  [Pro feature](/atrium-site/pricing/).

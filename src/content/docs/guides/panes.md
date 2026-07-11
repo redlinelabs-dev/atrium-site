@@ -10,8 +10,9 @@ what a pane can do beyond "be a terminal."
 
 - **Terminal** — a bare interactive shell in the project's connection (WSL2/PowerShell/Git Bash/cmd on
   Windows; zsh/bash/fish on macOS).
-- **Agent** — a shell that launches an agent command (`claude`, `codex`, …). Agent panes get provider
-  powers — session resume, context-% — described in [Agents in Atrium](/atrium-site/guides/agents/).
+- **Agent** — a shell that launches an agent command (`claude`, `codex`, …). Agent panes get
+  [provider](/atrium-site/guides/concepts/#providers) powers — session resume, context-% — described
+  in [Agents in Atrium](/atrium-site/guides/agents/).
 - **Command** — runs one program (a dev server, a build, a script) and shows **exited** when it ends.
   Atrium [auto-detects scripts](#script-detection) to offer as one-click command templates. Every pane
   has a **Restart** button; agents get a confirm first.

@@ -61,4 +61,10 @@ and the last error if there was one. No mystery spinners.
 - Tokens are stored locally, in files with owner-only permissions (on Windows too).
 - Read-only is structural: there is no write verb in the integration layer to misuse.
 
-*Requires an [Atrium Pro license](/atrium-site/pricing/).*
+## Next
+
+- [SSH remote projects](/atrium-site/guides/pro-ssh/) — the other half of Pro: your own
+  `ssh` + `tmux`, zero credentials stored.
+- [Compare Free vs. Pro](/atrium-site/pricing/), or
+  [buy Atrium Pro — $39, one-time](https://buy.polar.sh/polar_cl_c3Z1l6fB0kj5T4YF8KBZI8XiQFjWtzdbINqMR1moRg5) —
+  every 1.x update included forever.

@@ -36,3 +36,8 @@ Git context also shows up passively across the cockpit: the live **branch per pa
 state and drift in the [worktrees lens and inventory](/atrium-site/guides/worktrees/), and dirty-git
 indicators on the dashboard. All of it is read-only polling — Atrium never prompts for credentials and
 never runs an interactive git command on your behalf.
+
+## Next
+
+- [Worktrees](/atrium-site/guides/worktrees/) — where the dirty/clean and drift signals come from.
+- [Agents in Atrium](/atrium-site/guides/agents/) — review what an agent changed in the read-only diff.
