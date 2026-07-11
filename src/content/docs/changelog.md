@@ -6,6 +6,34 @@ description: Notable changes to Atrium, newest first. Full history on GitHub Rel
 Newest first. Each minor release is a deliberate "floor" — functional and daily-driven before the next.
 Full history + downloads on [GitHub Releases](https://github.com/redlinelabs-dev/atrium-site/releases).
 
+## 0.13.1 — "The Polish Round"
+
+Sixteen fixes from a six-lens design review of the whole app. The theme: **the app stops
+forgetting where you were, and everything you paid for has a door.**
+
+**Navigation lands, both ways:**
+
+- Dismissing any cover (Settings, Dashboard, Diff, My Work…) reveals the place beneath —
+  including a remembered worktree cockpit — instead of hard-resetting to the flat terminal; a
+  glance at Settings no longer erases the cockpit's place memory.
+- Keyboard focus returns to your terminal when a cover closes — first keystrokes land again.
+- Esc while typing in a worktree-cockpit pane reaches the terminal, never collapses the cockpit.
+- The Switcher's pane-pick lands exactly like a sidebar pane-click.
+
+**Every feature has a door:**
+
+- Session-history search (Pro) has a keybinding and appears in the cheatsheet.
+- The Pro capability list stays visible after you buy — the License panel shows what you unlocked.
+- The `?` cheatsheet is advertised in Settings → About, and both shortcut lists derive from the
+  same registry (they can no longer drift).
+- Import `atrium.toml` is available on the zero-projects welcome screen, and a fresh project's
+  empty state offers the agent templates you just picked — no more dead void.
+
+**The details:** the New Project dialog derives your real home path; notifications name the pane
+(not an internal id); remove-worktree can't double-fire; toasts stack instead of smearing; the
+Inventory tab hides for non-git projects; one verb per action everywhere; and an app-wide focus
+ring makes keyboard navigation look keyboard-first.
+
 ## 0.13.0 — "One Atrium"
 
 **Single-binary distribution: the edition is the license.** One installer per platform — the app

@@ -1,19 +1,19 @@
 {
-  "version": "0.13.0",
-  "notes": "Atrium v0.13.0 — One Atrium: one installer, the edition is the license — enter a key in Settings → License to unlock Pro, no reinstall; named workspaces (Pro) go live; Jira issue lists fixed (Atlassian retired their search API); pane respawn is 'Restart' everywhere.",
-  "pub_date": "2026-07-11T11:51:09Z",
+  "version": "0.13.1",
+  "notes": "Atrium v0.13.1 — The Polish Round: sixteen fixes from a full-app design review. Covers land back where you were and restore your keyboard focus; Esc never collapses the cockpit mid-typing; every feature has a door (history search shortcut, cheatsheet advertised, import on first run); plus a keyboard-first focus ring and calmer dialogs throughout.",
+  "pub_date": "2026-07-11T22:21:26Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjdGQUh3VUZkbU1uTHYyR2M5K0J6NVpQb3dPNldaYmRibEk5ZUZ4YytBQUhtMzl0WjBkT3FVYTZVdTN2UmdSOHJmakNHMVVmTFV3WTU0UXE2ZnF1Q3dZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNzY5ODMwCWZpbGU6QXRyaXVtXzAuMTMuMF94NjQtc2V0dXAuZXhlCm1sRVAyUUUwUUpKM1I2c0ovQXZMdjU0bk5HL3IvWmZMS1Yvc29YdjRCcWhiQXcyMVlJTXNTL2h2c3ltbDlLcWEwWjgzdTVraFJMcVRwdWlINzN1bkNnPT0K",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.13.0/Atrium_0.13.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYi9yN3IwU2tZZi9YTHFOREs4c01VaTRzVkxlbTQrYnRORGM5dEY1eUx3QUVFeXE2SDlkSnN3TEdNdVFjbUtidWp2bVdZcW9uZnNSenFXZm9zZ0R5b3dZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzODA3NTM1CWZpbGU6QXRyaXVtXzAuMTMuMV94NjQtc2V0dXAuZXhlCm9OdmwxM2pxTGF2RU1YbERhSnFYNDBEbk9STXJ6anI5emFnc1cwWmk5Qzl1WThPRWYvWmMvVE5oU0hmUUhxbkNWUXQ4MThQbGFRdTM5cXJFNmJqS0NBPT0K",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.13.1/Atrium_0.13.1_x64-setup.exe"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjVBbk5wZzNoZjVLQXRIWFI5R2dGNkNUNDFGancrdHVpdlVicjVQVUF6VGhzSW9xMXJyVWJQSUdyNy9HdGJ0UkxLdDlseGdWUHNNZkhJN1hVWndpa0FRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNzY5NTU4CWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKUFczbjd4Q3FHNGwzR2JOSFo0bDZSTm15TGJaRlJzMEFWZ0YwcjZHSU8waXk4VTA5WTVPOFNhNlZDbnZSUjRBOXVGb2VRWmJJbFg0eTZDcUxXZHg3QkE9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.13.0/Atrium.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjZwVjMrQnJFZHRHSUpVTVFZajk4amVYcmVtRkJ6ME1pc1hKTlFOQldLTlFhM3ZlTitLZ3VuNCtqSWxTdWx2ZzNNc0EyTjVWK1MxK2RrQXIxT3ZDWXdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzODA3MzEyCWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKM0Y0cmJPYlNhVnIzWEk2K1lObVRPbnVNM2EyZ2hyUHMvbWVZUXU2N21PT043TmRkTkFmMk8zTS9abCtBek8rMm1xY3VJYnpGSXlmZ1dTdUpqeUZhQ1E9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.13.1/Atrium.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjVBbk5wZzNoZjVLQXRIWFI5R2dGNkNUNDFGancrdHVpdlVicjVQVUF6VGhzSW9xMXJyVWJQSUdyNy9HdGJ0UkxLdDlseGdWUHNNZkhJN1hVWndpa0FRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNzY5NTU4CWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKUFczbjd4Q3FHNGwzR2JOSFo0bDZSTm15TGJaRlJzMEFWZ0YwcjZHSU8waXk4VTA5WTVPOFNhNlZDbnZSUjRBOXVGb2VRWmJJbFg0eTZDcUxXZHg3QkE9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.13.0/Atrium.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjZwVjMrQnJFZHRHSUpVTVFZajk4amVYcmVtRkJ6ME1pc1hKTlFOQldLTlFhM3ZlTitLZ3VuNCtqSWxTdWx2ZzNNc0EyTjVWK1MxK2RrQXIxT3ZDWXdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzODA3MzEyCWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKM0Y0cmJPYlNhVnIzWEk2K1lObVRPbnVNM2EyZ2hyUHMvbWVZUXU2N21PT043TmRkTkFmMk8zTS9abCtBek8rMm1xY3VJYnpGSXlmZ1dTdUpqeUZhQ1E9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.13.1/Atrium.app.tar.gz"
     }
   }
 }
