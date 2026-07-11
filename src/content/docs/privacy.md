@@ -65,12 +65,14 @@ them carry any information about your work.
   any internet connection — but it learns nothing about how you use Atrium. You can also update
   manually instead.
 
-- **Licensing (paid editions only).** Atrium's free edition has no licensing in it at all. For a
-  paid Pro edition, the way it confirms your purchase — a one-time offline key, checked against a
-  merchant-of-record — verifies **only your license**, never your activity. And it is never
-  something the app *needs in order to run*: if a license check can't reach the network, Atrium
-  keeps working locally. Anti-piracy stays "within reason" — I'd rather a determined freeloader
-  succeed than treat a paying user like a suspect.
+- **Licensing (only after you enter a key).** Since 0.13.0 Atrium is one app: it runs as the
+  free edition until a purchased license key is entered. The licensing endpoint is contacted
+  **only after you enter a key — never before**; without one, no licensing request is ever made,
+  and you can verify that on the wire. When a key is entered, the check — a one-time key checked
+  against a merchant-of-record — verifies **only your license**, never your activity. And it is
+  never something the app *needs in order to run*: if a license check can't reach the network,
+  Atrium keeps working locally. Anti-piracy stays "within reason" — I'd rather a determined
+  freeloader succeed than treat a paying user like a suspect.
 
 - **Crash reports (opt-in only, off by default).** If you've turned this on, a crash in
   Atrium's own code sends one small report to an endpoint I run — no third-party analytics

@@ -52,8 +52,8 @@ Atrium's full local organizer — everything described in these docs unless mark
 augmentation layer: [GitHub + Jira integrations](/atrium-site/guides/pro-integrations/) with a
 per-project Integration Hub and a cross-project **My Work** view (read-only, always),
 [SSH remote projects](/atrium-site/guides/pro-ssh/) over your own `ssh` + `tmux`, background
-monitoring + focus-aware desktop notifications, session-history search, Switcher action verbs,
-and per-worktree runtime vars.
+monitoring + focus-aware desktop notifications, session-history search, named workspaces,
+Switcher action verbs, and per-worktree runtime vars.
 
 Compare the full line on [Free vs. Pro](/atrium-site/pricing/), or
 [buy Pro directly](https://buy.polar.sh/polar_cl_c3Z1l6fB0kj5T4YF8KBZI8XiQFjWtzdbINqMR1moRg5) —

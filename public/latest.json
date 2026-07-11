@@ -1,19 +1,19 @@
 {
-  "version": "0.12.0",
-  "notes": "Atrium v0.12.0 \u2014 The Connected Cockpit: per-project GitHub + Jira Integration Hub (read-only), My Work view, calm change notifications, session-history search, SSH remote projects (Pro); project switches always land where you clicked; script detection no longer prompts at creation.",
-  "pub_date": "2026-07-11T00:46:47Z",
+  "version": "0.13.0",
+  "notes": "Atrium v0.13.0 — One Atrium: one installer, the edition is the license — enter a key in Settings → License to unlock Pro, no reinstall; named workspaces (Pro) go live; Jira issue lists fixed (Atlassian retired their search API); pane respawn is 'Restart' everywhere.",
+  "pub_date": "2026-07-11T11:51:09Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjd6NXU5WWtVL3lja2xpRURQY2RSelBFR1BqQXBETmRZbUNhRXlBSE5heWZMbDRDdElKR0JxMEpXWXFzenVGd3ZSMEdJY0JRTDlhbkgzYVpjTFNKUHd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNzMwMDk1CWZpbGU6QXRyaXVtXzAuMTIuMF94NjQtc2V0dXAuZXhlCjBPTEF4TXJ0N3Uza1dZM2s3UGlzMlhlSmVnMkhwaU1pQ2Fka1VxODZyVkhZZVhYbWJ5VUlPak9WTEkxN0ZjSjh6ZEZaME9LdXhBRXNjWHE0TGJrYUJRPT0K",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.12.0/Atrium_0.12.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjdGQUh3VUZkbU1uTHYyR2M5K0J6NVpQb3dPNldaYmRibEk5ZUZ4YytBQUhtMzl0WjBkT3FVYTZVdTN2UmdSOHJmakNHMVVmTFV3WTU0UXE2ZnF1Q3dZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNzY5ODMwCWZpbGU6QXRyaXVtXzAuMTMuMF94NjQtc2V0dXAuZXhlCm1sRVAyUUUwUUpKM1I2c0ovQXZMdjU0bk5HL3IvWmZMS1Yvc29YdjRCcWhiQXcyMVlJTXNTL2h2c3ltbDlLcWEwWjgzdTVraFJMcVRwdWlINzN1bkNnPT0K",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.13.0/Atrium_0.13.0_x64-setup.exe"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjR2amtMSHFsQnNuaHE2MVhFTUF0eFNPOUxKU0Q2czBEVURXeEZWRmo3V3hTeDRVU28rL3BmMTBYbWJLWi9HaUhTWEpKQTkxU2lGbDJQMXNMOTlWd3dBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNzI5OTAzCWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKUExHdk1YZHdmUEkwZXBPTjdsc0tRSGpvTlp2VzdvRjFWUU42bnI1WVlJVnBvbHlJcDhscjNiTk8rZjRhZHkyMHpETk1xRXZoa0g3ckV6RzFheldERHc9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.12.0/Atrium.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjVBbk5wZzNoZjVLQXRIWFI5R2dGNkNUNDFGancrdHVpdlVicjVQVUF6VGhzSW9xMXJyVWJQSUdyNy9HdGJ0UkxLdDlseGdWUHNNZkhJN1hVWndpa0FRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNzY5NTU4CWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKUFczbjd4Q3FHNGwzR2JOSFo0bDZSTm15TGJaRlJzMEFWZ0YwcjZHSU8waXk4VTA5WTVPOFNhNlZDbnZSUjRBOXVGb2VRWmJJbFg0eTZDcUxXZHg3QkE9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.13.0/Atrium.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjR2amtMSHFsQnNuaHE2MVhFTUF0eFNPOUxKU0Q2czBEVURXeEZWRmo3V3hTeDRVU28rL3BmMTBYbWJLWi9HaUhTWEpKQTkxU2lGbDJQMXNMOTlWd3dBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNzI5OTAzCWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKUExHdk1YZHdmUEkwZXBPTjdsc0tRSGpvTlp2VzdvRjFWUU42bnI1WVlJVnBvbHlJcDhscjNiTk8rZjRhZHkyMHpETk1xRXZoa0g3ckV6RzFheldERHc9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.12.0/Atrium.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjVBbk5wZzNoZjVLQXRIWFI5R2dGNkNUNDFGancrdHVpdlVicjVQVUF6VGhzSW9xMXJyVWJQSUdyNy9HdGJ0UkxLdDlseGdWUHNNZkhJN1hVWndpa0FRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNzY5NTU4CWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKUFczbjd4Q3FHNGwzR2JOSFo0bDZSTm15TGJaRlJzMEFWZ0YwcjZHSU8waXk4VTA5WTVPOFNhNlZDbnZSUjRBOXVGb2VRWmJJbFg0eTZDcUxXZHg3QkE9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.13.0/Atrium.app.tar.gz"
     }
   }
 }

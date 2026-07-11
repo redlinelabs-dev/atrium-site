@@ -6,6 +6,27 @@ description: Notable changes to Atrium, newest first. Full history on GitHub Rel
 Newest first. Each minor release is a deliberate "floor" — functional and daily-driven before the next.
 Full history + downloads on [GitHub Releases](https://github.com/redlinelabs-dev/atrium-site/releases).
 
+## 0.13.0 — "One Atrium"
+
+**Single-binary distribution: the edition is the license.** One installer per platform — the app
+runs as the Free edition until a purchased key is entered in **Settings → License**, and unlocks
+Pro on the spot. No separate download, no reinstall. Buying is now
+[checkout](https://buy.polar.sh/polar_cl_c3Z1l6fB0kj5T4YF8KBZI8XiQFjWtzdbINqMR1moRg5) → paste a key.
+
+- **One update channel** — every install updates from the same manifest, and an update can never
+  downgrade a licensed install: the binary always carries the license module, so your key keeps
+  working.
+- **Named workspaces (Pro) go live** — save a worktree's pane setup from the Switcher ("Save as
+  workspace…"), materialize the whole thing later in one click, landing in its worktree cockpit.
+  Re-activating converges instead of duplicating panes.
+- **Jira issue lists fixed** — Atlassian retired their search endpoint (HTTP 410); Atrium now uses
+  its replacement.
+- An unlicensed run never sees a locked Integrations tab — the quiet Pro disclosure remains the
+  only place Pro is mentioned.
+- Pane respawn is called **Restart** everywhere (it was "Reload" in one spot).
+- [Privacy policy](/atrium-site/privacy/) updated for the single binary: the licensing endpoint is
+  contacted only after a key is entered — never before, verifiable on the wire.
+
 ## 0.12.0 — "The Connected Cockpit"
 
 The Pro flagship release — **Atrium Pro is now purchasable**:
