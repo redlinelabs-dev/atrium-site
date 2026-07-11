@@ -1,19 +1,19 @@
 {
-  "version": "0.11.1",
-  "notes": "Atrium v0.11.1 — Paste the Picture: paste screenshots straight into agent panes (Ctrl+V with an image saves a temp PNG and pastes the shell-correct path; agents read it natively). Text paste unchanged.",
-  "pub_date": "2026-07-02T11:32:49Z",
+  "version": "0.12.0",
+  "notes": "Atrium v0.12.0 \u2014 The Connected Cockpit: per-project GitHub + Jira Integration Hub (read-only), My Work view, calm change notifications, session-history search, SSH remote projects (Pro); project switches always land where you clicked; script detection no longer prompts at creation.",
+  "pub_date": "2026-07-11T00:46:47Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYndxVUdWUEYyNWY3TlBhdnd5Wm8yLzRuY0d6eWNTeVpnZXdmbjRHbjUxRGF3K3RKUFVTdldJT0F3elU5SWNYYUV2ZzY3ME83dTdmaDErM256bnBiYVFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyOTkxOTEwCWZpbGU6QXRyaXVtXzAuMTEuMV94NjQtc2V0dXAuZXhlCnNaQS9PdVRSQW5uUVRJVWRoOFlTTUFDL0JqTE5jTkJLT2ljZG1LU3BaYUtwWkQ4eFFGdXpjR2JZNlRMMnNSVDZ1U0FIVUNXL0RObzZwbTRWQnBveEJRPT0K",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.11.1/Atrium_0.11.1_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjd6NXU5WWtVL3lja2xpRURQY2RSelBFR1BqQXBETmRZbUNhRXlBSE5heWZMbDRDdElKR0JxMEpXWXFzenVGd3ZSMEdJY0JRTDlhbkgzYVpjTFNKUHd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNzMwMDk1CWZpbGU6QXRyaXVtXzAuMTIuMF94NjQtc2V0dXAuZXhlCjBPTEF4TXJ0N3Uza1dZM2s3UGlzMlhlSmVnMkhwaU1pQ2Fka1VxODZyVkhZZVhYbWJ5VUlPak9WTEkxN0ZjSjh6ZEZaME9LdXhBRXNjWHE0TGJrYUJRPT0K",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.12.0/Atrium_0.12.0_x64-setup.exe"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYitFRlRoS1JicmsrSkxFdHBmc2ptdlI5VG1SS1QwVGpDMVhLeXo5OFVjWDFJSlZ2Ty81VDUxRzYxQUNVUUZ5T09ISFpwUy9MQWZEL3N2SldHd3lIS3dBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzMDEwNDkzCWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKaUYrMmMySXFVcDUzNjRpNEpoT1huOGk1WUk1QVR0WkphQ0piVGY1cUxoOERVQmRqSFE1bGV0NnViSkdrREVGQ01lb1JoQVhoNGF2aEdBay9SL0taQlE9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.11.1/Atrium.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjR2amtMSHFsQnNuaHE2MVhFTUF0eFNPOUxKU0Q2czBEVURXeEZWRmo3V3hTeDRVU28rL3BmMTBYbWJLWi9HaUhTWEpKQTkxU2lGbDJQMXNMOTlWd3dBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNzI5OTAzCWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKUExHdk1YZHdmUEkwZXBPTjdsc0tRSGpvTlp2VzdvRjFWUU42bnI1WVlJVnBvbHlJcDhscjNiTk8rZjRhZHkyMHpETk1xRXZoa0g3ckV6RzFheldERHc9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.12.0/Atrium.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYitFRlRoS1JicmsrSkxFdHBmc2ptdlI5VG1SS1QwVGpDMVhLeXo5OFVjWDFJSlZ2Ty81VDUxRzYxQUNVUUZ5T09ISFpwUy9MQWZEL3N2SldHd3lIS3dBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzMDEwNDkzCWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKaUYrMmMySXFVcDUzNjRpNEpoT1huOGk1WUk1QVR0WkphQ0piVGY1cUxoOERVQmRqSFE1bGV0NnViSkdrREVGQ01lb1JoQVhoNGF2aEdBay9SL0taQlE9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.11.1/Atrium.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjR2amtMSHFsQnNuaHE2MVhFTUF0eFNPOUxKU0Q2czBEVURXeEZWRmo3V3hTeDRVU28rL3BmMTBYbWJLWi9HaUhTWEpKQTkxU2lGbDJQMXNMOTlWd3dBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNzI5OTAzCWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKUExHdk1YZHdmUEkwZXBPTjdsc0tRSGpvTlp2VzdvRjFWUU42bnI1WVlJVnBvbHlJcDhscjNiTk8rZjRhZHkyMHpETk1xRXZoa0g3ckV6RzFheldERHc9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.12.0/Atrium.app.tar.gz"
     }
   }
 }
