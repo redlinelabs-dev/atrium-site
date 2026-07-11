@@ -16,7 +16,8 @@ export default defineConfig({
 			logo: { src: './src/assets/atrium-icon.svg', alt: 'Atrium' },
 			favicon: '/favicon.ico',
 			social: [
-				{ icon: 'github', label: 'GitHub', href: 'https://github.com/redlinelabs-dev/atrium' },
+				// atrium-site is the public repo (releases, issues, this site); the app repo is private.
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/redlinelabs-dev/atrium-site' },
 			],
 			customCss: ['./src/styles/custom.css'],
 			sidebar: [
@@ -45,7 +46,24 @@ export default defineConfig({
 						{ label: 'The Atrium MCP server', slug: 'guides/agents-mcp' },
 					],
 				},
-				{ label: 'Pricing', items: [{ label: 'Free vs. Pro', slug: 'pricing' }] },
+				{
+					label: 'Pro',
+					items: [
+						{ label: 'GitHub + Jira integrations', slug: 'guides/pro-integrations' },
+						{ label: 'SSH remote projects', slug: 'guides/pro-ssh' },
+					],
+				},
+				{
+					label: 'Pricing',
+					items: [
+						{ label: 'Free vs. Pro', slug: 'pricing' },
+						{
+							label: 'Buy Pro — $39',
+							link: 'https://buy.polar.sh/polar_cl_c3Z1l6fB0kj5T4YF8KBZI8XiQFjWtzdbINqMR1moRg5',
+							attrs: { target: '_blank' },
+						},
+					],
+				},
 				{ label: 'Release notes', items: [{ label: 'Changelog', slug: 'changelog' }] },
 				{ label: 'Trust', items: [{ label: 'Privacy policy', slug: 'privacy' }] },
 			],

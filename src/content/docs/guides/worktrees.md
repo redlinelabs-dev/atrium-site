@@ -58,6 +58,5 @@ nothing is duplicated or moved.
 
 ## Pro: per-worktree runtime vars
 
-The in-development Pro edition adds `$ATRIUM_PORT` / `$ATRIUM_WORKTREE` template variables so two
-worktrees can run the same dev-server command on distinct ports. See
-[What is Atrium? → Free and Pro](/atrium-site/guides/what-is-atrium/#free-and-pro).
+The [Pro edition](/atrium-site/pricing/) adds `$ATRIUM_PORT` / `$ATRIUM_WORKTREE` template
+variables so two worktrees can run the same dev-server command on distinct ports.

@@ -68,8 +68,8 @@ globally): the per-project tools (TODOs, scratchpad) resolve against the directo
 spawned in.
 
 > **History.** 0.8.0 briefly auto-wrote this `.mcp.json` when you opened a Claude pane; that
-> auto-writer was removed in 0.9.4. MCP discovery will return as an explicit per-project opt-in when
-> the Pro edition ships — it will never be on by default.
+> auto-writer was removed in 0.9.4. Registration is manual, per project, and will stay that way —
+> automatic discovery is not currently planned, and it would never be on by default.
 
 ## The tools
 

@@ -6,6 +6,42 @@ description: Notable changes to Atrium, newest first. Full history on GitHub Rel
 Newest first. Each minor release is a deliberate "floor" — functional and daily-driven before the next.
 Full history + downloads on [GitHub Releases](https://github.com/redlinelabs-dev/atrium-site/releases).
 
+## 0.12.0 — "The Connected Cockpit"
+
+The Pro flagship release — **Atrium Pro is now purchasable**: [$39 one-time](/atrium-site/pricing/),
+every 1.x update included forever.
+
+**Pro:**
+
+- **GitHub + Jira integrations, read-only forever** — a per-project
+  [Integration Hub](/atrium-site/guides/pro-integrations/): pull requests with live CI checks and
+  review states, assigned issues, and Jira tickets scoped to the project. GitHub auto-detects from
+  your remotes (override per project); Jira is opt-in per project — teach it by pasting a ticket
+  URL/key, and it makes zero requests until taught.
+- **My Work** (`Ctrl+Shift+M` / `⌘⇧M`) — one calm view of everything assigned to you across GitHub
+  and Jira, plus a quiet door on the Dashboard.
+- **Sidebar PR chips** — each project row shows its current branch's PR + checks state at a glance.
+- **Calm state-change notifications** — your PR merged, checks flipped, review requested, Jira
+  status changed; baseline-silent, opt-in, DND-aware, and clicking one lands in My Work.
+- **Connection health** — a rate-limit/cache/health ledger in Settings → Integrations; Jira tokens
+  now auto-refresh (no more hourly re-auth).
+- **Session-history search** — search across past terminal sessions, not just the open one.
+- **[SSH remote projects](/atrium-site/guides/pro-ssh/)** — open a project on a remote box over
+  your own `ssh`, reattach to your own `tmux` sessions; honest disconnected state with one-click
+  Reconnect; zero credentials stored, by construction.
+
+**Free:**
+
+- **"Atrium Pro" disclosure** in Settings — a plain statement of what Pro unlocks, so Free users
+  can make an informed call; every build now states its edition.
+- **Navigation always lands** — activating a project or pane always takes you there; covering
+  views dismiss instead of lingering with stale content.
+- **TODOs count badge** on the dock tab (parity with Inventory).
+- Script detection no longer prompts at project creation — detected scripts live in the pane
+  **+ Add** menu, and nothing runs until you click.
+- Fixes: OAuth consent no longer freezes the app window; token files get owner-only permissions on
+  Windows; a false "worktree no longer exists" notice on project switch.
+
 ## 0.11.1 — "Paste the Picture"
 
 Native **macOS support** ships: a universal (Apple Silicon + Intel) build with darwin auto-update

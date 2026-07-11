@@ -31,6 +31,7 @@ this table describes.
 | `Mod+Shift+T` | New pane in the active group |
 | `Mod+Shift+W` | Close the active pane |
 | `Mod+Shift+K` | Open the Switcher |
+| `Mod+Shift+M` | My Work — your PRs, reviews, and Jira issues (Pro) |
 | `Mod+Tab` / `Mod+Shift+Tab` | Next / previous pane |
 | `Mod+Shift+]` / `Mod+Shift+[` | Next / previous project |
 | `Mod+1` … `Mod+9` | Switch to project 1–9 |

@@ -36,6 +36,13 @@ project). See [Agents in Atrium](/atrium-site/guides/agents/#the-agent-catalog).
 Version, a **Check for updates** button, the keyboard cheatsheet, and the no-telemetry badge (see
 [Privacy](/atrium-site/privacy/)).
 
+## Integrations & License (Pro)
+
+Pro builds add two tabs: **Integrations** — connection health for
+[GitHub + Jira](/atrium-site/guides/pro-integrations/) (rate-limit headroom, cache state, last
+error) — and **License**, where you paste your key. The key is masked to its last four characters,
+and validation degrades gracefully offline (a 14-day grace window; Atrium never locks you out).
+
 ---
 
 ## Where configuration lives

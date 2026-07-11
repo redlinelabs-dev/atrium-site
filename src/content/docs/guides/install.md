@@ -18,6 +18,13 @@ description: Download Atrium for Windows or macOS, get past SmartScreen (Windows
    - **macOS** — `Atrium_<version>_universal.dmg` (one build for Apple Silicon and Intel)
 2. Run it. Atrium installs per-user and self-updates from then on (signed updates).
 
+### Upgrading to Pro
+
+[Buy a license](/atrium-site/pricing/) (Polar checkout; the key arrives by email), download the
+**Pro** installer from the same releases page — `Atrium-Pro_<version>_x64-setup.exe` on Windows,
+`Atrium-Pro_<version>_universal.dmg` on macOS — and install it right over Free. All your projects,
+panes, and settings stay put. Then paste the key in **Settings → License**.
+
 ### "Windows protected your PC" (SmartScreen)
 
 The installer isn't EV-code-signed yet, so SmartScreen may warn on first run. Click **More info →
