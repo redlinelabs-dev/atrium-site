@@ -6,6 +6,35 @@ description: Notable changes to Atrium, newest first. Full history on GitHub Rel
 Newest first. Each minor release is a deliberate "floor" — functional and daily-driven before the next.
 Full history + downloads on [GitHub Releases](https://github.com/redlinelabs-dev/atrium-site/releases).
 
+## 0.13.2 — "The Jira Round"
+
+Seven dual-validated fixes: a designer-led evaluation of the Jira integration plus two hardening
+items. The theme: **the integration tells the truth and pulls its weight.**
+
+**Jira (Pro):**
+
+- A Jira-only project's [Integration Hub](/atrium-site/guides/pro-integrations/) lands on the Jira
+  tab — no more "Connect GitHub" prompt (or silently empty body) on a project with no GitHub
+  remote; a Jira-only hub issues zero GitHub I/O.
+- Saved filters work on every Jira site: "In progress" matches by status *category* (renamed
+  workflow statuses still match), and "High priority" now includes **Highest** — it previously
+  hid your most urgent tickets.
+- Triage-grade issue rows: a status-category dot, an issue-type glyph, and relative updated time —
+  one row grammar shared with My Work; "Priority: None" renders as nothing.
+- Per-project filter memory — project A's filter no longer makes project B falsely claim "No open
+  issues"; a filtered empty state names the active filter with one-click return to All open.
+- Truthful truncation: past 50 issues the tab reads "50+" with a quiet link out to the project in
+  Jira, instead of presenting 50 as the total.
+- `integrations.open` Switcher command — the first keyboard door to the Integration Hub,
+  deep-linking to the Jira facet when the project has a binding.
+
+**Hardening:**
+
+- WSL being down is no longer indistinguishable from an Atrium hang: a fast liveness probe, an
+  honest degraded-state banner, and a spinner timeout.
+- All 24 synchronous Tauri commands audited for main-thread blocking (freeze-class); five
+  blocking-capable commands converted to async.
+
 ## 0.13.1 — "The Polish Round"
 
 Sixteen fixes from a six-lens design review of the whole app. The theme: **the app stops
