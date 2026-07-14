@@ -1,19 +1,19 @@
 {
-  "version": "0.13.2",
-  "notes": "Atrium v0.13.2 — The Jira Round: the Jira integration tells the truth and pulls its weight. A Jira-only project lands on its Jira tab; saved filters work on every Jira site (status category, Highest included); per-project filter memory with honest empty states; truthful 50+ truncation; triage-grade rows (status dot, type glyph, updated time); a keyboard door to the Integration Hub. Plus: WSL-down shows an honest degraded state instead of a hang, and five blocking-capable commands went async.",
-  "pub_date": "2026-07-12T16:28:36Z",
+  "version": "0.14.0",
+  "notes": "Atrium v0.14.0 \u2014 Feel: the whole app repainted onto an owned design-token spine with VS Code as the visual ground truth (one primitive set behind every dialog, VS Code control recipes, Dark Modern hues, calm scrollbars). Status motion de-glowed: ring spinner for working, hourglass for loading, reduced-motion slows instead of freezing. SSH on Windows made honest: a new Connect-using selector (Windows OpenSSH + detected WSL distros), Host autocomplete from your ssh config, and a presence probe that decodes real bytes, answers ConPTY's handshake, and reports actual spawn errors.",
+  "pub_date": "2026-07-14T20:39:20Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjVZaEUwK2ZOd1NibUJURGRZUmZsdTRtQjl2R3hXaUg1ZDFxbWczdkJPeFFIdDRYTm9SY2JvKzA4Z2Rud0E4eStCbFVNK0xKVDNnWG55Nm9hWVpRL2dnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzODczNTYyCWZpbGU6QXRyaXVtXzAuMTMuMl94NjQtc2V0dXAuZXhlCkUxU1d2OUlKTFE4dy9jS0xldnhDVUpFWFBUYVc2VElWQ3NCbTlHQTVXREUvTU1pK2g3QVhXQ21UUmNNR1JoWVZCZEZZT1FHT1BPTlhxT2NPWlVjUkFBPT0K",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.13.2/Atrium_0.13.2_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYnpZeE41emtOaThDc2I4c29JeUsyUWcra0c4YWVpN21zbDU5NkFKNDg3MHF1Q1JQODBXaTFJWWxocnZRNk1QRlpER1BLSFNvWmVYZVN0TFNhVVhBaGdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MDU4NzAxCWZpbGU6QXRyaXVtXzAuMTQuMF94NjQtc2V0dXAuZXhlCldRTzlKM0EzYzVNOG80Wk5TcTNFUVgxOVdySjQ4TGpkVjJFQTBUb1RVNlZ4Smp3R3ArTDNFUmlVYnVJMXFTQkVUT0FRTk1UaDhBTm1SakxDdlY1QUFRPT0K",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.14.0/Atrium_0.14.0_x64-setup.exe"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYi9wU3BOTE53QVE4Nm1jYU4rVmozc1MzTldtemR1M2dLcjhXdHY3QS9jakVDU1VXSTlTcGZnajc5Q0NZaThwZXZyQXpWWTM2SnNid2UxL0Vvc3VFK1FNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzODczMzM3CWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKU3hncVJ2Vko3eW4yaGpZNXFqaGlJWFJ1blFqdkVDVWNwamFkcUtqVXl1U2JNTkhBREcySjVJQ1NFTWR1QlRlbFZVVGtvS3NaM0Q5YkVmN2l0WU05RHc9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.13.2/Atrium.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjZaZ1ZBOWQzdXAwdmZWV0xrS252Z2FWdTJ5bWFuZmpmb09iT3R3Mzl6N3hIM1VxNHZkN1R3dmlzNTd2T3pXNUZtOGlTNWhYN1BLaDJHbUE3ZThIemdrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MDU4NDA0CWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKZXo3Slc5bVFWMndqSEZOVisvZ2VDVG9iNk5kKzVKaXJKNHhsVkdweW9UcnBkb3JjZ2pRNjNDdnZUZnpkc0VhN0NDUUdSUUJVRjRwRDhOQS90WExmQXc9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.14.0/Atrium.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYi9wU3BOTE53QVE4Nm1jYU4rVmozc1MzTldtemR1M2dLcjhXdHY3QS9jakVDU1VXSTlTcGZnajc5Q0NZaThwZXZyQXpWWTM2SnNid2UxL0Vvc3VFK1FNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzODczMzM3CWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKU3hncVJ2Vko3eW4yaGpZNXFqaGlJWFJ1blFqdkVDVWNwamFkcUtqVXl1U2JNTkhBREcySjVJQ1NFTWR1QlRlbFZVVGtvS3NaM0Q5YkVmN2l0WU05RHc9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.13.2/Atrium.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjZaZ1ZBOWQzdXAwdmZWV0xrS252Z2FWdTJ5bWFuZmpmb09iT3R3Mzl6N3hIM1VxNHZkN1R3dmlzNTd2T3pXNUZtOGlTNWhYN1BLaDJHbUE3ZThIemdrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MDU4NDA0CWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKZXo3Slc5bVFWMndqSEZOVisvZ2VDVG9iNk5kKzVKaXJKNHhsVkdweW9UcnBkb3JjZ2pRNjNDdnZUZnpkc0VhN0NDUUdSUUJVRjRwRDhOQS90WExmQXc9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.14.0/Atrium.app.tar.gz"
     }
   }
 }
