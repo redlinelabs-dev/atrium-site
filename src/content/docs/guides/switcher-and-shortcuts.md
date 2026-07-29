@@ -39,7 +39,6 @@ this table describes.
 | `Mod+Tab` / `Mod+Shift+Tab` | Next / previous pane |
 | `Mod+Shift+]` / `Mod+Shift+[` | Next / previous project |
 | `Mod+1` … `Mod+9` | Switch to project 1–9 |
-| `Mod+Shift+D` | Toggle the dock (Scratchpad / Todos / Inventory) |
 | `Mod+Shift+R` | Restart the active pane (agents ask for confirmation) |
 | `Mod+,` | Settings |
 | `Mod+=` / `Mod+-` / `Mod+0` | Zoom in / out / reset |

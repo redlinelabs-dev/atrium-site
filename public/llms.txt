@@ -3,7 +3,7 @@
 > Atrium is a calm, single-window desktop cockpit (Tauri + React + xterm.js, built for Windows + WSL2
 > and macOS) for your coding agents, terminals, and dev servers — organized into projects with live
 > status. It is an organizer, not an orchestrator: it never drives or dispatches agents (visibility-in,
-> never control-out). Current version 0.11.1; it ships a local MCP server (since 0.8.0) so agents can
+> never control-out). Current version 0.15.1; it ships a local MCP server (since 0.8.0) so agents can
 > see the cockpit and write into it.
 
 ## For agents (MCP)
