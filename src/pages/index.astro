@@ -1,0 +1,739 @@
+---
+// Atrium landing page — a custom static page in front of the Starlight docs.
+// Dark-first, self-contained (no external fonts, scripts, or trackers — the site
+// keeps the same privacy posture as the app). The version number and download
+// links are derived at build time from public/latest.json, the same manifest the
+// app's updater polls — so every release deploy refreshes this page automatically.
+import latest from '../../public/latest.json';
+
+import heroShot from '../assets/tour/hero-cockpit.png';
+import attentionShot from '../assets/tour/attention.png';
+import worktreesShot from '../assets/tour/worktrees.png';
+import dashboardShot from '../assets/tour/dashboard.png';
+import switcherShot from '../assets/tour/switcher.png';
+import devserverShot from '../assets/tour/devserver.png';
+import icon from '../assets/atrium-icon.svg';
+
+const version: string = latest.version;
+const BASE = '/atrium-site';
+const RELEASES = 'https://github.com/redlinelabs-dev/atrium-site/releases';
+const dl = (asset: string) => `${RELEASES}/download/v${version}/${asset}`;
+const winX64 = dl(`Atrium_${version}_x64-setup.exe`);
+const winX64Msi = dl(`Atrium_${version}_x64_en-US.msi`);
+const winArm = dl(`Atrium_${version}_arm64-setup.exe`);
+const macDmg = dl(`Atrium_${version}_universal.dmg`);
+const BUY = 'https://buy.polar.sh/polar_cl_c3Z1l6fB0kj5T4YF8KBZI8XiQFjWtzdbINqMR1moRg5';
+const description =
+  'Atrium is a calm, single-window cockpit for your coding agents, terminals, and dev servers — organized by project, visible at a glance. It organizes what’s running; it does not do the running for you. Free organizer, pay-once Pro, zero telemetry.';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atrium — one calm window for your agents, terminals, and worktrees</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href={`${BASE}/favicon.ico`} />
+    <link rel="icon" type="image/svg+xml" href={icon.src} />
+    <meta property="og:title" content="Atrium — one calm window for your agents, terminals, and worktrees" />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://redlinelabs-dev.github.io/atrium-site/" />
+    <meta property="og:image" content="https://redlinelabs-dev.github.io/atrium-site/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0b0d13" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href={`${BASE}/`}>
+          <img src={icon.src} alt="" width="24" height="24" />
+          <span>Atrium</span>
+        </a>
+        <nav class="nav-links" aria-label="Site">
+          <a href="#tour">Tour</a>
+          <a href="#pricing">Pricing</a>
+          <a href={`${BASE}/guides/what-is-atrium/`}>Docs</a>
+          <a href={`${BASE}/changelog/`}>Changelog</a>
+          <a href="https://github.com/redlinelabs-dev/atrium-site" rel="noopener">GitHub</a>
+        </nav>
+        <a class="btn btn-primary btn-sm" href="#download">Download</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============================ Hero ============================ -->
+      <section class="hero">
+        <div class="container">
+          <p class="eyebrow"><span class="dot dot-live"></span>For Windows + WSL2 and macOS</p>
+          <h1>One calm window for every agent, terminal, and worktree.</h1>
+          <p class="lede">
+            Atrium is a desktop cockpit for the developer running several things at once — Claude
+            sessions, dev servers, shells, three worktrees of the same repo — organized by project,
+            visible at a glance, reachable in two keystrokes.
+          </p>
+          <p class="creed">It organizes what’s running. It does not do the running for you.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" id="dl-primary" href={winX64} data-win={winX64} data-mac={macDmg}>
+              <span id="dl-primary-label">Download for Windows</span>
+            </a>
+            <a class="btn btn-ghost" href="#tour">See the cockpit</a>
+          </div>
+          <p class="cta-fine">
+            v{version} · free organizer, no account · Pro is $39 once — no subscription ·
+            <a href="#download">all platforms &amp; formats</a>
+          </p>
+          <figure class="shot hero-shot">
+            <img
+              src={heroShot.src}
+              width={heroShot.width}
+              height={heroShot.height}
+              alt="The Atrium cockpit: a live Claude Code session with its tool calls, a context-usage chip, liveness dots in the sidebar, and an attention badge on the project rail."
+              loading="eager"
+              fetchpriority="high"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============================ Trust strip ============================ -->
+      <section class="strip" aria-label="What Atrium promises">
+        <div class="container strip-inner">
+          <div class="strip-item">
+            <h3>Pay once, own it</h3>
+            <p>Free is the whole organizer. Pro is $39, one time. There is no subscription — and never will be.</p>
+          </div>
+          <div class="strip-item">
+            <h3>Zero telemetry</h3>
+            <p>No analytics, no account, no backend the app depends on. Pull the network cable — Atrium keeps working.</p>
+          </div>
+          <div class="strip-item">
+            <h3>Your subscription, not an API meter</h3>
+            <p>Agents run as the real interactive session on your own flat plan. Atrium never invokes one headlessly.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ Tour ============================ -->
+      <section id="tour" class="tour">
+        <div class="container">
+          <h2 class="section-title">Built for the day you actually have</h2>
+          <p class="section-lede">
+            Ten live panes across three projects. Two agents working, one waiting on you, a dev
+            server you forgot about. Atrium’s answer isn’t more automation — it’s a single quiet
+            window where all of it is legible.
+          </p>
+
+          <div class="feature">
+            <div class="feature-copy">
+              <h3>Know the moment an agent needs you</h3>
+              <p>
+                Liveness dots tell each pane’s state at a glance — working, idle, waiting. When an
+                agent stops for input, its project’s rail avatar quietly counts how many are waiting.
+                No popups, no sounds, no lost half-hour because a finished session sat behind an
+                alt-tab.
+              </p>
+              <p>
+                Claude panes carry a live context-window chip, so “am I about to compact?” is a
+                glance, not a scroll.
+              </p>
+            </div>
+            <figure class="shot shot-card">
+              <img src={attentionShot.src} width={attentionShot.width} height={attentionShot.height}
+                alt="The sidebar with a working agent's liveness dot, its 38% context chip, and a green badge on the project avatar counting agents that need attention." loading="lazy" />
+            </figure>
+          </div>
+
+          <div class="feature flip">
+            <div class="feature-copy">
+              <h3>Every worktree, one glance</h3>
+              <p>
+                The sidebar is the whole worktree story. Active worktrees list their panes; idle ones
+                collapse into a one-line ladder that fades with staleness — last week’s experiment
+                bright, last month’s receding. Create, remove, and prune from the UI, and spawn any
+                pane into any worktree.
+              </p>
+              <p>
+                Bare-clone or traditional layout — both are first-class. You always know which
+                worktree you’re about to commit in.
+              </p>
+            </div>
+            <figure class="shot shot-card">
+              <img src={worktreesShot.src} width={worktreesShot.width} height={worktreesShot.height}
+                alt="The Worktrees sidebar: main and a feature worktree with their panes, then an Idle accordion of four pane-less worktrees fading with age." loading="lazy" />
+            </figure>
+          </div>
+
+          <div class="feature feature-wide">
+            <div class="feature-copy">
+              <h3>Your whole desk on one wall</h3>
+              <p>
+                The Dashboard shows every project as a card: how many panes are running, which agents
+                are live, dirty git state, context usage. The crashed dev server you’d have noticed
+                in an hour — visible now.
+              </p>
+            </div>
+            <figure class="shot shot-card shot-full">
+              <img src={dashboardShot.src} width={dashboardShot.width} height={dashboardShot.height}
+                alt="Dashboard cards for two projects showing running-pane counts, agent counts, dirty state, and context usage." loading="lazy" />
+            </figure>
+          </div>
+
+          <div class="feature">
+            <div class="feature-copy">
+              <h3>Anywhere in two keystrokes</h3>
+              <p>
+                <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> opens the Switcher — a fuzzy-finder
+                over every pane, project, worktree, and view you have open, across all projects.
+                Type three letters, press Enter, you’ve arrived.
+              </p>
+              <p>
+                Every shortcut is chosen to never collide with your shell: <kbd>Ctrl</kbd>+<kbd>C</kbd>
+                and <kbd>Ctrl</kbd>+<kbd>R</kbd> always reach the terminal.
+              </p>
+            </div>
+            <figure class="shot shot-card shot-fade">
+              <img src={switcherShot.src} width={switcherShot.width} height={switcherShot.height}
+                alt="The Switcher overlay listing panes, projects, worktrees, and views with fuzzy search." loading="lazy" />
+            </figure>
+          </div>
+
+          <div class="feature flip">
+            <div class="feature-copy">
+              <h3>Restoration, not survival</h3>
+              <p>
+                Atrium never keeps a daemon alive on your machine. Quit it and nothing runs behind
+                your back; open it and everything comes home — agent sessions resume where they left
+                off, shells replay their scrollback, and commands wait politely with a Start button.
+              </p>
+              <p>An organizer, not a multiplexer. Deleting the app leaves nothing behind.</p>
+            </div>
+            <figure class="shot shot-card">
+              <img src={devserverShot.src} width={devserverShot.width} height={devserverShot.height}
+                alt="A restored dev-server pane, stopped, showing its command and a Start button — nothing runs until you say so." loading="lazy" />
+            </figure>
+          </div>
+
+          <!-- Compact grid of the rest -->
+          <div class="more-grid">
+            <div class="more-card">
+              <h4>Home</h4>
+              <p>A pinned, non-repo place for your long-lived personal agents and launchers — the tools that never belonged in a project list.</p>
+            </div>
+            <div class="more-card">
+              <h4>Agents that aren’t blind</h4>
+              <p>An opt-in local MCP server lets agents read the cockpit — even a sibling pane’s logs — and write into Atrium. Never drive it.</p>
+            </div>
+            <div class="more-card">
+              <h4>Git tools built in</h4>
+              <p>Branch and dirty-state chips on every pane, a diff view, and a commit graph — the context you need before you commit.</p>
+            </div>
+            <div class="more-card">
+              <h4>WSL2-native</h4>
+              <p>Built for the Windows ↔ WSL boundary: panes in any distro, PowerShell, or Git Bash, side by side. No networking, no config.</p>
+            </div>
+            <div class="more-card">
+              <h4>Portable by design</h4>
+              <p>Your layout lives in a readable <code>atrium.toml</code> you can export, import, and check into a repo.</p>
+            </div>
+            <div class="more-card">
+              <h4>Calm themes</h4>
+              <p>Light and dark, preset themes, reduced-motion support — status motion is information, never decoration.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ The boundary ============================ -->
+      <section class="boundary">
+        <div class="container">
+          <h2 class="section-title">A boundary, not a roadmap gap</h2>
+          <p class="section-lede">
+            Every agent-adjacent tool eventually asks you to hand over the wheel. Atrium is built on
+            the opposite commitment — structurally, not as a setting.
+          </p>
+          <div class="tenets">
+            <div class="tenet">
+              <h3>Organizer, not orchestrator</h3>
+              <p>
+                Atrium shows you what’s running and gets you there fast. It never dispatches, fans
+                out, or runs a meta-agent. The agent surface has no <code>spawn</code>, no
+                <code>run</code>, no <code>stop</code> — the capability is absent, not merely denied.
+              </p>
+            </div>
+            <div class="tenet">
+              <h3>Vanilla sessions on your plan</h3>
+              <p>
+                Your agents run as the same interactive TUIs you’d run in a bare terminal, on your
+                own flat subscription. No headless invocations, ever — so a tool you bought can never
+                quietly meter you onto per-token API billing.
+              </p>
+            </div>
+            <div class="tenet">
+              <h3>Visibility in, never control out</h3>
+              <p>
+                Agents may look <em>into</em> the cockpit and write notes into it. Nothing flows the
+                other way. The trigger for every action in Atrium is your hand, not a model’s.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ Keyboard ============================ -->
+      <section class="keys">
+        <div class="container">
+          <h2 class="section-title">Fast hands welcome</h2>
+          <p class="section-lede">
+            A small, collision-free set of shortcuts — <kbd>Ctrl</kbd> on Windows, <kbd>⌘</kbd> on
+            macOS. Press <kbd>?</kbd> in the app for the full cheatsheet.
+          </p>
+          <div class="keys-grid">
+            <div class="key-row"><span><kbd>Mod</kbd><kbd>Shift</kbd><kbd>K</kbd></span><p>Switcher — jump anywhere</p></div>
+            <div class="key-row"><span><kbd>Mod</kbd><kbd>Shift</kbd><kbd>T</kbd></span><p>New pane in the active group</p></div>
+            <div class="key-row"><span><kbd>Mod</kbd><kbd>Tab</kbd></span><p>Next pane</p></div>
+            <div class="key-row"><span><kbd>Mod</kbd><kbd>1</kbd>…<kbd>9</kbd></span><p>Switch to project 1–9</p></div>
+            <div class="key-row"><span><kbd>Mod</kbd><kbd>Shift</kbd><kbd>R</kbd></span><p>Restart the active pane</p></div>
+            <div class="key-row"><span><kbd>Mod</kbd><kbd>Shift</kbd><kbd>/</kbd></span><p>Search scrollback</p></div>
+            <div class="key-row"><span><kbd>Mod</kbd><kbd>Shift</kbd><kbd>M</kbd></span><p>My Work — PRs &amp; tickets <em>(Pro)</em></p></div>
+            <div class="key-row"><span><kbd>?</kbd></span><p>Keyboard cheatsheet</p></div>
+          </div>
+          <p class="keys-more"><a href={`${BASE}/guides/switcher-and-shortcuts/`}>Full keyboard reference →</a></p>
+        </div>
+      </section>
+
+      <!-- ============================ Privacy ============================ -->
+      <section class="privacy">
+        <div class="container privacy-inner">
+          <div>
+            <h2 class="section-title">Yours, verifiably</h2>
+            <p>
+              Atrium watches your work so you don’t have to. It never watches <em>you</em> — and you
+              don’t have to take that on faith.
+            </p>
+            <ul class="plain-list">
+              <li><strong>No telemetry.</strong> Not “anonymous usage statistics” — nothing. The app sends no data about your work, anywhere.</li>
+              <li><strong>No required backend.</strong> There is no Atrium server the app depends on. Licensing may touch the network once; core function never does.</li>
+              <li><strong>No account.</strong> Nothing to sign into, nothing to be locked out of. Delete the app and nothing is left behind.</li>
+              <li><strong>Verifiable.</strong> The <a href={`${BASE}/privacy/`}>privacy policy</a> tells you how to check all of this yourself — down to watching the process’s network activity.</li>
+            </ul>
+          </div>
+          <div class="privacy-aside">
+            <p class="aside-quote">
+              “Updates come from a static JSON file on this page. That file is the entire backend.”
+            </p>
+            <p class="aside-note">
+              This site keeps the same posture: no analytics, no cookies, no third-party requests.
+              What you’re reading is plain static HTML.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ Pricing ============================ -->
+      <section id="pricing" class="pricing">
+        <div class="container">
+          <h2 class="section-title">One price, and it isn’t monthly</h2>
+          <p class="section-lede">
+            Free is never a crippled trial — it’s the whole organizer, no caps, no nags. Pro adds the
+            reach a working developer pays for without thinking twice.
+          </p>
+          <div class="price-grid">
+            <div class="price-card">
+              <h3>Free</h3>
+              <p class="price">$0<span> forever</span></p>
+              <p class="price-tag">The complete organizer</p>
+              <ul>
+                <li>Projects, groups, and unlimited panes</li>
+                <li>Liveness, attention, and context indicators</li>
+                <li>Full worktree lifecycle + idle ladder</li>
+                <li>Dashboard, Switcher, Home</li>
+                <li>Diff view + commit graph</li>
+                <li>Session restoration &amp; scrollback search</li>
+                <li>Local MCP server for your agents</li>
+                <li>Themes, <code>atrium.toml</code> portability, updater</li>
+              </ul>
+              <a class="btn btn-ghost btn-block" href="#download">Download free</a>
+            </div>
+            <div class="price-card price-card-pro">
+              <h3>Pro</h3>
+              <p class="price">$39<span> once</span></p>
+              <p class="price-tag">Perpetual per major version — every 1.x update included forever</p>
+              <ul>
+                <li><strong>SSH remote projects</strong> — your own <code>ssh</code> + <code>tmux</code>; zero credentials stored</li>
+                <li><strong>GitHub + Jira hub</strong> — PRs, CI checks, tickets; read-only always</li>
+                <li><strong>My Work</strong> — everything assigned to you, one view</li>
+                <li><strong>Focus-aware notifications</strong> — calm alerts, even stepped away</li>
+                <li><strong>Session-history search</strong> across past sessions</li>
+                <li><strong>Named workspaces</strong> — a worktree’s whole pane setup, back in one click</li>
+                <li><strong>Worktree runtime vars</strong> — <code>PORT=$&lbrace;3000+index&rbrace;</code></li>
+                <li><strong>Switcher action verbs</strong></li>
+              </ul>
+              <a class="btn btn-primary btn-block" href={BUY} rel="noopener">Buy Atrium Pro — $39</a>
+              <p class="price-fine">
+                Checkout by <a href="https://polar.sh" rel="noopener">Polar</a> (merchant of record).
+                Key arrives by email; paste it into Settings — Pro unlocks in place, same binary.
+              </p>
+            </div>
+          </div>
+          <p class="pricing-more"><a href={`${BASE}/pricing/`}>Full Free vs. Pro comparison &amp; FAQ →</a></p>
+        </div>
+      </section>
+
+      <!-- ============================ Download ============================ -->
+      <section id="download" class="download">
+        <div class="container">
+          <h2 class="section-title">Get Atrium {version}</h2>
+          <p class="section-lede">One binary per platform. Free to run; a license key turns it Pro in place.</p>
+          <div class="dl-grid">
+            <a class="dl-card" href={winX64} data-plat="win">
+              <h3>Windows x64</h3>
+              <p>Windows 10/11 · works with any WSL2 distro</p>
+              <span class="dl-name">Atrium_{version}_x64-setup.exe</span>
+            </a>
+            <a class="dl-card" href={winArm} data-plat="win-arm">
+              <h3>Windows on ARM <em class="new-pill">new</em></h3>
+              <p>Native arm64 build — Snapdragon laptops, no emulation</p>
+              <span class="dl-name">Atrium_{version}_arm64-setup.exe</span>
+            </a>
+            <a class="dl-card" href={macDmg} data-plat="mac">
+              <h3>macOS</h3>
+              <p>Universal — Apple silicon &amp; Intel · macOS 11+</p>
+              <span class="dl-name">Atrium_{version}_universal.dmg</span>
+            </a>
+          </div>
+          <p class="dl-fine">
+            Prefer MSI? <a href={winX64Msi}>Atrium_{version}_x64_en-US.msi</a> ·
+            <a href={RELEASES}>All releases &amp; checksums</a> ·
+            <a href={`${BASE}/guides/install/`}>Install guide</a>
+          </p>
+          <p class="dl-fine">
+            The app updates itself from <a href={`${BASE}/latest.json`}><code>latest.json</code></a> on
+            this site — signed builds, no update server.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a class="brand" href={`${BASE}/`}>
+            <img src={icon.src} alt="" width="22" height="22" />
+            <span>Atrium</span>
+          </a>
+          <p>One calm home for what you’re running.<br />You own it. It watches your work, never you.</p>
+        </div>
+        <nav class="footer-cols" aria-label="Footer">
+          <div>
+            <h4>Product</h4>
+            <a href="#download">Download</a>
+            <a href="#pricing">Pricing</a>
+            <a href={`${BASE}/changelog/`}>Changelog</a>
+            <a href={RELEASES}>Releases</a>
+          </div>
+          <div>
+            <h4>Docs</h4>
+            <a href={`${BASE}/guides/what-is-atrium/`}>What is Atrium?</a>
+            <a href={`${BASE}/guides/install/`}>Install &amp; first run</a>
+            <a href={`${BASE}/guides/worktrees/`}>Worktrees</a>
+            <a href={`${BASE}/guides/agents-mcp/`}>Agents &amp; MCP</a>
+          </div>
+          <div>
+            <h4>Trust</h4>
+            <a href={`${BASE}/privacy/`}>Privacy policy</a>
+            <a href="https://polar.sh/purchases" rel="noopener">License portal</a>
+            <a href="https://github.com/redlinelabs-dev/atrium-site/issues" rel="noopener">Support &amp; issues</a>
+            <a href="https://github.com/redlinelabs-dev/atrium-site" rel="noopener">GitHub</a>
+          </div>
+        </nav>
+      </div>
+      <div class="container footer-base">
+        <p>© 2026 Redline Labs · Atrium v{version}</p>
+        <p>This page is static HTML — no analytics, no cookies, no third-party requests.</p>
+      </div>
+    </footer>
+
+    <script is:inline>
+      // Progressive enhancement only: point the hero button at this OS's installer.
+      // Everything works without it — the button falls back to the Windows x64 build,
+      // and the download section lists every platform explicitly.
+      (function () {
+        try {
+          var btn = document.getElementById('dl-primary');
+          var label = document.getElementById('dl-primary-label');
+          if (!btn || !label) return;
+          var ua = navigator.userAgent;
+          if (/Macintosh|Mac OS X/i.test(ua)) {
+            btn.href = btn.dataset.mac;
+            label.textContent = 'Download for macOS';
+          } else if (!/Windows/i.test(ua)) {
+            btn.href = '#download';
+            label.textContent = 'Download Atrium';
+          }
+        } catch (e) {
+          /* keep the fallback link */
+        }
+      })();
+    </script>
+
+    <style>
+      /* ---------- Tokens (matched to the app's own palette) ---------- */
+      :root {
+        color-scheme: dark;
+        --bg: #0b0d13;
+        --bg-raise: #10131b;
+        --panel: #12151e;
+        --border: #232839;
+        --border-soft: #1a1e2c;
+        --text: #e9ecf5;
+        --muted: #a2a9bc;
+        --dim: #6d7488;
+        --accent: #6d7cff;
+        --accent-hover: #8894ff;
+        --live: #00e676;
+        --radius: 12px;
+        --font:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Variable Text', Roboto,
+          'Helvetica Neue', Arial, sans-serif;
+        --mono: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, monospace;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font);
+        font-size: 16.5px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+      a { color: var(--accent-hover); text-decoration: none; }
+      a:hover { text-decoration: underline; text-underline-offset: 3px; }
+      code { font-family: var(--mono); font-size: 0.86em; background: var(--bg-raise); border: 1px solid var(--border-soft); border-radius: 5px; padding: 0.08em 0.35em; }
+      kbd {
+        font-family: var(--mono); font-size: 0.78em; color: var(--text);
+        background: var(--bg-raise); border: 1px solid var(--border);
+        border-bottom-width: 2px; border-radius: 5px; padding: 0.12em 0.45em;
+      }
+      h1, h2, h3 { letter-spacing: -0.015em; line-height: 1.15; text-wrap: balance; }
+
+      /* ---------- Buttons ---------- */
+      .btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+        border-radius: 9px; padding: 0.72rem 1.35rem; font-weight: 600; font-size: 0.97rem;
+        border: 1px solid transparent; transition: background 140ms ease, border-color 140ms ease;
+      }
+      .btn:hover { text-decoration: none; }
+      .btn-primary { background: var(--accent); color: #fff; }
+      .btn-primary:hover { background: var(--accent-hover); }
+      .btn-ghost { border-color: var(--border); color: var(--text); background: transparent; }
+      .btn-ghost:hover { border-color: var(--dim); background: var(--bg-raise); }
+      .btn-sm { padding: 0.42rem 0.95rem; font-size: 0.9rem; }
+      .btn-block { width: 100%; margin-top: auto; }
+
+      /* ---------- Nav ---------- */
+      .nav {
+        position: sticky; top: 0; z-index: 50;
+        background: color-mix(in srgb, var(--bg) 82%, transparent);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-soft);
+      }
+      .nav-inner { display: flex; align-items: center; gap: 2rem; height: 60px; }
+      .brand { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--text); font-weight: 700; font-size: 1.05rem; }
+      .brand:hover { text-decoration: none; }
+      .nav-links { display: flex; gap: 1.6rem; margin-left: auto; }
+      .nav-links a { color: var(--muted); font-size: 0.94rem; font-weight: 500; }
+      .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+      /* ---------- Hero ---------- */
+      .hero { padding: 88px 0 40px; text-align: center; position: relative; overflow: hidden; }
+      .hero::before {
+        content: ''; position: absolute; inset: -40% -20% auto; height: 90%;
+        background: radial-gradient(ellipse 60% 55% at 50% 0%, rgba(109, 124, 255, 0.13), transparent 70%);
+        pointer-events: none;
+      }
+      .eyebrow {
+        display: inline-flex; align-items: center; gap: 0.55rem;
+        color: var(--muted); font-size: 0.86rem; font-weight: 600;
+        letter-spacing: 0.06em; text-transform: uppercase;
+        border: 1px solid var(--border); border-radius: 999px; padding: 0.3rem 0.9rem;
+        background: var(--bg-raise);
+      }
+      .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+      .dot-live { background: var(--live); animation: breathe 3.2s ease-in-out infinite; }
+      @keyframes breathe { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+      @media (prefers-reduced-motion: reduce) { .dot-live { animation: none; } }
+      .hero h1 {
+        font-size: clamp(2.3rem, 5.4vw, 3.55rem); font-weight: 800;
+        max-width: 21ch; margin: 1.4rem auto 0;
+      }
+      .lede { color: var(--muted); font-size: 1.16rem; max-width: 62ch; margin: 1.3rem auto 0; }
+      .creed { font-size: 1.16rem; font-weight: 650; margin: 1.1rem auto 0; color: var(--text); }
+      .cta-row { display: flex; gap: 0.8rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap; }
+      .cta-fine { color: var(--dim); font-size: 0.88rem; margin-top: 0.9rem; }
+      .cta-fine a { color: var(--dim); text-decoration: underline; text-underline-offset: 3px; }
+      .cta-fine a:hover { color: var(--muted); }
+
+      /* ---------- Screenshots ---------- */
+      .shot { margin: 0; }
+      .shot img { display: block; max-width: 100%; height: auto; border-radius: var(--radius); }
+      .hero-shot { margin-top: 3.2rem; position: relative; }
+      .hero-shot img {
+        border: 1px solid var(--border);
+        box-shadow: 0 30px 90px -20px rgba(0, 0, 0, 0.75), 0 0 120px -40px rgba(109, 124, 255, 0.25);
+      }
+      .shot-card {
+        display: flex; align-items: center; justify-content: center;
+        background: radial-gradient(120% 120% at 30% 20%, #151927 0%, var(--panel) 60%);
+        border: 1px solid var(--border-soft); border-radius: 16px; padding: 2rem;
+      }
+      .shot-card img { border: 1px solid var(--border); box-shadow: 0 16px 44px -18px rgba(0, 0, 0, 0.7); }
+      .shot-fade img { mask-image: linear-gradient(to bottom, black 78%, transparent 100%); }
+      .shot-full { padding: 1.4rem; }
+
+      /* ---------- Trust strip ---------- */
+      .strip { border-block: 1px solid var(--border-soft); background: var(--bg-raise); margin-top: 64px; }
+      .strip-inner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; padding-block: 2.2rem; }
+      .strip-item h3 { font-size: 1.02rem; margin-bottom: 0.35rem; }
+      .strip-item p { color: var(--muted); font-size: 0.94rem; }
+
+      /* ---------- Sections ---------- */
+      .section-title { font-size: clamp(1.7rem, 3.4vw, 2.4rem); font-weight: 750; }
+      .section-lede { color: var(--muted); max-width: 64ch; margin-top: 0.9rem; font-size: 1.08rem; }
+      .tour { padding: 96px 0 40px; }
+      .feature {
+        display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+        gap: 3.5rem; align-items: center; margin-top: 72px;
+      }
+      .feature.flip .feature-copy { order: 2; }
+      .feature.flip .shot { order: 1; }
+      .feature-wide { grid-template-columns: 1fr; gap: 1.6rem; }
+      .feature-copy h3 { font-size: 1.45rem; margin-bottom: 0.7rem; }
+      .feature-copy p { color: var(--muted); margin-top: 0.7rem; }
+      .more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 80px; }
+      .more-card { background: var(--panel); border: 1px solid var(--border-soft); border-radius: var(--radius); padding: 1.3rem 1.4rem; }
+      .more-card h4 { font-size: 1rem; margin-bottom: 0.35rem; }
+      .more-card p { color: var(--muted); font-size: 0.92rem; }
+
+      /* ---------- Boundary ---------- */
+      .boundary { padding: 96px 0; }
+      .boundary .container { border-top: 1px solid var(--border-soft); padding-top: 80px; }
+      .tenets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2.6rem; }
+      .tenet {
+        background: linear-gradient(180deg, #141827 0%, var(--panel) 100%);
+        border: 1px solid var(--border-soft); border-radius: 14px; padding: 1.7rem 1.6rem;
+      }
+      .tenet h3 { font-size: 1.08rem; margin-bottom: 0.6rem; }
+      .tenet p { color: var(--muted); font-size: 0.95rem; }
+
+      /* ---------- Keys ---------- */
+      .keys { padding: 0 0 96px; }
+      .keys-grid {
+        display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 3rem; margin-top: 2.2rem;
+        border: 1px solid var(--border-soft); border-radius: 14px; background: var(--panel);
+        padding: 0.9rem 1.8rem;
+      }
+      .key-row {
+        display: flex; align-items: baseline; justify-content: space-between; gap: 1.5rem;
+        padding: 0.72rem 0; border-bottom: 1px solid var(--border-soft);
+      }
+      .key-row:nth-last-child(-n + 2) { border-bottom: none; }
+      .key-row span { white-space: nowrap; display: inline-flex; gap: 0.3rem; }
+      .key-row p { color: var(--muted); font-size: 0.94rem; text-align: right; }
+      .key-row em { color: var(--dim); font-style: normal; }
+      .keys-more { margin-top: 1.4rem; font-size: 0.95rem; }
+
+      /* ---------- Privacy ---------- */
+      .privacy { background: var(--bg-raise); border-block: 1px solid var(--border-soft); padding: 88px 0; }
+      .privacy-inner { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 4rem; align-items: start; }
+      .privacy p { color: var(--muted); margin-top: 0.9rem; max-width: 60ch; }
+      .plain-list { list-style: none; margin-top: 1.5rem; display: grid; gap: 0.9rem; }
+      .plain-list li { color: var(--muted); padding-left: 1.4rem; position: relative; }
+      .plain-list li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 7px; height: 7px; border-radius: 50%; background: var(--live); }
+      .plain-list strong { color: var(--text); }
+      .privacy-aside { border-left: 2px solid var(--accent); padding-left: 1.6rem; margin-top: 3.2rem; }
+      .aside-quote { font-size: 1.15rem; font-weight: 600; color: var(--text) !important; line-height: 1.45; }
+      .aside-note { font-size: 0.92rem; }
+
+      /* ---------- Pricing ---------- */
+      .pricing { padding: 96px 0; }
+      .price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin-top: 2.6rem; align-items: stretch; }
+      .price-card {
+        display: flex; flex-direction: column;
+        background: var(--panel); border: 1px solid var(--border-soft); border-radius: 16px; padding: 2rem;
+      }
+      .price-card-pro { border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); background: linear-gradient(180deg, #151a2c 0%, var(--panel) 55%); }
+      .price-card h3 { font-size: 1.05rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+      .price { font-size: 2.6rem; font-weight: 800; margin-top: 0.4rem; }
+      .price span { font-size: 1rem; font-weight: 500; color: var(--dim); margin-left: 0.3rem; }
+      .price-tag { color: var(--muted); font-size: 0.94rem; margin-top: 0.2rem; }
+      .price-card ul { list-style: none; margin: 1.4rem 0 1.8rem; display: grid; gap: 0.55rem; }
+      .price-card li { color: var(--muted); font-size: 0.95rem; padding-left: 1.35rem; position: relative; }
+      .price-card li::before { content: '✓'; position: absolute; left: 0; color: var(--live); font-weight: 700; }
+      .price-card li strong { color: var(--text); font-weight: 600; }
+      .price-fine { color: var(--dim); font-size: 0.85rem; margin-top: 0.9rem; }
+      .pricing-more { margin-top: 1.6rem; font-size: 0.95rem; }
+
+      /* ---------- Download ---------- */
+      .download { padding: 0 0 96px; text-align: center; }
+      .download .container { border-top: 1px solid var(--border-soft); padding-top: 88px; }
+      .download .section-lede { margin-inline: auto; }
+      .dl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2.4rem; }
+      .dl-card {
+        display: block; text-align: left; color: var(--text);
+        background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
+        padding: 1.5rem 1.6rem; transition: border-color 140ms ease, background 140ms ease;
+      }
+      .dl-card:hover { text-decoration: none; border-color: var(--accent); background: #151927; }
+      .dl-card h3 { font-size: 1.12rem; }
+      .dl-card p { color: var(--muted); font-size: 0.9rem; margin-top: 0.3rem; min-height: 2.7em; }
+      .dl-name { display: block; font-family: var(--mono); font-size: 0.78rem; color: var(--dim); margin-top: 0.9rem; overflow-wrap: anywhere; }
+      .new-pill {
+        font-style: normal; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
+        text-transform: uppercase; color: #0b0d13; background: var(--live);
+        border-radius: 999px; padding: 0.12rem 0.5rem; vertical-align: 0.2em; margin-left: 0.4rem;
+      }
+      .dl-fine { color: var(--dim); font-size: 0.9rem; margin-top: 1.3rem; }
+      .dl-fine a { color: var(--muted); }
+
+      /* ---------- Footer ---------- */
+      .footer { border-top: 1px solid var(--border-soft); background: var(--bg-raise); padding: 56px 0 32px; }
+      .footer-inner { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 3rem; }
+      .footer-brand p { color: var(--dim); font-size: 0.92rem; margin-top: 1rem; }
+      .footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+      .footer-cols h4 { font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--dim); margin-bottom: 0.9rem; }
+      .footer-cols a { display: block; color: var(--muted); font-size: 0.93rem; padding: 0.22rem 0; }
+      .footer-cols a:hover { color: var(--text); text-decoration: none; }
+      .footer-base {
+        display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+        border-top: 1px solid var(--border-soft); margin-top: 44px; padding-top: 22px;
+      }
+      .footer-base p { color: var(--dim); font-size: 0.84rem; }
+
+      /* ---------- Responsive ---------- */
+      @media (max-width: 900px) {
+        .strip-inner, .tenets, .more-grid, .dl-grid { grid-template-columns: 1fr; }
+        .feature, .privacy-inner, .price-grid, .footer-inner { grid-template-columns: 1fr; }
+        .feature { gap: 1.8rem; margin-top: 56px; }
+        .feature.flip .feature-copy { order: 1; }
+        .feature.flip .shot { order: 2; }
+        .keys-grid { grid-template-columns: 1fr; padding: 0.4rem 1.4rem; }
+        .key-row:nth-last-child(2) { border-bottom: 1px solid var(--border-soft); }
+        .privacy-aside { margin-top: 0; }
+        .hero { padding-top: 56px; }
+        .nav-links { display: none; }
+      }
+      @media (max-width: 520px) {
+        .more-grid { grid-template-columns: 1fr; }
+        .shot-card { padding: 1.1rem; }
+        .footer-cols { grid-template-columns: 1fr 1fr; }
+      }
+    </style>
+  </body>
+</html>
