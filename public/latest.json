@@ -1,23 +1,23 @@
 {
-  "version": "0.15.0",
-  "notes": "Atrium v0.15.0 \u2014 Home: a pinned place for your long-lived personal agents (launchers, resume commands, side-by-side shells, per-group identity colors) \u2014 and the Worktrees sidebar becomes the complete worktree surface: a thin Idle accordion lists every pane-less worktree as fade-ladder rows (recency-sorted, staleness-faded) with create/remove and one-click spawn; the unused right-edge Dock retires. Garbled terminal text on app reopen fixed (glyph-atlas heals on cold launch and page merges). First native Windows-on-ARM build.",
-  "pub_date": "2026-07-29T20:52:02Z",
+  "version": "0.15.1",
+  "notes": "Atrium v0.15.1 \u2014 patch for 0.15.0 \u201cHome\u201d: idle-worktree rows no longer paint hover actions over still-visible age text.",
+  "pub_date": "2026-07-29T21:30:24Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjhDbS9MdDNKRWpOeHN5WUhrdmRudkIyTHBrRWE2dUZib0lYcXF2M2VDNjJFSHhYMzRML2ROUkNpT21ESnNFV3lkM1E0bnNGSGM3YnRiLzRUS2pkRmcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MzU4MDg5CWZpbGU6QXRyaXVtXzAuMTUuMF94NjQtc2V0dXAuZXhlCmhiWWNZSzc3aW5oaHJaK05ocmtUNTdnc2pYa3dTKzV2MXlFdzV3TzNoZVFlQ1A4LzBFWTFxS3ZEN0YvY2tqM01KZnN5KzQ0R0V6Y0N3Q0VaRDFZSEF3PT0K",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.15.0/Atrium_0.15.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjBRckVXSStkb2tmZGNGcWdSVGtBaFVPZ3ZmUmUwL2o0QWR1ZG1XN2hDaTZvZFlkYUR6TGtYMG9WRmxidjY1L3NTbXVGYnVGdk9Vak01ZFIwNG1pVHdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MzYwNTA0CWZpbGU6QXRyaXVtXzAuMTUuMV94NjQtc2V0dXAuZXhlCmpMcVNLeFk0UUlsRlF3QXAzNkp0SGRrYVBHZEhxWTdHOThvbVEwUlhKQjYxcE1WQjB6ZHJPMHNReG5HeXhxTGtMblhkZlJmemthWUlvMThleVRFbEF3PT0K",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.15.1/Atrium_0.15.1_x64-setup.exe"
     },
     "windows-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYi9mSnpEVDhpZ1lUT2FNZE5WeFhPUkkxV01hMUJlTkZUenB6RTBtZndCSmZuTkE2anVXbEpFVVg3MUtjeVNNdGVmQm8xYy8vckRmeCthdzNUeXJ0OUFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MzU4MDM1CWZpbGU6QXRyaXVtXzAuMTUuMF9hcm02NC1zZXR1cC5leGUKQm5TRFlQUFhCN0xaSmFaZ012UjhnMko3RFRweWN6VEpUYmEyam9aSUt4aXRqdS9BS3Rxc01OY0w2K2orSVJMRER0T2tvZndPN1BZOHBmd0NYOU9FQUE9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.15.0/Atrium_0.15.0_arm64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYndJMkZ2cVhQZk9UbjhmNkU1Z3ovNTZUdnd1TjhqeWU1dUJZZVRaMEd4aXpKOEx1QWtHeHFFQmN0cU53cVpMSGlEaU9zWGlZcFJONHVodHFTdTRWOHdzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MzYwNTQwCWZpbGU6QXRyaXVtXzAuMTUuMV9hcm02NC1zZXR1cC5leGUKQzNMMzczeVJ5TjJYcUJ6OXZsYXlGZ2xsMGdnRjRSb0h1SE5ubi8wQXNWSlVGNmhMVWpLWWxuQ0czcVphZjNkbzhGbm5LdUttcUpPMHhGZGswWlpiQVE9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.15.1/Atrium_0.15.1_arm64-setup.exe"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjlIVkR0NzVpT2JtaEhJcEdyaGVRbUhuczRpcmxNUU5mbTdBdUdDSlNoamJtcTVEZTRJcWN4ZGZxTGJmNWxBUmRMZHVnUUNmd1orQTNqS1hVZU51MFFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MzU3MzM4CWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKandWWGlIV1Bua25URFhLWjdORDBGVUxPMGxhRHNWSy9KY29TbHBDKzdjRFhqU0RDYjRGSHkyazNBYThjRFhhVUcwbHNhNUQ2MUpDTmVyT0t6b2FFQmc9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.15.0/Atrium.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYnlHOFpHZndXUUQwNmpRa2tld2g2WmhmZHZzaUVuVlE3VUdYcVJiejNHeklvTW5lSVZodkRhdi9YeXE2Z3JtK2xlM2hVL05Ia3hCRjE5Um52Uy9UbkFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MzYwMzk0CWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKbndWSVNraFVQSmxYR0dtWUlDRUJaa3NQakVTNHhsWmdUVGEvMGlZZlNQOGhJa0dHejRKSXp6aGVYNEdTaWpzdUdzSkJXT3ozNUlMbjRxdkd5c2poQ1E9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.15.1/Atrium.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYjlIVkR0NzVpT2JtaEhJcEdyaGVRbUhuczRpcmxNUU5mbTdBdUdDSlNoamJtcTVEZTRJcWN4ZGZxTGJmNWxBUmRMZHVnUUNmd1orQTNqS1hVZU51MFFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MzU3MzM4CWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKandWWGlIV1Bua25URFhLWjdORDBGVUxPMGxhRHNWSy9KY29TbHBDKzdjRFhqU0RDYjRGSHkyazNBYThjRFhhVUcwbHNhNUQ2MUpDTmVyT0t6b2FFQmc9PQo=",
-      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.15.0/Atrium.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTck93dzIvREFMYnlHOFpHZndXUUQwNmpRa2tld2g2WmhmZHZzaUVuVlE3VUdYcVJiejNHeklvTW5lSVZodkRhdi9YeXE2Z3JtK2xlM2hVL05Ia3hCRjE5Um52Uy9UbkFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MzYwMzk0CWZpbGU6QXRyaXVtLmFwcC50YXIuZ3oKbndWSVNraFVQSmxYR0dtWUlDRUJaa3NQakVTNHhsWmdUVGEvMGlZZlNQOGhJa0dHejRKSXp6aGVYNEdTaWpzdUdzSkJXT3ozNUlMbjRxdkd5c2poQ1E9PQo=",
+      "url": "https://github.com/redlinelabs-dev/atrium-site/releases/download/v0.15.1/Atrium.app.tar.gz"
     }
   }
 }
