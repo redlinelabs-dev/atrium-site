@@ -50,11 +50,6 @@ first launch takes one extra step:
      ```sh
      xattr -r -d com.apple.quarantine /Applications/Atrium.app
      ```
-   - **Homebrew** (personal tap, prints the same one-liner as a caveat after install):
-     ```sh
-     brew tap redlinelabs-dev/tap
-     brew install --cask atrium
-     ```
 3. This is a **one-time** step per install — once cleared, self-update keeps working normally.
 
 ## First run
