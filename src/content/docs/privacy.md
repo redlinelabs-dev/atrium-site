@@ -7,7 +7,7 @@ description: Atrium watches nothing you do — no telemetry, no account, no serv
 in the loop. This page says exactly what that means — and, just as importantly, how you can
 check that I'm telling the truth.
 
-_Last updated: 2026-07-10 (opt-in crash reports amendment, ADR-0035)._
+_Last updated: 2026-07-29 (named the update-check host after the move to atrium.redlinelabs.dev; clarified license-check cadence and the 14-day offline grace window — corrections in wording, no behavior change)._
 
 ## The short version
 
@@ -58,8 +58,9 @@ Privacy doesn't mean "never sends a single packet." It means **I never watch wha
 There are a small number of clearly-bounded cases where Atrium may talk to the network. None of
 them carry any information about your work.
 
-- **Checking for updates.** Atrium can ask a public release page whether a newer version of the
-  app exists — the same kind of request you make by visiting any website. It sends *nothing*
+- **Checking for updates.** Atrium can ask `atrium.redlinelabs.dev/latest.json` — a static,
+  public manifest on this site — whether a newer version of the app exists; the same kind of
+  request you make by visiting any website. It sends *nothing*
   about you or your projects; it only asks "is there a newer build?" As with loading any web
   page, the host can see that *some* request came from your IP address — that's unavoidable for
   any internet connection — but it learns nothing about how you use Atrium. You can also update
@@ -68,10 +69,12 @@ them carry any information about your work.
 - **Licensing (only after you enter a key).** Since 0.13.0 Atrium is one app: it runs as the
   free edition until a purchased license key is entered. The licensing endpoint is contacted
   **only after you enter a key — never before**; without one, no licensing request is ever made,
-  and you can verify that on the wire. When a key is entered, the check — a one-time key checked
-  against a merchant-of-record — verifies **only your license**, never your activity. And it is
-  never something the app *needs in order to run*: if a license check can't reach the network,
-  Atrium keeps working locally. Anti-piracy stays "within reason" — I'd rather a determined
+  and you can verify that on the wire. When a key is entered, the check — your key re-checked
+  against a merchant-of-record at launch, never more often — verifies **only your license**,
+  never your activity. And it is never something the app *needs in order to run*: if a license
+  check can't reach the network, Atrium keeps working locally, and Pro stays unlocked through a
+  14-day offline grace window before falling back to the free edition (the app itself never
+  stops working). Anti-piracy stays "within reason" — I'd rather a determined
   freeloader succeed than treat a paying user like a suspect.
 
 - **Crash reports (opt-in only, off by default).** If you've turned this on, a crash in
@@ -95,7 +98,7 @@ I'd rather you trust this because you checked than because I asked.
    normally. Everything that matters keeps working — proof the app doesn't depend on me.
 2. **Watch the wire.** Point a network monitor (your OS firewall log, Wireshark, Little Snitch,
    etc.) at Atrium. You'll see it idle. The only requests you might catch are an occasional
-   update check to the public release page — and you can read exactly what it asks for.
+   update check to `atrium.redlinelabs.dev` — and you can read exactly what it asks for.
 
 If you ever observe Atrium sending something this page doesn't account for, that's a bug and a
 broken promise — please report it on the Support channel below.

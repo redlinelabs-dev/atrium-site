@@ -9,10 +9,11 @@ It's a tabbed main-area view:
 ## Appearance
 
 - **Theme** — six presets: Dark, Light, High contrast, Nord, Solarized dark, Sepia — plus a
-  System/Light/Dark appearance preference and a **glow intensity** control. Status-orb semantics stay
-  constant across every theme (identity is color, state is motion), and `prefers-reduced-motion` is
-  respected.
+  System/Light/Dark appearance preference and a **Group glow** control (Off/Subtle/Normal). Status-orb
+  semantics stay constant across every theme (identity is color, state is motion), and
+  `prefers-reduced-motion` is respected.
 - **Terminal font** — family and size; a Nerd Font is bundled as the default.
+- **Zoom** — an app-wide zoom level (50–200%), and an in-app **status-orb legend**.
 
 ## Notifications
 
@@ -23,22 +24,28 @@ notifications and OSC 9/777 passthrough, with per-project mute.)
 
 - **Default editor** — Open-in-editor presets for VS Code, Cursor, Zed, and Windsurf, or any custom
   command (honored verbatim).
-- **Default shell** — what new projects connect with (WSL2/PowerShell/Git Bash/cmd on Windows;
-  zsh/bash/fish on macOS).
+- **Available agents** — the **agent catalog**: which agent commands are offered when you create a
+  project, each with its own create/resume commands. See
+  [Agents in Atrium](/guides/agents/#the-agent-catalog).
+- **Remote connections (SSH)** — a Pro, macOS/Linux-only toggle to share connections to the same host
+  (ControlMaster).
 
 ## New projects
 
-The default groups and the **agent catalog** (which agent commands are offered when you create a
-project). See [Agents in Atrium](/guides/agents/#the-agent-catalog).
+- **Default shell** — what new projects connect with (WSL2/PowerShell/Git Bash/cmd on Windows;
+  zsh/bash/fish on macOS).
+- **Edit default groups…** — the group skeleton every new project starts with.
 
 ## About
 
-Version, a **Check for updates** button, the keyboard cheatsheet, and the no-telemetry badge (see
-[Privacy](/privacy/)).
+Version and edition, a **Check for updates** button, the keyboard cheatsheet, an opt-in
+**Send crash reports** toggle (off by default — see [Privacy](/privacy/)), and the no-telemetry
+badge.
 
 ## Integrations & License (Pro)
 
-Pro builds add two tabs: **Integrations** — connection health for
+A **License** tab is always present, and an **Integrations** tab appears once a key verifies:
+**Integrations** — connection health for
 [GitHub + Jira](/guides/pro-integrations/) (rate-limit headroom, cache state, last
 error) — and **License**, where you paste your key. The key is masked to its last four characters,
 and validation degrades gracefully offline (a 14-day grace window; Atrium never locks you out).
@@ -60,7 +67,8 @@ the [MCP tools](/guides/agents-mcp/) read.
 
 **Export project** writes a small TOML file at the repo root that you commit; **Import** recreates the
 project on any machine. It's deliberately portable: no absolute paths (the working directory is
-implicit — the repo it lives in), just the project name and its groups/templates:
+implicit — the repo it lives in), just the project name, its shell (informational — the importer uses
+its own connection), and its groups/templates:
 
 ```toml
 schema_version = 1
@@ -88,9 +96,11 @@ execute anything by itself.
 
 ### `<project>/.atrium/` — the in-repo workspace
 
-`todos.json` and `notes/*.md` — the dock's TODOs and scratchpad. These travel with the checkout and are
-what agents read/write through MCP. App-level preferences (theme, fonts, zoom, editor, catalog) are
-stored locally by the app and aren't part of any of these files.
+The reserved per-project folder agents can reach through MCP. Its original tenants — `todos.json` and
+`notes/*.md`, the retired Dock's TODOs and scratchpad — are no longer displayed in-app (since 0.15.0);
+existing files stay on disk, unread. It's gitignored (Atrium maintains the entry), so it stays on the
+machine rather than traveling with the repo. App-level preferences (theme, fonts, zoom, editor,
+catalog) are stored locally by the app and aren't part of any of these files.
 
 ## Next
 

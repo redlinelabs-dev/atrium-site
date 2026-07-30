@@ -22,14 +22,16 @@ what a pane can do beyond "be a terminal."
 Closing Atrium never loses a pane. Panes persist as **dormant, click-to-wake skeletons** — the process
 isn't respawned until you wake it, so launching Atrium never auto-runs anything. Scrollback is saved on
 close and replayed **size-first** (the terminal takes its size before history is written back, so
-nothing rewraps or tears). A crash-loop guard stops a repeatedly-dying command from burning CPU, and
-respawns preserve the pane's **live working directory** rather than resetting to the project root.
+nothing rewraps or tears). After three unexpected shutdowns in a row, Atrium asks before restoring
+panes instead of restoring them blindly, and respawns preserve the pane's **live working directory**
+rather than resetting to the project root.
 
 ## Working with panes
 
 - **Scrollback search** — `Ctrl+Shift+/` (`⌘⇧/`) opens find-in-scrollback.
 - **Pin** a pane to the top of its group; **move** it to another group; **rename** it (otherwise the
-  title derives from its folder + kind).
+  title derives from its folder + kind); **set its working directory**, open its **History**, or
+  **Stop** it without closing.
 - **Right-click pastes** (terminal convention), and app chrome is never text-selectable. On macOS,
   copy/paste in a pane is `⌘⇧C` / `⌘V`.
 - **Paste a screenshot** — `Ctrl+V` with an image on the clipboard writes a temp PNG and pastes its
@@ -37,7 +39,7 @@ respawns preserve the pane's **live working directory** rather than resetting to
 - **Clickable links** — URLs in terminal output open in your browser.
 - **Live context per pane** — the current working directory (worktree-aware), the git branch, and the
   pane's **memory usage** (including processes inside WSL) are shown live.
-- **Open lazygit here** — one click spawns `lazygit` scoped to the pane's live directory (if
+- **Open lazygit here** — right-click a worktree to spawn `lazygit` in that worktree (if
   installed). See [Git tools](/guides/git-tools/).
 
 ## Script detection

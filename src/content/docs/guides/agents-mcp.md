@@ -1,6 +1,6 @@
 ---
 title: The Atrium MCP server
-description: An opt-in local MCP server gives your coding agents eyes into the cockpit — read project + pane status and logs, write TODOs + scratchpad — over the shared filesystem, with no networking.
+description: An opt-in local MCP server gives your coding agents eyes into the cockpit — read project + pane status and logs, write TODOs + scratchpad notes into the repo's .atrium/ — over the shared filesystem, with no networking.
 ---
 
 The Atrium binary ships a local **MCP server** so a coding agent running in one of your panes can *see
@@ -14,8 +14,9 @@ your guide to the `atrium` tools.
 
 - **See the cockpit.** "What projects/panes exist? What's running? What's this pane doing?"
 - **Read a sibling pane's logs.** "Read the dev-server pane and tell me why it's 500ing."
-- **Leave a trail the human sees.** Add/update TODOs and append scratchpad notes — they show up live in
-  Atrium's dock.
+- **Leave a trail on disk.** Add/update TODOs and append scratchpad notes — written to the project's
+  `.atrium/` folder. (Atrium no longer displays them in-app — the Dock was retired in 0.15.0 — so
+  treat them as files the human reads.)
 
 What you **cannot** do: drive Atrium. There is no tool to spawn, run, restart, or close anything — by
 design ([the boundary](/guides/concepts/#the-boundary--visibility-in-never-control-out)).
@@ -50,7 +51,8 @@ claude mcp add atrium -- \
   --mcp-stdio --root ~/.atrium
 ```
 
-Or commit the equivalent project-scoped `.mcp.json` at the repo root:
+Or use the equivalent project-scoped `.mcp.json` at the repo root (note: Atrium adds `.mcp.json` to
+the project's `.gitignore`, so committing it requires an explicit un-ignore):
 
 ```json
 {
@@ -88,7 +90,7 @@ spawned in.
 
 | Tool | What it does |
 | --- | --- |
-| `add_todo(text)` | Adds a TODO to the current project (tagged `source: agent`) — appears live in the dock. |
+| `add_todo(text)` | Adds a TODO to the current project (tagged `source: agent`) — written to `.atrium/todos.json`. |
 | `set_todo_status(id, status)` | Sets a TODO's status: `open` / `in_progress` / `done`. |
 | `append_scratchpad(slug, text)` | Appends to a scratchpad note (append-only — never overwrites a human's note). |
 
@@ -100,7 +102,7 @@ project the agent is running in.
 - *"Use atrium's `list_projects` and tell me which agents are running right now."*
 - *"Call `read_pane_output` on the dev-server pane and explain the latest error."*
 - *"Break this work into TODOs in atrium so I can see your plan."* → the agent calls `add_todo` a few
-  times; you watch them appear in the dock, then it `set_todo_status`-es them as it goes.
+  times, writing its plan to `.atrium/todos.json`, then `set_todo_status`-es them as it goes.
 - *"Append your findings to the `agent-log` scratchpad before you finish."*
 
 ## Notes for agents

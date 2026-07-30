@@ -32,9 +32,10 @@ Your choice persists per project. See [Worktrees](/guides/worktrees/).
 
 ## Live state
 
-Per pane, Atrium surfaces: a **status orb** (running / working / needs-input / crashed / exited /
-dormant — identity stays one color; *motion* carries the state), an **attention** flag when the agent
-rings the terminal bell, the **live working directory** + git branch (worktree-aware), per-pane
+Per pane, Atrium surfaces: a **status orb** (running / working / needs-input / loading / crashed /
+exited / dormant / disconnected — identity stays one color; *motion* carries the state), an
+**attention** flag when a pane finishes work you asked for and you haven't looked, the **live
+working directory** + git branch (worktree-aware), per-pane
 **memory usage**, and — for Claude panes — **context-window usage %** (read from Claude's own
 statusline, never guessed).
 
@@ -52,17 +53,17 @@ Providers are a *lens* on an agent, never a controller. See [Agents in Atrium](/
 
 - **`~/.atrium/`** — Atrium's own data dir: `atrium.json` (your projects/groups/panes), `live.json`
   (the live status snapshot), and `panes/` (recent pane output for the MCP tools).
-- **`<project>/.atrium/`** — the in-repo, agent-reachable folder: `todos.json` (the dock's TODOs) and
-  `notes/` (scratchpad markdown). It travels with the checkout — which is exactly how the MCP tools
-  read and write it.
+- **`<project>/.atrium/`** — the in-repo, agent-reachable folder. Its original tenants (`todos.json`,
+  `notes/`) were retired with the Dock in 0.15.0; agents can still read/write them over MCP, but
+  Atrium doesn't display them. It's gitignored — it stays on the machine.
 - **`<project>/atrium.toml`** — the optional, committed, portable project definition (groups +
   templates, no absolute paths). See [Settings & configuration](/guides/settings/).
 
 ## The boundary — *visibility-in, never control-out*
 
 The most important design rule. Atrium reads agent telemetry to **display** it, and agents can talk
-**to** Atrium (query state, write into TODOs/scratchpad). But **Atrium never drives, dispatches, or
-spawns agents to do work**, and runs no meta-agent.
+**to** Atrium (query state, write into `.atrium/` files — no longer surfaced in the UI). But **Atrium
+never drives, dispatches, or spawns agents to do work**, and runs no meta-agent.
 
 This isn't a policy you could toggle — it's **structural**. The MCP tool surface registers only read +
 write-into-Atrium verbs; there is no `spawn` / `dispatch` / `run` / `control` verb to call, and a unit

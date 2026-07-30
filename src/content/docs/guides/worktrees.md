@@ -1,6 +1,6 @@
 ---
 title: Worktrees
-description: The worktrees sidebar lens, the inventory, full create/remove/prune lifecycle from the UI, spawning panes into worktrees, and the per-worktree Worktree View.
+description: The worktrees sidebar lens, the Idle accordion, full create/remove/prune lifecycle from the UI, spawning panes into worktrees, and the per-worktree Worktree View.
 ---
 
 A git worktree is a second working copy of the same repository, checked out to a different branch — so
@@ -11,47 +11,57 @@ first-class organizing [lens](/guides/concepts/#lenses), not an afterthought.
 ## The Worktrees sidebar lens
 
 Toggle the sidebar between **Groups** and **Worktrees** with the chip in its header (the choice
-persists per project). In the Worktrees view, each worktree is a two-line row showing its branch and a
-group-colored status orb for the panes homed there. You get:
+persists per project). In the Worktrees view the sidebar shows **every** worktree in the repo —
+occupied ones as expandable sections, pane-less ones in the Idle accordion below. Each occupied
+worktree is a two-line row showing its directory name, a pane count, and its branch on the second
+line. You get:
 
-- **Drift detection** — see when a worktree has diverged from its base.
+- **Drift detection** — see when a pane has wandered out of the worktree it was spawned in.
+- **Rehome a drifted pane** — one click on the drift pill re-homes the pane to the worktree it
+  wandered into.
 - **Empty worktrees as launch targets** — a worktree with no panes is one click from having one.
-- **Move-to-worktree** — rehome an existing pane into a worktree.
 - Both **bare-clone** and traditional worktree layouts are handled; non-git projects degrade
   gracefully (the lens just isn't offered).
+- Worktrees created or removed **outside Atrium** (a terminal, an agent) appear or disappear within a
+  few seconds — no manual refresh.
+
+## Idle worktrees
+
+Pane-less worktrees live in a thin **`Idle · N`** accordion at the bottom of the list (collapsed by
+default; the choice persists per project). Rows are one line each — name, dirty dot, branch, and
+last-activity age — sorted most-recent first, and fade with staleness so an hour-old worktree reads
+brighter than a month-old one. Hovering a row swaps the age for its actions: a `＋▾` spawn button and
+a `✕` to remove. The sidebar is the complete worktree surface — if a worktree exists, it's here.
 
 ## Spawn anything into any worktree
 
-Every worktree row has a `＋▾` caret that opens the full spawn menu — every group's templates — scoped
-to that worktree's directory. An agent template launched this way starts *in* the worktree, on that
-branch, with the pane's live cwd and branch shown in the cockpit.
+Every occupied worktree header has a persistent `＋▾` caret, and idle rows reveal the same caret on
+hover — it opens the full spawn menu — every group's templates — scoped to that worktree's directory.
+An agent template launched this way starts *in* the worktree, on that branch, with the pane's live
+cwd and branch shown in the cockpit.
 
 ## Lifecycle from the UI
 
 Everything you'd otherwise do with `git worktree` on the command line:
 
-- **New worktree** — create a branch off any base (or check out an existing branch); the path is
-  auto-derived from the branch name and editable before you commit.
-- **Remove worktree** — a two-gate destructive confirm: it warns about panes homed there (and closes
-  them first), and surfaces git's `--force` gate separately if the worktree is dirty.
-- **Prune orphaned** — one-click `git worktree prune`, with a prunable-count badge, confirmed before
+- **New worktree** — the `+ New worktree…` button on the Idle accordion header (also in the
+  [Switcher](/guides/switcher-and-shortcuts/)): create a branch off any base (or check out an
+  existing branch); the path is auto-derived from the branch name and editable before you commit.
+- **Remove worktree** — from an idle row's hover `✕` or any worktree's right-click menu; a two-gate
+  destructive confirm that warns about panes homed there (and closes them first), and surfaces git's
+  `--force` gate separately if the worktree is dirty.
+- **Prune orphaned** — `git worktree prune`, on the worktree right-click menu, confirmed before
   running.
 
 These are the only git *writes* Atrium performs, and each one is human-initiated and confirmed — the
 [diff and history views](/guides/git-tools/) stay read-only.
-
-## The Inventory
-
-The dock's **Inventory** tab is the full worktree catalog with derived metadata: branch, pane count,
-last-activity age, clean/dirty state, and prunability — with search, sort, and filter. Sort by
-**stale** to triage which worktrees to clean up.
 
 ## Worktree View
 
 For deep work in one worktree, enter **Worktree View** — a cockpit lens over the main area (from the
 sidebar or the [Switcher](/guides/switcher-and-shortcuts/)):
 
-- A **partition selector** across your worktrees.
+- A header showing the worktree's branch, path, and dirty state.
 - **Agent and shell slots** per worktree, with tabbed panes and empty-slot spawn.
 - `Esc` exits; your last main-area view is remembered per project.
 

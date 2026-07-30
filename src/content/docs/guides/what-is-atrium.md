@@ -24,14 +24,17 @@ and stays out of the way.
   context-window usage % on Claude panes.
 - **See every project at once.** A dashboard with each project's live status, plus an attention rail
   that surfaces crashed or waiting panes even from background projects.
-- **Work across git worktrees.** A [worktrees lens](/guides/worktrees/) over the sidebar,
-  full create/remove/prune lifecycle from the UI, and a per-worktree cockpit view — built for running
-  parallel agents on parallel branches.
+- **Work across git worktrees.** A [worktrees lens](/guides/worktrees/) over the sidebar —
+  including an `Idle · N` ladder of pane-less worktrees, so the sidebar shows every worktree
+  (0.15.0) — full create/remove/prune lifecycle from the UI, and a per-worktree cockpit view — built
+  for running parallel agents on parallel branches.
+- **Keep your personal agents somewhere.** [Home](/guides/concepts/) — a pinned, non-repo place for
+  long-lived launchers (a personal assistant, a journal) that never belonged in a project list.
 - **Jump anywhere.** The [Switcher](/guides/switcher-and-shortcuts/) (`Ctrl+Shift+K` /
   `⌘⇧K`) fuzzy-jumps to any pane, project, worktree, or view across everything you have open.
 - **Give your agents situational awareness — if you want.** An opt-in local
   [MCP server](/guides/agents-mcp/) lets an agent ask what else is running, read another
-  pane's logs, and leave TODOs/notes you'll see in the dock.
+  pane's logs, and leave TODOs/notes in the repo's `.atrium/` folder.
 
 ## What it is *not*
 

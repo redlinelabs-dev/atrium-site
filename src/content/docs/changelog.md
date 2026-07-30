@@ -6,6 +6,73 @@ description: Notable changes to Atrium, newest first. Full history on GitHub Rel
 Newest first. Each minor release is a deliberate "floor" — functional and daily-driven before the next.
 Full history + downloads on [GitHub Releases](https://github.com/redlinelabs-dev/atrium-site/releases).
 
+## 0.15.2
+
+- The [Worktrees view](/guides/worktrees/) self-heals when worktrees change outside the app: an
+  agent running `git worktree remove`/`prune` in a pane updates the sidebar (and the Idle count)
+  within seconds — no more stale list until you switched views. Unchanged sets apply nothing, so
+  ages and dirty markers never flicker.
+
+## 0.15.1
+
+- Idle-worktree rows: hovering no longer paints the ✕/Add actions on top of still-visible age
+  text — the age properly fades out under the overlay.
+
+## 0.15.0 — "Home"
+
+Two structural moves — **Home**, a pinned non-repo place for your long-lived personal agents, and
+the **Worktrees sidebar becoming the complete worktree surface** — plus the first Windows-on-ARM
+builds.
+
+**Added — Home:**
+
+- **Home**: a pinned, non-deletable place first in the rail — launchers for identity-shaped tools
+  (a personal assistant, a journal) that never belonged in the project list. Ships with a seeded
+  Shells group; launcher-keyed groups are created lazily on first spawn.
+- Flat launcher list with **New launcher…**, split Add-Pane, and a per-launcher **resume command**
+  so any agent CLI with a resume flag can pick up its session.
+- **Group-level connection** — side-by-side shells (e.g. WSL next to PowerShell) inside Home — and
+  a per-group identity-color override.
+
+**Changed — the sidebar is the whole worktree story:**
+
+- The [Worktrees view](/guides/worktrees/) now shows **every** worktree: active sections first,
+  then a thin **`Idle · N` accordion** listing pane-less worktrees as one-line rows — recency-sorted,
+  fading with staleness, hover revealing remove ✕ and the Add split-button. `+ New worktree…` lives
+  on the accordion header.
+- **The Dock is retired** (Scratchpad, TODOs, Inventory, `Ctrl+Shift+D`) — the inventory job moved
+  into the sidebar; the TODOs/scratchpad concept is parked. On-disk `.atrium/` files are left
+  untouched (agents can still write them over [MCP](/guides/agents-mcp/)).
+
+**Fixed:**
+
+- WebGL glyph-atlas corruption healed on cold-launch shell replay — garbled terminal text on app
+  reopen is gone.
+- Focus-ring consistency and design-token ownership fixes; the Integration Hub rate-limit readout
+  shows remaining/limit and reset time.
+
+**Internal:**
+
+- **Windows-on-ARM**: releases now include a native `arm64-setup.exe` alongside x64, and the update
+  channel gained a `windows-aarch64` entry — ARM installs self-update natively.
+
+## 0.14.0 — "Feel"
+
+The whole app repainted onto an owned design-token spine with VS Code as the visual ground truth,
+status motion de-glowed into information-first geometry, and SSH on Windows made honest end-to-end.
+
+- One owned token spine (spacing, type ramp, radii, motion, elevation, focus ring) drives every
+  surface; the dark preset re-tuned to VS Code Dark Modern hues. Every dialog rides the same
+  chrome, focus behavior, and Esc lifecycle.
+- Working panes show an identity-hue gap-ring spinner; loading shows an hourglass flip — distinct
+  shapes, no glow halos. Reduced-motion **slows** status animation instead of freezing it (status
+  motion is information, not decoration).
+- **SSH route selector** (Pro, Windows): a "Connect using" dropdown — Windows OpenSSH or any
+  detected WSL distro — plus host autocomplete from your `~/.ssh/config`. Pure detection; Atrium
+  never configures or mutates anything.
+- The SSH presence probe tells the truth: three stacked root causes behind false "ssh was not
+  found" reports fixed, inherited by the tmux preflight.
+
 ## 0.13.2 — "The Jira Round"
 
 Seven dual-validated fixes: a designer-led evaluation of the Jira integration plus two hardening

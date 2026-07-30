@@ -5,8 +5,9 @@ description: Download Atrium for Windows or macOS, get past SmartScreen (Windows
 
 ## Requirements
 
-- **Windows 10/11**, 64-bit. Agents and projects typically live in **WSL2** (Ubuntu or similar),
-  which Atrium drives across the WSL↔Windows boundary.
+- **Windows 10/11** — x64, or Windows 11 on ARM (native arm64 build, since 0.15.0). Agents and
+  projects typically live in **WSL2** (Ubuntu or similar), which Atrium drives across the
+  WSL↔Windows boundary.
 - **macOS** (Apple Silicon or Intel — one universal build). Agents and projects run **natively** —
   no WSL2-equivalent boundary to cross.
 - Your coding agents installed where you run them (e.g. `claude` in your WSL distro or macOS shell).
@@ -14,7 +15,10 @@ description: Download Atrium for Windows or macOS, get past SmartScreen (Windows
 ## Download & install
 
 1. Grab the latest release from the [releases page](https://github.com/redlinelabs-dev/atrium-site/releases/latest):
-   - **Windows** — `Atrium_<version>_x64-setup.exe`
+   - **Windows (x64)** — `Atrium_<version>_x64-setup.exe` (or `Atrium_<version>_x64_en-US.msi` if
+     your environment prefers MSI)
+   - **Windows on ARM** — `Atrium_<version>_arm64-setup.exe` (native arm64, new in 0.15.0;
+     setup.exe only — no ARM64 MSI)
    - **macOS** — `Atrium_<version>_universal.dmg` (one build for Apple Silicon and Intel)
 2. Run it. Atrium installs per-user and self-updates from then on (signed updates).
 
