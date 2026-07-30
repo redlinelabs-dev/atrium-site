@@ -2,12 +2,13 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-// GitHub Project Pages: served at https://redlinelabs-dev.github.io/atrium-site/
+// GitHub Pages behind the custom domain https://atrium.redlinelabs.dev/ (CNAME in public/).
 // `latest.json` (the updater manifest) lives in public/ so it publishes UNCHANGED at the site root —
-// the app polls https://redlinelabs-dev.github.io/atrium-site/latest.json and must keep working.
+// the app polls https://atrium.redlinelabs.dev/latest.json. Apps shipped ≤0.15.x poll the old
+// https://redlinelabs-dev.github.io/atrium-site/latest.json URL, which GitHub 301-redirects here
+// (path-preserving) for as long as the custom domain stays bound — so that redirect is load-bearing.
 export default defineConfig({
-	site: 'https://redlinelabs-dev.github.io',
-	base: '/atrium-site',
+	site: 'https://atrium.redlinelabs.dev',
 	integrations: [
 		starlight({
 			title: 'Atrium',

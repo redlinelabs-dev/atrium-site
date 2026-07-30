@@ -6,7 +6,7 @@ description: The worktrees sidebar lens, the inventory, full create/remove/prune
 A git worktree is a second working copy of the same repository, checked out to a different branch — so
 you can have several branches open at once without stashing. That's how you run **parallel agents on
 parallel branches**: one checkout per line of work, no stash juggling. Atrium treats them as a
-first-class organizing [lens](/atrium-site/guides/concepts/#lenses), not an afterthought.
+first-class organizing [lens](/guides/concepts/#lenses), not an afterthought.
 
 ## The Worktrees sidebar lens
 
@@ -38,7 +38,7 @@ Everything you'd otherwise do with `git worktree` on the command line:
   running.
 
 These are the only git *writes* Atrium performs, and each one is human-initiated and confirmed — the
-[diff and history views](/atrium-site/guides/git-tools/) stay read-only.
+[diff and history views](/guides/git-tools/) stay read-only.
 
 ## The Inventory
 
@@ -49,7 +49,7 @@ last-activity age, clean/dirty state, and prunability — with search, sort, and
 ## Worktree View
 
 For deep work in one worktree, enter **Worktree View** — a cockpit lens over the main area (from the
-sidebar or the [Switcher](/atrium-site/guides/switcher-and-shortcuts/)):
+sidebar or the [Switcher](/guides/switcher-and-shortcuts/)):
 
 - A **partition selector** across your worktrees.
 - **Agent and shell slots** per worktree, with tabbed panes and empty-slot spawn.
@@ -60,11 +60,11 @@ nothing is duplicated or moved.
 
 ## Pro: per-worktree runtime vars
 
-The [Pro edition](/atrium-site/pricing/) adds `$ATRIUM_PORT` / `$ATRIUM_WORKTREE` template
+The [Pro edition](/pricing/) adds `$ATRIUM_PORT` / `$ATRIUM_WORKTREE` template
 variables so two worktrees can run the same dev-server command on distinct ports.
 
 ## Next
 
-- [Git tools](/atrium-site/guides/git-tools/) — the read-only diff and commit graph behind the
+- [Git tools](/guides/git-tools/) — the read-only diff and commit graph behind the
   dirty/drift signals.
-- [The Switcher](/atrium-site/guides/switcher-and-shortcuts/) — jump to any worktree from the keyboard.
+- [The Switcher](/guides/switcher-and-shortcuts/) — jump to any worktree from the keyboard.

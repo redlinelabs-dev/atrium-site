@@ -15,12 +15,12 @@ shared filesystem). Tools are read + write-into-Atrium ONLY — there is no spaw
   pane's recent logs], list_todos, read_scratchpad(slug)
 - Write-into-Atrium: add_todo(text), set_todo_status(id, status), append_scratchpad(slug, text)
 
-Full guide (for both humans and LLMs): https://redlinelabs-dev.github.io/atrium-site/guides/agents-mcp/
+Full guide (for both humans and LLMs): https://atrium.redlinelabs.dev/guides/agents-mcp/
 
 ## Docs
 
-- What is Atrium?: https://redlinelabs-dev.github.io/atrium-site/guides/what-is-atrium/
-- Install & first run: https://redlinelabs-dev.github.io/atrium-site/guides/install/
-- Core concepts (projects, panes, providers, the boundary): https://redlinelabs-dev.github.io/atrium-site/guides/concepts/
-- Using Atrium with agents (MCP): https://redlinelabs-dev.github.io/atrium-site/guides/agents-mcp/
-- Changelog: https://redlinelabs-dev.github.io/atrium-site/changelog/
+- What is Atrium?: https://atrium.redlinelabs.dev/guides/what-is-atrium/
+- Install & first run: https://atrium.redlinelabs.dev/guides/install/
+- Core concepts (projects, panes, providers, the boundary): https://atrium.redlinelabs.dev/guides/concepts/
+- Using Atrium with agents (MCP): https://atrium.redlinelabs.dev/guides/agents-mcp/
+- Changelog: https://atrium.redlinelabs.dev/changelog/

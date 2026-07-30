@@ -15,7 +15,7 @@ provider) the rest of these guides lean on, plus the one hard rule that shapes e
   **Agents**, **Terminals**, **Commands** — but groups are yours to rename and rearrange. At most one
   group per project carries the *agents role* (that's where Atrium expects AI agents to live).
 - **Template** — a one-click pane factory inside a group (e.g. `claude`, `bun run dev`). Templates are
-  what [`atrium.toml`](/atrium-site/guides/settings/#atriumtoml--the-portable-project-file) exports.
+  what [`atrium.toml`](/guides/settings/#atriumtoml--the-portable-project-file) exports.
 - **Pane** — a single live terminal: an **agent** (e.g. `claude`), a plain **terminal**, or a
   **command** (a script Atrium detected or you defined; it exits when the program exits). Panes stay
   mounted and alive when hidden — switching panes or projects never kills a session.
@@ -28,7 +28,7 @@ panes, never where they live:
 - The sidebar toggles between the **Groups** view and the **Worktrees** view.
 - **Worktree View** turns the main area into a per-worktree cockpit with agent/shell slots.
 
-Your choice persists per project. See [Worktrees](/atrium-site/guides/worktrees/).
+Your choice persists per project. See [Worktrees](/guides/worktrees/).
 
 ## Live state
 
@@ -39,14 +39,14 @@ rings the terminal bell, the **live working directory** + git branch (worktree-a
 statusline, never guessed).
 
 This live state lives in memory while Atrium runs; it's published to `~/.atrium/live.json` each poll so
-[agents can read it](/atrium-site/guides/agents-mcp/).
+[agents can read it](/guides/agents-mcp/).
 
 ## Providers
 
 Each agent is a **provider** derived from the pane's startup command (its first token). A provider
 *declares what it can expose* — session resume, telemetry (context-%), scrollback handling, spawn-env.
 Claude is the fully-featured reference provider; unknown commands are generic (no special powers).
-Providers are a *lens* on an agent, never a controller. See [Agents in Atrium](/atrium-site/guides/agents/).
+Providers are a *lens* on an agent, never a controller. See [Agents in Atrium](/guides/agents/).
 
 ## Where Atrium keeps things
 
@@ -56,7 +56,7 @@ Providers are a *lens* on an agent, never a controller. See [Agents in Atrium](/
   `notes/` (scratchpad markdown). It travels with the checkout — which is exactly how the MCP tools
   read and write it.
 - **`<project>/atrium.toml`** — the optional, committed, portable project definition (groups +
-  templates, no absolute paths). See [Settings & configuration](/atrium-site/guides/settings/).
+  templates, no absolute paths). See [Settings & configuration](/guides/settings/).
 
 ## The boundary — *visibility-in, never control-out*
 
@@ -77,6 +77,6 @@ and restore resume the exact conversation.
 
 ## Next
 
-- [Panes & terminals](/atrium-site/guides/panes/) — what each pane can do.
-- [Worktrees](/atrium-site/guides/worktrees/) — the parallel-branches lens.
-- [Agents in Atrium](/atrium-site/guides/agents/) — providers and session resume.
+- [Panes & terminals](/guides/panes/) — what each pane can do.
+- [Worktrees](/guides/worktrees/) — the parallel-branches lens.
+- [Agents in Atrium](/guides/agents/) — providers and session resume.

@@ -6,7 +6,7 @@ running*. It doesn't do the running for you. *Organizer, not orchestrator.*
 
 **→ [Download for Windows](https://github.com/redlinelabs-dev/atrium-site/releases/latest)**
 &nbsp;·&nbsp; **[Download for macOS](https://github.com/redlinelabs-dev/atrium-site/releases/latest)**
-&nbsp;·&nbsp; [redlinelabs-dev.github.io/atrium-site](https://redlinelabs-dev.github.io/atrium-site)
+&nbsp;·&nbsp; [atrium.redlinelabs.dev](https://atrium.redlinelabs.dev)
 
 ## What it does
 
@@ -40,7 +40,7 @@ running*. It doesn't do the running for you. *Organizer, not orchestrator.*
    (`Atrium_<version>_universal.dmg` — one build for Apple Silicon and Intel) and
    drag `Atrium.app` into `/Applications`.
 2. Atrium is ad-hoc signed, not notarized, so macOS Gatekeeper blocks the first
-   launch — see the [install guide](https://redlinelabs-dev.github.io/atrium-site/guides/install/)
+   launch — see the [install guide](https://atrium.redlinelabs.dev/guides/install/)
    for the one-time fix.
 
 Each release lists a SHA-256 checksum if you'd like to verify your download.
@@ -49,7 +49,7 @@ Each release lists a SHA-256 checksum if you'd like to verify your download.
 
 Atrium's core organizer is free — no caps, no nags. A **Pro** edition (SSH/remote,
 background monitoring, named workspaces, and other augmentation features) is in development under
-a one-time-purchase model; see the [Free and Pro](https://redlinelabs-dev.github.io/atrium-site/guides/what-is-atrium/#free-and-pro)
+a one-time-purchase model; see the [Free and Pro](https://atrium.redlinelabs.dev/guides/what-is-atrium/#free-and-pro)
 breakdown for details. **The application source is closed**; this repository is the public home
 for the website and the release downloads only — so there's nothing to build here.
 

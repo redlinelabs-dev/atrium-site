@@ -11,8 +11,8 @@ what a pane can do beyond "be a terminal."
 - **Terminal** — a bare interactive shell in the project's connection (WSL2/PowerShell/Git Bash/cmd on
   Windows; zsh/bash/fish on macOS).
 - **Agent** — a shell that launches an agent command (`claude`, `codex`, …). Agent panes get
-  [provider](/atrium-site/guides/concepts/#providers) powers — session resume, context-% — described
-  in [Agents in Atrium](/atrium-site/guides/agents/).
+  [provider](/guides/concepts/#providers) powers — session resume, context-% — described
+  in [Agents in Atrium](/guides/agents/).
 - **Command** — runs one program (a dev server, a build, a script) and shows **exited** when it ends.
   Atrium [auto-detects scripts](#script-detection) to offer as one-click command templates. Every pane
   has a **Restart** button; agents get a confirm first.
@@ -38,7 +38,7 @@ respawns preserve the pane's **live working directory** rather than resetting to
 - **Live context per pane** — the current working directory (worktree-aware), the git branch, and the
   pane's **memory usage** (including processes inside WSL) are shown live.
 - **Open lazygit here** — one click spawns `lazygit` scoped to the pane's live directory (if
-  installed). See [Git tools](/atrium-site/guides/git-tools/).
+  installed). See [Git tools](/guides/git-tools/).
 
 ## Script detection
 
@@ -54,9 +54,9 @@ Detection only *suggests* — nothing runs until you click.
 - **App zoom** — `Ctrl+=` / `Ctrl+-` / `Ctrl+0` (`⌘` on macOS) zooms the whole app; terminals re-fit,
   and the level persists.
 - **Themes** — six presets with a glow-intensity control; see
-  [Settings & configuration](/atrium-site/guides/settings/).
+  [Settings & configuration](/guides/settings/).
 
 ## Next
 
-- [Worktrees](/atrium-site/guides/worktrees/) — spawn panes into any worktree.
-- [The Switcher & keyboard shortcuts](/atrium-site/guides/switcher-and-shortcuts/) — every binding.
+- [Worktrees](/guides/worktrees/) — spawn panes into any worktree.
+- [The Switcher & keyboard shortcuts](/guides/switcher-and-shortcuts/) — every binding.

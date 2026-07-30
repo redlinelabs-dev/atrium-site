@@ -3,7 +3,7 @@ title: Settings & configuration
 description: The Settings view, themes, notifications, editors, the agent catalog — and where Atrium keeps its data (atrium.json, atrium.toml, the .atrium folder).
 ---
 
-Open Settings with `Ctrl+,` (`⌘,`) or via the [Switcher](/atrium-site/guides/switcher-and-shortcuts/).
+Open Settings with `Ctrl+,` (`⌘,`) or via the [Switcher](/guides/switcher-and-shortcuts/).
 It's a tabbed main-area view:
 
 ## Appearance
@@ -29,17 +29,17 @@ notifications and OSC 9/777 passthrough, with per-project mute.)
 ## New projects
 
 The default groups and the **agent catalog** (which agent commands are offered when you create a
-project). See [Agents in Atrium](/atrium-site/guides/agents/#the-agent-catalog).
+project). See [Agents in Atrium](/guides/agents/#the-agent-catalog).
 
 ## About
 
 Version, a **Check for updates** button, the keyboard cheatsheet, and the no-telemetry badge (see
-[Privacy](/atrium-site/privacy/)).
+[Privacy](/privacy/)).
 
 ## Integrations & License (Pro)
 
 Pro builds add two tabs: **Integrations** — connection health for
-[GitHub + Jira](/atrium-site/guides/pro-integrations/) (rate-limit headroom, cache state, last
+[GitHub + Jira](/guides/pro-integrations/) (rate-limit headroom, cache state, last
 error) — and **License**, where you paste your key. The key is masked to its last four characters,
 and validation degrades gracefully offline (a 14-day grace window; Atrium never locks you out).
 
@@ -54,7 +54,7 @@ Atrium has three configuration surfaces, each with a distinct job:
 The durable store for everything you've set up: projects, groups, templates, panes (as dormant
 skeletons), per-project view memory, and managed agent permissions. Machine-local; you never edit it by
 hand. Alongside it live `live.json` (the live status snapshot) and `panes/` (recent output) — the files
-the [MCP tools](/atrium-site/guides/agents-mcp/) read.
+the [MCP tools](/guides/agents-mcp/) read.
 
 ### `atrium.toml` — the portable project file
 
@@ -94,6 +94,6 @@ stored locally by the app and aren't part of any of these files.
 
 ## Next
 
-- [Agents in Atrium](/atrium-site/guides/agents/) — the agent catalog and managed permissions.
-- The Integrations & License tabs are [Pro](/atrium-site/pricing/) — GitHub + Jira health and
+- [Agents in Atrium](/guides/agents/) — the agent catalog and managed permissions.
+- The Integrations & License tabs are [Pro](/pricing/) — GitHub + Jira health and
   your key.

@@ -13,7 +13,7 @@ items. The theme: **the integration tells the truth and pulls its weight.**
 
 **Jira (Pro):**
 
-- A Jira-only project's [Integration Hub](/atrium-site/guides/pro-integrations/) lands on the Jira
+- A Jira-only project's [Integration Hub](/guides/pro-integrations/) lands on the Jira
   tab — no more "Connect GitHub" prompt (or silently empty body) on a project with no GitHub
   remote; a Jira-only hub issues zero GitHub I/O.
 - Saved filters work on every Jira site: "In progress" matches by status *category* (renamed
@@ -81,19 +81,19 @@ Pro on the spot. No separate download, no reinstall. Buying is now
 - An unlicensed run never sees a locked Integrations tab — the quiet Pro disclosure remains the
   only place Pro is mentioned.
 - Pane respawn is called **Restart** everywhere (it was "Reload" in one spot).
-- [Privacy policy](/atrium-site/privacy/) updated for the single binary: the licensing endpoint is
+- [Privacy policy](/privacy/) updated for the single binary: the licensing endpoint is
   contacted only after a key is entered — never before, verifiable on the wire.
 
 ## 0.12.0 — "The Connected Cockpit"
 
 The Pro flagship release — **Atrium Pro is now purchasable**:
 **[buy it for $39, one-time](https://buy.polar.sh/polar_cl_c3Z1l6fB0kj5T4YF8KBZI8XiQFjWtzdbINqMR1moRg5)**
-(every 1.x update included forever), or [compare Free vs. Pro](/atrium-site/pricing/).
+(every 1.x update included forever), or [compare Free vs. Pro](/pricing/).
 
 **Pro:**
 
 - **GitHub + Jira integrations, read-only forever** — a per-project
-  [Integration Hub](/atrium-site/guides/pro-integrations/): pull requests with live CI checks and
+  [Integration Hub](/guides/pro-integrations/): pull requests with live CI checks and
   review states, assigned issues, and Jira tickets scoped to the project. GitHub auto-detects from
   your remotes (override per project); Jira is opt-in per project — teach it by pasting a ticket
   URL/key, and it makes zero requests until taught.
@@ -105,7 +105,7 @@ The Pro flagship release — **Atrium Pro is now purchasable**:
 - **Connection health** — a rate-limit/cache/health ledger in Settings → Integrations; Jira tokens
   now auto-refresh (no more hourly re-auth).
 - **Session-history search** — search across past terminal sessions, not just the open one.
-- **[SSH remote projects](/atrium-site/guides/pro-ssh/)** — open a project on a remote box over
+- **[SSH remote projects](/guides/pro-ssh/)** — open a project on a remote box over
   your own `ssh`, reattach to your own `tmux` sessions; honest disconnected state with one-click
   Reconnect; zero credentials stored, by construction.
 
@@ -124,7 +124,7 @@ The Pro flagship release — **Atrium Pro is now purchasable**:
 ## 0.11.1 — "Paste the Picture"
 
 Native **macOS support** ships: a universal (Apple Silicon + Intel) build with darwin auto-update
-entries alongside the existing Windows updater. See [Install & first run](/atrium-site/guides/install/)
+entries alongside the existing Windows updater. See [Install & first run](/guides/install/)
 for the Gatekeeper first-run step (ad-hoc signed, not notarized).
 
 - **Paste screenshots into panes** — `Ctrl+V` with an image on the clipboard writes it to a temp PNG
@@ -177,7 +177,7 @@ Full worktree lifecycle management from the UI.
 - **ErrorBoundary** — a top-level React error boundary so render crashes show a recoverable panel
   instead of a blank screen.
 - **Removed: the `.mcp.json` auto-writer.** Atrium no longer writes MCP discovery config when a Claude
-  pane opens. The [MCP server](/atrium-site/guides/agents-mcp/) itself still ships in the binary —
+  pane opens. The [MCP server](/guides/agents-mcp/) itself still ships in the binary —
   connecting it is now a manual, per-project opt-in. Auto-discovery will return as an explicit opt-in
   with the Pro edition; it will never be on by default.
 
@@ -196,7 +196,7 @@ Windows/WSL2 build at the time — native macOS support shipped later, in 0.11.1
   ships in 0.9.0; the genuine free/pro split lands ahead of 1.0, as part of Atrium's commercial
   launch.
 - **Privacy policy** — provable no-telemetry, no backend the app depends on. See
-  [Privacy](/atrium-site/privacy/).
+  [Privacy](/privacy/).
 
 ## 0.8.0 — "The Integration Layer"
 
@@ -206,7 +206,7 @@ The agent-integration layer — **visibility-in, never control-out**.
   shared filesystem (works on default WSL2, no port/firewall/token). Read tools: `list_projects`,
   `list_panes`, `pane_status`, `read_pane_output` (read a sibling pane's logs), `list_todos`,
   `read_scratchpad`. Write-into-Atrium tools: `add_todo`, `set_todo_status`, `append_scratchpad`. No
-  control verb — enforced by a test. See [The Atrium MCP server](/atrium-site/guides/agents-mcp/).
+  control verb — enforced by a test. See [The Atrium MCP server](/guides/agents-mcp/).
   (The auto-discovery wiring this shipped with was later removed in 0.9.4 — connecting is manual.)
 - **Live status snapshot** — the cockpit publishes real per-pane status so the MCP surface reflects
   what's actually running.

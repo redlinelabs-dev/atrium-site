@@ -5,7 +5,7 @@ description: The read-only diff viewer, the commit lane-graph, copy-as-markdown 
 
 Atrium's git surface is deliberately **read-only**: it shows you state; it doesn't stage, commit, or
 push. (The one exception is the human-initiated, confirmed
-[worktree lifecycle](/atrium-site/guides/worktrees/#lifecycle-from-the-ui).) When you *do* want to
+[worktree lifecycle](/guides/worktrees/#lifecycle-from-the-ui).) When you *do* want to
 operate on the repo, Atrium hands you to a real tool instead of half-building one.
 
 ## Diff viewer
@@ -33,11 +33,11 @@ the right directory.
 ## Everywhere else
 
 Git context also shows up passively across the cockpit: the live **branch per pane**, dirty/clean
-state and drift in the [worktrees lens and inventory](/atrium-site/guides/worktrees/), and dirty-git
+state and drift in the [worktrees lens and inventory](/guides/worktrees/), and dirty-git
 indicators on the dashboard. All of it is read-only polling — Atrium never prompts for credentials and
 never runs an interactive git command on your behalf.
 
 ## Next
 
-- [Worktrees](/atrium-site/guides/worktrees/) — where the dirty/clean and drift signals come from.
-- [Agents in Atrium](/atrium-site/guides/agents/) — review what an agent changed in the read-only diff.
+- [Worktrees](/guides/worktrees/) — where the dirty/clean and drift signals come from.
+- [Agents in Atrium](/guides/agents/) — review what an agent changed in the read-only diff.

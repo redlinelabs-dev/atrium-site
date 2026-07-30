@@ -2,7 +2,7 @@ name: Deploy docs to GitHub Pages
 
 # Builds the Astro + Starlight site and deploys it to GitHub Pages. latest.json + llms.txt live in
 # public/, so they publish at the site root unchanged (the app's updater polls
-# https://redlinelabs-dev.github.io/atrium-site/latest.json — that URL must keep working).
+# https://atrium.redlinelabs.dev/latest.json; apps ≤0.15.x poll the old github.io URL, which 301-redirects here — both must keep working).
 #
 # Explicit bun steps (not withastro/action) — replicates the local `bun install && bun run build` flow
 # exactly and surfaces the full Astro output on failure.

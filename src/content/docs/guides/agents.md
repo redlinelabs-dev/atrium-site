@@ -53,11 +53,11 @@ cockpit.
 
 ## TODOs and notes you can watch
 
-Agents connected to the [Atrium MCP server](/atrium-site/guides/agents-mcp/) can write TODOs and
+Agents connected to the [Atrium MCP server](/guides/agents-mcp/) can write TODOs and
 scratchpad notes that appear **live** in the dock — a running plan you can watch without tailing the
 agent's output.
 
 ## Next
 
-- [The Atrium MCP server](/atrium-site/guides/agents-mcp/) — opt-in cockpit visibility for agents.
-- [Core concepts → The boundary](/atrium-site/guides/concepts/#the-boundary--visibility-in-never-control-out).
+- [The Atrium MCP server](/guides/agents-mcp/) — opt-in cockpit visibility for agents.
+- [Core concepts → The boundary](/guides/concepts/#the-boundary--visibility-in-never-control-out).

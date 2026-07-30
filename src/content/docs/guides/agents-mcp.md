@@ -18,7 +18,7 @@ your guide to the `atrium` tools.
   Atrium's dock.
 
 What you **cannot** do: drive Atrium. There is no tool to spawn, run, restart, or close anything — by
-design ([the boundary](/atrium-site/guides/concepts/#the-boundary--visibility-in-never-control-out)).
+design ([the boundary](/guides/concepts/#the-boundary--visibility-in-never-control-out)).
 Visibility-in, never control-out. A unit test fails Atrium's build if a control verb ever appears in
 the tool surface.
 
@@ -113,6 +113,6 @@ project the agent is running in.
 
 ## Next
 
-- [Agents in Atrium](/atrium-site/guides/agents/) — providers, session resume, permissions.
-- [Core concepts → The boundary](/atrium-site/guides/concepts/#the-boundary--visibility-in-never-control-out) —
+- [Agents in Atrium](/guides/agents/) — providers, session resume, permissions.
+- [Core concepts → The boundary](/guides/concepts/#the-boundary--visibility-in-never-control-out) —
   why there's no control verb to call.

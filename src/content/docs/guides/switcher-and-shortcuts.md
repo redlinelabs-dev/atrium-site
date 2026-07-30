@@ -14,7 +14,7 @@ have open, across **all** projects:
 
 - **Panes** — jump straight to any terminal or agent.
 - **Projects** — switch project.
-- **Worktrees** — jump into a worktree (including [Worktree View](/atrium-site/guides/worktrees/#worktree-view)).
+- **Worktrees** — jump into a worktree (including [Worktree View](/guides/worktrees/#worktree-view)).
 - **Views** — Dashboard, Settings.
 
 Matching favors what you meant: prefix and contiguous matches rank above scattered subsequences, and
@@ -47,10 +47,10 @@ this table describes.
 | `?` | Keyboard cheatsheet overlay |
 
 In-pane copy/paste on macOS: `⌘⇧C` / `⌘V`. Right-click pastes on all platforms. `Ctrl+V` with an
-image on the clipboard [pastes a screenshot](/atrium-site/guides/panes/#working-with-panes).
+image on the clipboard [pastes a screenshot](/guides/panes/#working-with-panes).
 
 ## Next
 
-- [Settings & configuration](/atrium-site/guides/settings/) — themes, editors, the agent catalog.
+- [Settings & configuration](/guides/settings/) — themes, editors, the agent catalog.
 - Action verbs in the Switcher (New pane, New worktree, Toggle theme) are a
-  [Pro feature](/atrium-site/pricing/).
+  [Pro feature](/pricing/).

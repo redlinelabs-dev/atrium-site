@@ -23,7 +23,7 @@ description: Download Atrium for Windows or macOS, get past SmartScreen (Windows
 [**Buy an Atrium Pro license — $39**](https://buy.polar.sh/polar_cl_c3Z1l6fB0kj5T4YF8KBZI8XiQFjWtzdbINqMR1moRg5)
 (Polar checkout; the key arrives by email), then paste it into **Settings → License** in the app
 you already installed. Pro unlocks in place — one binary, no separate download, no reinstall
-(since 0.13.0). Undecided? See [Free vs. Pro](/atrium-site/pricing/).
+(since 0.13.0). Undecided? See [Free vs. Pro](/pricing/).
 
 ### "Windows protected your PC" (SmartScreen)
 
@@ -80,6 +80,6 @@ shows per-pane memory so you can see it coming. Relief valves: close idle panes,
 
 ## Next
 
-- [Core concepts](/atrium-site/guides/concepts/) — projects, panes, lenses, the boundary.
-- [Panes & terminals](/atrium-site/guides/panes/) — what a pane can do.
-- [The Atrium MCP server](/atrium-site/guides/agents-mcp/) — give your agents eyes into the cockpit.
+- [Core concepts](/guides/concepts/) — projects, panes, lenses, the boundary.
+- [Panes & terminals](/guides/panes/) — what a pane can do.
+- [The Atrium MCP server](/guides/agents-mcp/) — give your agents eyes into the cockpit.
