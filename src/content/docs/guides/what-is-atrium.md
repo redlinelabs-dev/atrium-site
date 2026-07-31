@@ -19,6 +19,10 @@ and stays out of the way.
 - **Stop alt-tabbing across terminal windows.** [Projects → groups → panes](/guides/concepts/#projects--groups--panes), each a live terminal that
   stays alive when you switch away. Sessions restore when you reopen — Claude panes resume the exact
   conversation.
+- **Give your agents eyes.** An opt-in local [MCP server](/guides/agents-mcp/) — no cloud, no port —
+  lets an agent in one pane ask what else is running, read a sibling pane's logs, and check
+  git/worktree state, so it can explain a crashed dev server without you pasting the trace.
+  Visibility in, never control out: there's no tool to spawn, run, or restart anything.
 - **Know what's happening without staring.** A status orb per pane (solid while running, pulsing while
   working, breathing when an agent needs your input), the live working directory + git branch, and
   context-window usage % on Claude panes.
@@ -32,9 +36,6 @@ and stays out of the way.
   long-lived launchers (a personal assistant, a journal) that never belonged in a project list.
 - **Jump anywhere.** The [Switcher](/guides/switcher-and-shortcuts/) (`Ctrl+Shift+K` /
   `⌘⇧K`) fuzzy-jumps to any pane, project, worktree, or view across everything you have open.
-- **Give your agents situational awareness — if you want.** An opt-in local
-  [MCP server](/guides/agents-mcp/) lets an agent ask what else is running, read another
-  pane's logs, and leave TODOs/notes in the repo's `.atrium/` folder.
 
 ## What it is *not*
 

@@ -86,6 +86,30 @@ unlocks a crippled app.
 No. Atrium has no subscription billing, and never will. You pay once for Pro and get every
 1.x update forever — no renewal, no update window, no subscription infrastructure of any kind.
 
+### How does Atrium compare to Solo?
+
+[Solo](https://soloterm.com) is a real, actively developed workspace for agents and dev processes,
+and worth knowing about if you're comparing — this isn't a knock on it. The concrete differences,
+for the record:
+
+- **Free tier.** Solo's Free caps out at 4 projects and 20 processes (every feature included,
+  the gate is pure capacity); unlocking more is $99/year (renewals run $69/year). Atrium's Free
+  has no project or process cap at all — the $39 Pro purchase is a one-time perpetual license for
+  the augmentation layer (integrations, SSH, notifications — see the cards above), not a capacity
+  unlock.
+- **Telemetry.** Solo collects basic product-analytics (Aptabase) and crash reports (Sentry).
+  Atrium sends none, of any kind, ever — see the [privacy policy](/privacy/).
+- **The agent surface.** Solo's MCP server (~40+ tools) includes control verbs —
+  `spawn_agent`, `restart_process`, `send_input` — behind a documented lead/worker orchestration
+  pattern. Atrium's [MCP server](/guides/agents-mcp/) is visibility-only by design: read the
+  cockpit, write TODOs/notes, never drive anything. Control-out is a real future direction, staged
+  behind its own opt-in and trust-review surface — not shipped by default today.
+
+Both products are Tauri desktop apps solving an adjacent problem; they just make different bets.
+Solo bets on capacity-gated pricing and a wide agent-coordination surface out of the gate. Atrium
+bets on an uncapped free tier, pay-once pricing, and a narrower, slower-to-expand boundary between
+"showing you things" and "acting for you."
+
 ### Why does the Pro app embed an Atlassian OAuth client secret?
 
 Because Atlassian's OAuth flow requires one, and Atrium has no server to hide it on — there is

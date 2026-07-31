@@ -12,6 +12,7 @@ import worktreesShot from '../assets/tour/worktrees.png';
 import dashboardShot from '../assets/tour/dashboard.png';
 import switcherShot from '../assets/tour/switcher.png';
 import devserverShot from '../assets/tour/devserver.png';
+import mcpShot from '../assets/tour/mcp-demo.png';
 import icon from '../assets/atrium-icon.svg';
 
 const version: string = latest.version;
@@ -216,15 +217,35 @@ const description =
             </figure>
           </div>
 
+          <div class="feature flip">
+            <div class="feature-copy">
+              <h3>Give your agents eyes</h3>
+              <p>
+                A local MCP server, no cloud, no port, opt-in. Connect it once and an agent in one
+                pane can ask what else is running, read a sibling pane’s logs, and check git/worktree
+                state — without you pasting a stack trace into the chat.
+              </p>
+              <p>
+                Below: the dev-server pane throws, and the agent in pane 2 reads its output and
+                explains the crash on its own. Visibility in, never control out — there’s no tool
+                to spawn, run, or restart anything.
+              </p>
+            </div>
+            <figure class="shot shot-card">
+              <video class="mcp-demo-video" poster={mcpShot.src} autoplay muted loop playsinline controls
+                width={mcpShot.width} height={mcpShot.height}
+                aria-label="An agent in one pane reads a crashed dev-server pane's logs over the Atrium MCP server and explains the error, unprompted.">
+                <source src={`${BASE}/demo/mcp-demo.webm`} type="video/webm" />
+                <source src={`${BASE}/demo/mcp-demo.mp4`} type="video/mp4" />
+              </video>
+            </figure>
+          </div>
+
           <!-- Compact grid of the rest -->
           <div class="more-grid">
             <div class="more-card">
               <h4>Home</h4>
               <p>A pinned, non-repo place for your long-lived personal agents and launchers — the tools that never belonged in a project list.</p>
-            </div>
-            <div class="more-card">
-              <h4>Agents that aren’t blind</h4>
-              <p>An opt-in local MCP server lets agents read the cockpit — even a sibling pane’s logs — and write into Atrium. Never drive it.</p>
             </div>
             <div class="more-card">
               <h4>Git tools built in</h4>
@@ -279,6 +300,14 @@ const description =
               </p>
             </div>
           </div>
+          <p class="boundary-note">
+            Concretely: <a href="https://soloterm.com" rel="noopener">Solo</a> — a real, well-built
+            workspace for agents and worth knowing about — ships MCP control verbs like
+            <code>spawn_agent</code> and <code>restart_process</code> today. Atrium's stops at
+            visibility on purpose; control-out is staged behind its own opt-in later, not shipped by
+            default. Neither bet is wrong — it's the line this page is about. See the
+            <a href={`${BASE}/pricing/`}>full comparison</a> for the free-tier and pricing differences.
+          </p>
         </div>
       </section>
 
@@ -582,7 +611,7 @@ const description =
 
       /* ---------- Screenshots ---------- */
       .shot { margin: 0; }
-      .shot img { display: block; max-width: 100%; height: auto; border-radius: var(--radius); }
+      .shot img, .shot video { display: block; max-width: 100%; height: auto; border-radius: var(--radius); }
       .hero-shot { margin-top: 3.2rem; position: relative; }
       .hero-shot img {
         border: 1px solid var(--border);
@@ -593,7 +622,7 @@ const description =
         background: radial-gradient(120% 120% at 30% 20%, #151927 0%, var(--panel) 60%);
         border: 1px solid var(--border-soft); border-radius: 16px; padding: 2rem;
       }
-      .shot-card img { border: 1px solid var(--border); box-shadow: 0 16px 44px -18px rgba(0, 0, 0, 0.7); }
+      .shot-card img, .shot-card video { border: 1px solid var(--border); box-shadow: 0 16px 44px -18px rgba(0, 0, 0, 0.7); }
       .shot-fade img { mask-image: linear-gradient(to bottom, black 78%, transparent 100%); }
       .shot-full { padding: 1.4rem; }
 
@@ -631,6 +660,8 @@ const description =
       }
       .tenet h3 { font-size: 1.08rem; margin-bottom: 0.6rem; }
       .tenet p { color: var(--muted); font-size: 0.95rem; }
+      .boundary-note { color: var(--muted); font-size: 0.9rem; margin-top: 1.8rem; max-width: 760px; }
+      .boundary-note code { font-size: 0.88em; }
 
       /* ---------- Keys ---------- */
       .keys { padding: 0 0 96px; }
