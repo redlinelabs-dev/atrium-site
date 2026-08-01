@@ -48,8 +48,10 @@ export default defineConfig({
 				{
 					label: 'Agents',
 					items: [
-						{ label: 'Agents in Atrium', slug: 'guides/agents' },
+						// Marquee position (0.16 "Eyes", ADR-0054 — the un-park): the MCP guide leads this
+						// group now, not "Agents in Atrium" — give your agents eyes is the pitch.
 						{ label: 'The Atrium MCP server', slug: 'guides/agents-mcp' },
+						{ label: 'Agents in Atrium', slug: 'guides/agents' },
 					],
 				},
 				{
