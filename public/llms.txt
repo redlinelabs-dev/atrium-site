@@ -12,7 +12,8 @@ Atrium exposes a local stdio MCP server (the agent spawns `atrium --mcp-stdio`, 
 shared filesystem). Tools are read + write-into-Atrium ONLY — there is no spawn/run/control verb.
 
 - Read: list_projects, list_panes, pane_status(pane_id), read_pane_output(pane_id) [read a sibling
-  pane's recent logs], list_todos, read_scratchpad(slug)
+  pane's recent logs], list_todos, read_scratchpad(slug), git_status, list_worktrees, list_ports
+  [listening TCP ports, tagged with a pane id where known], project_info
 - Write-into-Atrium: add_todo(text), set_todo_status(id, status), append_scratchpad(slug, text)
 
 Full guide (for both humans and LLMs): https://atrium.redlinelabs.dev/guides/agents-mcp/

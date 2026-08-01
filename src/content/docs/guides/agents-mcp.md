@@ -1,6 +1,6 @@
 ---
 title: The Atrium MCP server
-description: An opt-in local MCP server gives your coding agents eyes into the cockpit — read project + pane status and logs, write TODOs + scratchpad notes into the repo's .atrium/ — over the shared filesystem, with no networking.
+description: An opt-in local MCP server gives your coding agents eyes into the cockpit — read project + pane status, git/worktree state, listening ports, and logs, write TODOs + scratchpad notes into the repo's .atrium/ — over the shared filesystem, with no networking.
 ---
 
 The Atrium binary ships a local **MCP server** so a coding agent running in one of your panes can *see
@@ -14,6 +14,9 @@ your guide to the `atrium` tools.
 
 - **See the cockpit.** "What projects/panes exist? What's running? What's this pane doing?"
 - **Read a sibling pane's logs.** "Read the dev-server pane and tell me why it's 500ing."
+- **See the depth the sidebar sees.** Git branch + dirty state, worktrees, the current project's
+  connection/groups/templates, and which ports are listening — "find the dev server URL without
+  being told."
 - **Leave a trail on disk.** Add/update TODOs and append scratchpad notes — written to the project's
   `.atrium/` folder. (Atrium no longer displays them in-app — the Dock was retired in 0.15.0 — so
   treat them as files the human reads.)
@@ -85,6 +88,10 @@ spawned in.
 | `read_pane_output(pane_id)` | A pane's **recent terminal output** as plain text — read another pane's logs. |
 | `list_todos` | The current project's TODOs (`.atrium/todos.json`). |
 | `read_scratchpad(slug)` | A scratchpad note (`.atrium/notes/<slug>.md`). |
+| `git_status` | The current project's git branch and dirty state — same info as the sidebar's branch chip. |
+| `list_worktrees` | The current project's git worktrees, each with branch + dirty state — matches the sidebar's Worktree view. |
+| `list_ports` | LISTENING TCP ports in the current project's own runtime, tagged with a pane id where known (wsl2 only) — find the dev server's port without being told. No wait/bind verb — just the question. |
+| `project_info` | Connection kind/shell + groups/templates for the current project — the sidebar's own project record. |
 
 **Write-into-Atrium (annotate Atrium's own surfaces — never the agent's, never control):**
 
@@ -104,6 +111,9 @@ project the agent is running in.
 - *"Break this work into TODOs in atrium so I can see your plan."* → the agent calls `add_todo` a few
   times, writing its plan to `.atrium/todos.json`, then `set_todo_status`-es them as it goes.
 - *"Append your findings to the `agent-log` scratchpad before you finish."*
+- *"What port is the dev server on?"* → the agent calls `list_ports`, finds the listening port, and
+  builds the URL — no need to tell it.
+- *"Is my working tree clean, and what worktrees do I have?"* → `git_status` + `list_worktrees`.
 
 ## Notes for agents
 
