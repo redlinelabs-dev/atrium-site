@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    # Astro + Starlight docs site. There are no lint, typecheck, format or
+    # test scripts in package.json yet, so those steps are off — `astro build`
+    # is the single check, which is the fleet baseline for a static site.
+    # Turn typecheck on once `astro check` (and @astrojs/check) is added.
+    uses: JimmayVV/fleet-ci/.github/workflows/node-ci.yml@v1
+    with:
+      package-manager: bun
+      lint: false
+      format-check: false
+      typecheck: false
+      test: false
+      build: true
+      playwright: false
