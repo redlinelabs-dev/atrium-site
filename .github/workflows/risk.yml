@@ -1,0 +1,25 @@
+name: Risk
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: read
+  id-token: write
+
+jobs:
+  risk:
+    uses: JimmayVV/fleet-ci/.github/workflows/risk.yml@v1
+    with:
+      # public/latest.json is the updater feed the shipped app polls; a wrong
+      # value there breaks updates for every installed copy. astro.config
+      # owns the site URL and base path that the Pages deploy depends on.
+      high-paths: |
+        .github/workflows/**
+        astro.config.*
+        public/latest.json
+  dependabot:
+    uses: JimmayVV/fleet-ci/.github/workflows/dependabot-automerge.yml@v1
